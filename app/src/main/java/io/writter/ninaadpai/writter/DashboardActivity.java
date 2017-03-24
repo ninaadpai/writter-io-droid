@@ -50,6 +50,9 @@ public class DashboardActivity extends AppCompatActivity {
             case R.id.navigation_notifications:
                 fragmentClass = NotificationsFragment.class;
                 break;
+            case R.id.navigation_profile:
+                fragmentClass = ProfileFragment.class;
+                break;
             default:
                 fragmentClass = FeedFragment.class;
         }
@@ -63,20 +66,11 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.context_menu,menu);
-        return true;
-    }
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("Demo","Dashboard: onCreate before");
         setContentView(R.layout.activity_dashboard);
         Log.i("Demo","Dashboard: onCreate after");
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setTitle("");
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
