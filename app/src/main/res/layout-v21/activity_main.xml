@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginBackground"
+    tools:context="io.writter.ninaadpai.writter.MainActivity">
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:text="@string/subtitle" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_below="@+id/subTitle"
+        android:layout_centerHorizontal="true"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="@string/app_name"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/emailEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="14sp"
+        android:hint="@string/emailhint"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/appTitle"
+        android:layout_marginTop="15dp"
+        android:layout_alignLeft="@+id/subTitle"
+        android:layout_alignStart="@+id/subTitle"
+        android:layout_alignRight="@+id/subTitle"
+        android:layout_alignEnd="@+id/subTitle" />
+
+    <EditText
+        android:id="@+id/passwordEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:hint="@string/pwdhint"
+        android:inputType="textPassword"
+        android:textSize="14sp"
+        android:layout_below="@+id/emailEdit"
+        android:layout_alignLeft="@+id/emailEdit"
+        android:layout_alignStart="@+id/emailEdit"
+        android:layout_alignRight="@+id/emailEdit"
+        android:layout_alignEnd="@+id/emailEdit" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/passwordEdit"
+        android:layout_alignStart="@+id/passwordEdit"
+        android:layout_below="@+id/passwordEdit"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/login" />
+
+    <Button
+        android:id="@+id/signupbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#1EA775"
+        android:text="@string/signup"
+        android:layout_below="@+id/passwordEdit"
+        android:layout_alignRight="@+id/passwordEdit"
+        android:layout_alignEnd="@+id/passwordEdit" />
+
+    <TextView
+        android:id="@+id/alternateOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:text="@string/alternativeor"
+        android:layout_below="@+id/signupbtn"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:text="@string/usegoogle"
+        android:layout_below="@+id/alternateOr"
+        android:layout_alignRight="@+id/loginbtn"
+        android:layout_alignEnd="@+id/loginbtn"
+        android:layout_marginRight="9dp"
+        android:layout_marginEnd="9dp" />
+
+    <TextView
+        android:id="@+id/facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@android:color/white"
+        android:text="@string/usefacebook"
+        android:layout_alignBaseline="@+id/google"
+        android:layout_alignBottom="@+id/google"
+        android:layout_alignLeft="@+id/signupbtn"
+        android:layout_alignStart="@+id/signupbtn" />
+
+    <TextView
+        android:id="@+id/termsOfService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/google"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textColor="@android:color/white"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/whatsThis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        android:text="@string/whatsthis"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        tools:textColor="@android:color/white" />
+
+</RelativeLayout>

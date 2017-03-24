@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/loginBackground"
+    tools:context="io.writter.ninaadpai.writter.SetUpNameActivity">
+
+    <TextView
+        android:id="@+id/setupHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/setuphint"
+        android:textColor="@android:color/white"
+        android:textSize="11sp" />
+
+    <EditText
+        android:id="@+id/firstLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="14sp"
+        android:hint="@string/nameHint"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/setupHint"
+        android:layout_alignLeft="@+id/setupHint"
+        android:layout_alignStart="@+id/setupHint"
+        android:layout_alignRight="@+id/setupHint"
+        android:layout_alignEnd="@+id/setupHint"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/topicEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/firstLastName"
+        android:layout_alignLeft="@+id/firstLastName"
+        android:layout_alignRight="@+id/firstLastName"
+        android:layout_alignStart="@+id/firstLastName"
+        android:layout_below="@+id/firstLastName"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        tools:ignore="RtlHardcoded" />
+
+    <ListView
+        android:id="@+id/topicList"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/topicEditText"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/topicEditText"
+        android:layout_alignStart="@+id/topicEditText"
+        android:layout_alignRight="@+id/topicEditText"
+        android:layout_alignEnd="@+id/topicEditText" />
+
+    <Button
+        android:id="@+id/gobtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#1EA775"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        tools:ignore="RtlHardcoded"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/chosenFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/topicEditText"
+        android:layout_alignStart="@+id/topicEditText"
+        android:layout_below="@+id/topicList"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/white"
+        android:text="@string/chosen_favorites" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/favoriteRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/gobtn1"
+        android:layout_marginTop="10dp"
+        android:layout_alignEnd="@+id/topicEditText"
+        android:layout_alignLeft="@+id/topicEditText"
+        android:layout_alignRight="@+id/topicEditText"
+        android:layout_alignStart="@+id/topicEditText"
+        android:layout_below="@+id/chosenFavorites" />
+
+</RelativeLayout>

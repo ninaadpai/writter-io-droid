@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "538912686298",
+    "firebase_url": "https://writter-android.firebaseio.com",
+    "project_id": "writter-android",
+    "storage_bucket": "writter-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538912686298:android:533fafc58bcd8bf5",
+        "android_client_info": {
+          "package_name": "io.writter.ninaadpai.writter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "538912686298-3a16iu9n7gihmijphvl9rilp5nk8ukvs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs_qk9_HPmHAWp8E9ByrmAciVxN3OM9CY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

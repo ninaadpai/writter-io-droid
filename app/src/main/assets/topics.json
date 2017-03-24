@@ -1,0 +1,6002 @@
+[
+	{
+		"item": "http://www.wikidata.org/entity/Q262",
+		"itemLabel": "Algeria",
+		"value": "Algeria",
+		"valueLabel": "Algeria"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q44",
+		"itemLabel": "beer",
+		"value": "Beer",
+		"valueLabel": "Beer"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31",
+		"itemLabel": "Belgium",
+		"value": "Belgium",
+		"valueLabel": "Belgium"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q242",
+		"itemLabel": "Belize",
+		"value": "Belize",
+		"valueLabel": "Belize"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q64",
+		"itemLabel": "Berlin",
+		"value": "Berlin",
+		"valueLabel": "Berlin"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q179",
+		"itemLabel": "Boeing 747",
+		"value": "Boeing-747",
+		"valueLabel": "Boeing-747"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q35",
+		"itemLabel": "Denmark",
+		"value": "Denmark",
+		"valueLabel": "Denmark"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q144",
+		"itemLabel": "dog",
+		"value": "Dogs-pets-1",
+		"valueLabel": "Dogs-pets-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q328",
+		"itemLabel": "English Wikipedia",
+		"value": "English-Wikipedia",
+		"valueLabel": "English-Wikipedia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q191",
+		"itemLabel": "Estonia",
+		"value": "Estonia",
+		"valueLabel": "Estonia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q153",
+		"itemLabel": "ethanol",
+		"value": "Ethanol",
+		"valueLabel": "Ethanol"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q276",
+		"itemLabel": "Eurovision Song Contest",
+		"value": "Eurovision-Song-Contest",
+		"valueLabel": "Eurovision-Song-Contest"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q142",
+		"itemLabel": "France",
+		"value": "France",
+		"valueLabel": "France"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q150",
+		"itemLabel": "French",
+		"value": "French-language",
+		"valueLabel": "French-language"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23",
+		"itemLabel": "George Washington",
+		"value": "George-Washington",
+		"valueLabel": "George-Washington"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q190",
+		"itemLabel": "God",
+		"value": "God",
+		"valueLabel": "God"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q187",
+		"itemLabel": "Il Canto degli Italiani",
+		"value": "Il-Canto-Degli-Italiani",
+		"valueLabel": "Il-Canto-Degli-Italiani"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q205",
+		"itemLabel": "infinity",
+		"value": "Infinity",
+		"valueLabel": "Infinity"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q232",
+		"itemLabel": "Kazakhstan",
+		"value": "Kazakhstan",
+		"valueLabel": "Kazakhstan"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q343",
+		"itemLabel": "La Flèche",
+		"value": "La-Flèche",
+		"valueLabel": "La-Flèche"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q185",
+		"itemLabel": "Larry Sanger",
+		"value": "Larry-Sanger-1",
+		"valueLabel": "Larry-Sanger-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q347",
+		"itemLabel": "Liechtenstein",
+		"value": "Liechtenstein",
+		"valueLabel": "Liechtenstein"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q84",
+		"itemLabel": "London",
+		"value": "London",
+		"valueLabel": "London"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q316",
+		"itemLabel": "love",
+		"value": "Love",
+		"valueLabel": "Love"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q105",
+		"itemLabel": "Monday",
+		"value": "Monday",
+		"valueLabel": "Monday"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q340",
+		"itemLabel": "Montreal",
+		"value": "Montréal-QC-Canada",
+		"valueLabel": "Montréal-QC-Canada"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q167",
+		"itemLabel": "pi",
+		"value": "Pi",
+		"valueLabel": "Pi"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q102",
+		"itemLabel": "pneumonoultramicroscopicsilicovolcanoconiosis",
+		"value": "Pneumonoultramicroscopicsilicovolcanoconiosis-1",
+		"valueLabel": "Pneumonoultramicroscopicsilicovolcanoconiosis-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q268",
+		"itemLabel": "Poznań",
+		"value": "Poznań",
+		"valueLabel": "Poznań"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q220",
+		"itemLabel": "Rome",
+		"value": "Rome-Italy",
+		"valueLabel": "Rome-Italy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22",
+		"itemLabel": "Scotland",
+		"value": "Scotland",
+		"valueLabel": "Scotland"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q306",
+		"itemLabel": "Sebastián Piñera",
+		"value": "Sebastián-Piñera",
+		"valueLabel": "Sebastián-Piñera"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q334",
+		"itemLabel": "Singapore",
+		"value": "Singapore",
+		"valueLabel": "Singapore"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q145",
+		"itemLabel": "United Kingdom",
+		"value": "The-United-Kingdom-1",
+		"valueLabel": "The-United-Kingdom-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1",
+		"itemLabel": "universe",
+		"value": "The-Universe",
+		"valueLabel": "The-Universe"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13",
+		"itemLabel": "triskaidekaphobia",
+		"value": "Triskaidekaphobia",
+		"valueLabel": "Triskaidekaphobia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q127",
+		"itemLabel": "Tuesday",
+		"value": "Tuesday",
+		"valueLabel": "Tuesday"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q128",
+		"itemLabel": "Wednesday",
+		"value": "Wednesday",
+		"valueLabel": "Wednesday"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q282",
+		"itemLabel": "wine",
+		"value": "Wine",
+		"valueLabel": "Wine"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q514",
+		"itemLabel": "anatomy",
+		"value": "Anatomy-1",
+		"valueLabel": "Anatomy-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q735",
+		"itemLabel": "art",
+		"value": "Art-37",
+		"valueLabel": "Art-37"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q545",
+		"itemLabel": "Baltic Sea",
+		"value": "Baltic-Sea",
+		"valueLabel": "Baltic-Sea"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q550",
+		"itemLabel": "avenue des Champs-Élysées",
+		"value": "Champs-Elysees",
+		"valueLabel": "Champs-Elysees"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q718",
+		"itemLabel": "chess",
+		"value": "Chess",
+		"valueLabel": "Chess"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q780",
+		"itemLabel": "chicken",
+		"value": "Chicken-food-1",
+		"valueLabel": "Chicken-food-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5096351",
+		"itemLabel": "Chickens",
+		"value": "Chickens",
+		"valueLabel": "Chickens"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q784",
+		"itemLabel": "Dominica",
+		"value": "Commonwealth-of-Dominica",
+		"valueLabel": "Commonwealth-of-Dominica"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q800",
+		"itemLabel": "Costa Rica",
+		"value": "Costa-Rica-1",
+		"valueLabel": "Costa-Rica-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q504",
+		"itemLabel": "Émile Zola",
+		"value": "Emil-Zola-1",
+		"valueLabel": "Emil-Zola-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q784649",
+		"itemLabel": "Fables",
+		"value": "Fables",
+		"valueLabel": "Fables"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q540",
+		"itemLabel": "Freenet",
+		"value": "Freenet",
+		"valueLabel": "Freenet"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q690",
+		"itemLabel": "Delft",
+		"value": "Gemeente-Delft",
+		"valueLabel": "Gemeente-Delft"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q803",
+		"itemLabel": "Utrecht",
+		"value": "Gemeente-Utrecht",
+		"valueLabel": "Gemeente-Utrecht"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q449",
+		"itemLabel": "Georges Brassens",
+		"value": "Georges-Brassens",
+		"valueLabel": "Georges-Brassens"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q507",
+		"itemLabel": "googol",
+		"value": "Googol-1",
+		"valueLabel": "Googol-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q782",
+		"itemLabel": "Hawaii",
+		"value": "Hawaii",
+		"valueLabel": "Hawaii"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q661",
+		"itemLabel": "hydraulic ram",
+		"value": "Hydraulic-Ram",
+		"valueLabel": "Hydraulic-Ram"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q817",
+		"itemLabel": "Kuwait",
+		"value": "Kuwait",
+		"valueLabel": "Kuwait"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q813",
+		"itemLabel": "Kyrgyzstan",
+		"value": "Kyrgyzstan",
+		"valueLabel": "Kyrgyzstan"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q484",
+		"itemLabel": "laziness",
+		"value": "Laziness",
+		"valueLabel": "Laziness"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q822",
+		"itemLabel": "Lebanon",
+		"value": "Lebanon",
+		"valueLabel": "Lebanon"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q435",
+		"itemLabel": "Library of Alexandria",
+		"value": "Library-of-Alexandria",
+		"valueLabel": "Library-of-Alexandria"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q615",
+		"itemLabel": "Lionel Messi",
+		"value": "Lionel-Messi-football-player",
+		"valueLabel": "Lionel-Messi-football-player"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q510",
+		"itemLabel": "Mariana Trench",
+		"value": "Mariana-Trench",
+		"valueLabel": "Mariana-Trench"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q483",
+		"itemLabel": "Megaupload",
+		"value": "Megaupload",
+		"valueLabel": "Megaupload"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q649",
+		"itemLabel": "Moscow",
+		"value": "Moscow",
+		"valueLabel": "Moscow"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q697",
+		"itemLabel": "Nauru",
+		"value": "Nauru",
+		"valueLabel": "Nauru"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q654",
+		"itemLabel": "neon",
+		"value": "Neon",
+		"valueLabel": "Neon"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q664",
+		"itemLabel": "New Zealand",
+		"value": "New-Zealand",
+		"valueLabel": "New-Zealand"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q619",
+		"itemLabel": "Nicolaus Copernicus",
+		"value": "Nicolaus-Copernicus-1",
+		"valueLabel": "Nicolaus-Copernicus-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q627",
+		"itemLabel": "nitrogen",
+		"value": "Nitrogen",
+		"valueLabel": "Nitrogen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q659",
+		"itemLabel": "north",
+		"value": "North-1",
+		"valueLabel": "North-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q629",
+		"itemLabel": "oxygen",
+		"value": "Oxygen",
+		"valueLabel": "Oxygen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q733",
+		"itemLabel": "Paraguay",
+		"value": "Paraguay",
+		"valueLabel": "Paraguay"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q454",
+		"itemLabel": "peace",
+		"value": "Peace",
+		"valueLabel": "Peace"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q419",
+		"itemLabel": "Peru",
+		"value": "Peru",
+		"valueLabel": "Peru"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q756",
+		"itemLabel": "plant",
+		"value": "Plants",
+		"valueLabel": "Plants"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q457",
+		"itemLabel": "Poissy",
+		"value": "Poissy",
+		"valueLabel": "Poissy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q703",
+		"itemLabel": "potassium",
+		"value": "Potassium",
+		"valueLabel": "Potassium"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q676",
+		"itemLabel": "prose",
+		"value": "Prose",
+		"valueLabel": "Prose"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q806",
+		"itemLabel": "Randstad",
+		"value": "Randstad",
+		"valueLabel": "Randstad"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q657",
+		"itemLabel": "Chad",
+		"value": "Republic-of-Chad",
+		"valueLabel": "Republic-of-Chad"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q685",
+		"itemLabel": "Solomon Islands",
+		"value": "Solomon-Islands",
+		"valueLabel": "Solomon-Islands"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q349",
+		"itemLabel": "sport",
+		"value": "Sports",
+		"valueLabel": "Sports"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q553",
+		"itemLabel": "tooth",
+		"value": "Teeth",
+		"valueLabel": "Teeth"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q678",
+		"itemLabel": "Tonga",
+		"value": "Tonga",
+		"valueLabel": "Tonga"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q672",
+		"itemLabel": "Tuvalu",
+		"value": "Tuvalu",
+		"valueLabel": "Tuvalu"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q381",
+		"itemLabel": "Ubuntu",
+		"value": "Ubuntu-operating-system",
+		"valueLabel": "Ubuntu-operating-system"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q499",
+		"itemLabel": "armpit",
+		"value": "Underarms",
+		"valueLabel": "Underarms"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q641",
+		"itemLabel": "Venice",
+		"value": "Venice-Italy",
+		"valueLabel": "Venice-Italy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q370",
+		"itemLabel": "Wikiversity",
+		"value": "Wikiversity",
+		"valueLabel": "Wikiversity"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q363",
+		"itemLabel": "World War III",
+		"value": "World-War-Three",
+		"valueLabel": "World-War-Three"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q997",
+		"itemLabel": "Andrei Sakharov",
+		"value": "Andrei-Sakharov",
+		"valueLabel": "Andrei-Sakharov"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q995",
+		"itemLabel": "Appingedam",
+		"value": "Appingedam",
+		"valueLabel": "Appingedam"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q999",
+		"itemLabel": "astatine",
+		"value": "Astatine",
+		"valueLabel": "Astatine"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1723",
+		"itemLabel": "Batangas City",
+		"value": "Batangas-Philippines",
+		"valueLabel": "Batangas-Philippines"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1464",
+		"itemLabel": "Benigno Aquino III",
+		"value": "Benigno-Aquino-III",
+		"valueLabel": "Benigno-Aquino-III"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1173",
+		"itemLabel": "Burgundy",
+		"value": "Burgundy-4",
+		"valueLabel": "Burgundy-4"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1420",
+		"itemLabel": "automobile",
+		"value": "Cars-and-Automobiles",
+		"valueLabel": "Cars-and-Automobiles"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q830",
+		"itemLabel": "cattle",
+		"value": "Cattle",
+		"valueLabel": "Cattle"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4037",
+		"itemLabel": "Schwäbisch Gmünd",
+		"value": "Schwäbisch-Gmünd",
+		"valueLabel": "Schwäbisch-Gmünd"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4653",
+		"itemLabel": "Sherlock Holmes",
+		"value": "Sherlock-Holmes",
+		"valueLabel": "Sherlock-Holmes"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3167",
+		"itemLabel": "Siegen",
+		"value": "Siegen",
+		"valueLabel": "Siegen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4019",
+		"itemLabel": "Sindelfingen",
+		"value": "Sindelfingen",
+		"valueLabel": "Sindelfingen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5690",
+		"itemLabel": "Sparta",
+		"value": "Sparta",
+		"valueLabel": "Sparta"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3492",
+		"itemLabel": "Sumatra",
+		"value": "Sumatra",
+		"valueLabel": "Sumatra"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3107",
+		"itemLabel": "Sylt",
+		"value": "Sylt",
+		"valueLabel": "Sylt"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3930",
+		"itemLabel": "table tennis",
+		"value": "Table-Tennis",
+		"valueLabel": "Table-Tennis"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7696807",
+		"itemLabel": "Telescopes",
+		"value": "Telescopes",
+		"valueLabel": "Telescopes"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5301",
+		"itemLabel": "TeX",
+		"value": "TeX",
+		"valueLabel": "TeX"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3957",
+		"itemLabel": "town",
+		"value": "Town-1",
+		"valueLabel": "Town-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5339",
+		"itemLabel": "transistor",
+		"value": "Transistors",
+		"valueLabel": "Transistors"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5422",
+		"itemLabel": "Udmurt Republic",
+		"value": "Udmurtia",
+		"valueLabel": "Udmurtia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5627",
+		"itemLabel": "Ulyanovsk",
+		"value": "Ulyanovsk",
+		"valueLabel": "Ulyanovsk"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3840",
+		"itemLabel": "Velbert",
+		"value": "Velbert",
+		"valueLabel": "Velbert"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4356",
+		"itemLabel": "Wedel",
+		"value": "Wedel",
+		"valueLabel": "Wedel"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4182",
+		"itemLabel": "Weizmann Institute of Science",
+		"value": "Weizmann-Institute-of-Science",
+		"valueLabel": "Weizmann-Institute-of-Science"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5128",
+		"itemLabel": "Woerden",
+		"value": "Woerden",
+		"valueLabel": "Woerden"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8545",
+		"itemLabel": "101 Dalmatians",
+		"value": "101-Dalmatians",
+		"valueLabel": "101-Dalmatians"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6577",
+		"itemLabel": "1471",
+		"value": "1471-1",
+		"valueLabel": "1471-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7034",
+		"itemLabel": "14th century",
+		"value": "14th-Century",
+		"valueLabel": "14th-Century"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6756",
+		"itemLabel": "1607",
+		"value": "1607-1",
+		"valueLabel": "1607-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7811",
+		"itemLabel": "1794",
+		"value": "1794-1",
+		"valueLabel": "1794-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7016",
+		"itemLabel": "17th century",
+		"value": "17th-Century",
+		"valueLabel": "17th-Century"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7633",
+		"itemLabel": "1844",
+		"value": "1844-1",
+		"valueLabel": "1844-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8150",
+		"itemLabel": "1936 Summer Olympics",
+		"value": "1936-Summer-Olympics",
+		"valueLabel": "1936-Summer-Olympics"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8613",
+		"itemLabel": "2016 Summer Olympics",
+		"value": "2016-Summer-Olympics-in-Rio",
+		"valueLabel": "2016-Summer-Olympics-in-Rio"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6927",
+		"itemLabel": "20th century",
+		"value": "20th-Century",
+		"valueLabel": "20th-Century"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8103",
+		"itemLabel": "2nd century",
+		"value": "2nd-Century",
+		"valueLabel": "2nd-Century"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8099",
+		"itemLabel": "4th century",
+		"value": "4th-Century",
+		"valueLabel": "4th-Century"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9597",
+		"itemLabel": "abdomen",
+		"value": "Abdomen",
+		"valueLabel": "Abdomen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8282",
+		"itemLabel": "Addison's disease",
+		"value": "Addisons-Disease",
+		"valueLabel": "Addisons-Disease"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6625",
+		"itemLabel": "Agen",
+		"value": "Agen",
+		"valueLabel": "Agen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5830",
+		"itemLabel": "Airbus A380",
+		"value": "Airbus-A380",
+		"valueLabel": "Airbus-A380"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5981",
+		"itemLabel": "Alavus",
+		"value": "Alavus",
+		"valueLabel": "Alavus"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6711",
+		"itemLabel": "Allen Ginsberg",
+		"value": "Allen-Ginsberg",
+		"valueLabel": "Allen-Ginsberg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7042",
+		"itemLabel": "Amberg",
+		"value": "Amberg",
+		"valueLabel": "Amberg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7960",
+		"itemLabel": "American Curl",
+		"value": "American-Curl",
+		"valueLabel": "American-Curl"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9434",
+		"itemLabel": "Arnold Palmer",
+		"value": "Arnold-Palmer",
+		"valueLabel": "Arnold-Palmer"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9810",
+		"itemLabel": "Asten",
+		"value": "Asten",
+		"valueLabel": "Asten"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7341",
+		"itemLabel": "Auschwitz concentration camp",
+		"value": "Auschwitz-Birkenau-Concentration-Camp",
+		"valueLabel": "Auschwitz-Birkenau-Concentration-Camp"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7954",
+		"itemLabel": "Belgian Grand Prix",
+		"value": "Belgian-Grand-Prix",
+		"valueLabel": "Belgian-Grand-Prix"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9905",
+		"itemLabel": "Beverwijk",
+		"value": "Beverwijk",
+		"valueLabel": "Beverwijk"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7100",
+		"itemLabel": "biophysics",
+		"value": "Biophysics",
+		"valueLabel": "Biophysics"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8252",
+		"itemLabel": "Birgunj",
+		"value": "Birgunj-1",
+		"valueLabel": "Birgunj-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9361",
+		"itemLabel": "Bishkek",
+		"value": "BIshkek-1",
+		"valueLabel": "BIshkek-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9817",
+		"itemLabel": "Bladel",
+		"value": "Bladel",
+		"valueLabel": "Bladel"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6394",
+		"itemLabel": "Boeing 707",
+		"value": "Boeing-707",
+		"valueLabel": "Boeing-707"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6423",
+		"itemLabel": "Boeing 767",
+		"value": "Boeing-767",
+		"valueLabel": "Boeing-767"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9819",
+		"itemLabel": "Boxmeer",
+		"value": "Boxmeer",
+		"valueLabel": "Boxmeer"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7802",
+		"itemLabel": "bread",
+		"value": "Bread",
+		"valueLabel": "Bread"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8680",
+		"itemLabel": "British Empire",
+		"value": "British-Empire",
+		"valueLabel": "British-Empire"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6393",
+		"itemLabel": "Brive-la-Gaillarde",
+		"value": "Brive-la-Gaillarde-1",
+		"valueLabel": "Brive-la-Gaillarde-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9803",
+		"itemLabel": "Brunssum",
+		"value": "Brunssum",
+		"valueLabel": "Brunssum"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q219",
+		"itemLabel": "Bulgaria",
+		"value": "Bulgaria",
+		"valueLabel": "Bulgaria"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10032",
+		"itemLabel": "Bunnik",
+		"value": "Bunnik",
+		"valueLabel": "Bunnik"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5995",
+		"itemLabel": "Cabinet Office",
+		"value": "Cabinet-Office",
+		"valueLabel": "Cabinet-Office"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6206",
+		"itemLabel": "capitalism",
+		"value": "Capitalism",
+		"valueLabel": "Capitalism"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9910",
+		"itemLabel": "Castricum",
+		"value": "Castricum",
+		"valueLabel": "Castricum"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5785",
+		"itemLabel": "Cayman Islands",
+		"value": "Cayman-Islands",
+		"valueLabel": "Cayman-Islands"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8844",
+		"itemLabel": "Centaurus",
+		"value": "Centaurs",
+		"valueLabel": "Centaurs"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10257",
+		"itemLabel": "Channel Tunnel",
+		"value": "Channel-Tunnel",
+		"valueLabel": "Channel-Tunnel"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7167",
+		"itemLabel": "colonialism",
+		"value": "Colonialism",
+		"valueLabel": "Colonialism"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7087",
+		"itemLabel": "consciousness",
+		"value": "Consciousness",
+		"valueLabel": "Consciousness"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8413",
+		"itemLabel": "Constantine the Great",
+		"value": "Constantine-the-Great",
+		"valueLabel": "Constantine-the-Great"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7533",
+		"itemLabel": "zucchini",
+		"value": "Courgette",
+		"valueLabel": "Courgette"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8789",
+		"itemLabel": "cryptography",
+		"value": "Cryptography",
+		"valueLabel": "Cryptography"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10189",
+		"itemLabel": "Der Tagesspiegel",
+		"value": "Der-Tagesspiegel",
+		"valueLabel": "Der-Tagesspiegel"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9322",
+		"itemLabel": "Deutsche Bahn",
+		"value": "Deutsche-Bahn",
+		"valueLabel": "Deutsche-Bahn"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9685",
+		"itemLabel": "Diana, Princess of Wales",
+		"value": "Diana-Princess-of-Wales-2",
+		"valueLabel": "Diana-Princess-of-Wales-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9649",
+		"itemLabel": "human digestive system",
+		"value": "Digestive-System",
+		"valueLabel": "Digestive-System"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8548",
+		"itemLabel": "Dijkstra's algorithm",
+		"value": "Dijkstras-Algorithm-3",
+		"valueLabel": "Dijkstras-Algorithm-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7735",
+		"itemLabel": "diving",
+		"value": "Diving-2",
+		"valueLabel": "Diving-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7369",
+		"itemLabel": "dolphin",
+		"value": "Dolphin-1",
+		"valueLabel": "Dolphin-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7892",
+		"itemLabel": "drinking water",
+		"value": "Drinking-Water",
+		"valueLabel": "Drinking-Water"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10000",
+		"itemLabel": "Dutch Wikipedia",
+		"value": "Dutch-Wikipedia",
+		"valueLabel": "Dutch-Wikipedia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7362",
+		"itemLabel": "ear",
+		"value": "Ears",
+		"valueLabel": "Ears"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8008",
+		"itemLabel": "earth sciences",
+		"value": "Earth-Science",
+		"valueLabel": "Earth-Science"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8134",
+		"itemLabel": "economics",
+		"value": "Economics",
+		"valueLabel": "Economics"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8057",
+		"itemLabel": "economy of France",
+		"value": "Economy-of-France",
+		"valueLabel": "Economy-of-France"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8050",
+		"itemLabel": "economy of Spain",
+		"value": "Economy-of-Spain",
+		"valueLabel": "Economy-of-Spain"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9188",
+		"itemLabel": "Empire State Building",
+		"value": "Empire-State-Building",
+		"valueLabel": "Empire-State-Building"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9465",
+		"itemLabel": "ethics",
+		"value": "Ethics",
+		"valueLabel": "Ethics"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8901",
+		"itemLabel": "European Central Bank",
+		"value": "European-Central-Bank",
+		"valueLabel": "European-Central-Bank"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8880",
+		"itemLabel": "European Commission",
+		"value": "European-Commission",
+		"valueLabel": "European-Commission"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7091",
+		"itemLabel": "Évariste Galois",
+		"value": "Évariste-Galois-1",
+		"valueLabel": "Évariste-Galois-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7565",
+		"itemLabel": "father",
+		"value": "Fathers",
+		"valueLabel": "Fathers"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8401",
+		"itemLabel": "Fellatio",
+		"value": "Fellatio-Blow-Job",
+		"valueLabel": "Fellatio-Blow-Job"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8253",
+		"itemLabel": "fiction",
+		"value": "Fiction",
+		"valueLabel": "Fiction"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6839",
+		"itemLabel": "Figueres",
+		"value": "Figueres",
+		"valueLabel": "Figueres"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7032",
+		"itemLabel": "Filderstadt",
+		"value": "Filderstadt",
+		"valueLabel": "Filderstadt"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6286",
+		"itemLabel": "First Punic War",
+		"value": "First-Punic-War",
+		"valueLabel": "First-Punic-War"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8447",
+		"itemLabel": "French Wikipedia",
+		"value": "French-Wikipedia",
+		"valueLabel": "French-Wikipedia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9149",
+		"itemLabel": "fundamentalism",
+		"value": "Fundamentalism-1",
+		"valueLabel": "Fundamentalism-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8410",
+		"itemLabel": "Gang bang",
+		"value": "Gang-Bang-1",
+		"valueLabel": "Gang-Bang-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9354",
+		"itemLabel": "Gianfranco Zola",
+		"value": "Gianfranco-Zola",
+		"valueLabel": "Gianfranco-Zola"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7038",
+		"itemLabel": "Girona",
+		"value": "Girona-Spain",
+		"valueLabel": "Girona-Spain"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7942",
+		"itemLabel": "global warming",
+		"value": "Global-Warming",
+		"valueLabel": "Global-Warming"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q44571",
+		"itemLabel": "GNU",
+		"value": "GNU",
+		"valueLabel": "GNU"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7598",
+		"itemLabel": "GNU Project",
+		"value": "GNU-Project",
+		"valueLabel": "GNU-Project"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1012",
+		"itemLabel": "Celje",
+		"value": "Celje",
+		"valueLabel": "Celje"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1385",
+		"itemLabel": "cerium",
+		"value": "Cerium",
+		"valueLabel": "Cerium"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1108",
+		"itemLabel": "caesium",
+		"value": "Cesium",
+		"valueLabel": "Cesium"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1748",
+		"itemLabel": "Copenhagen",
+		"value": "Copenhagen",
+		"valueLabel": "Copenhagen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1473",
+		"itemLabel": "Davao City",
+		"value": "Davao",
+		"valueLabel": "Davao"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q974",
+		"itemLabel": "Democratic Republic of the Congo",
+		"value": "Democratic-Republic-of-the-Congo-1",
+		"valueLabel": "Democratic-Republic-of-the-Congo-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1293",
+		"itemLabel": "draughts",
+		"value": "Draughts",
+		"valueLabel": "Draughts"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1375",
+		"itemLabel": "Dungeons & Dragons",
+		"value": "Dungeons-and-Dragons-1",
+		"valueLabel": "Dungeons-and-Dragons-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1631",
+		"itemLabel": "Édith Piaf",
+		"value": "Edith-Piaf-2",
+		"valueLabel": "Edith-Piaf-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1422",
+		"itemLabel": "Juventus F.C.",
+		"value": "FC-Juventus",
+		"valueLabel": "FC-Juventus"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1465",
+		"itemLabel": "Feltre",
+		"value": "Feltre",
+		"valueLabel": "Feltre"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1496",
+		"itemLabel": "Ferdinand Magellan",
+		"value": "Ferdinand-Magellan",
+		"valueLabel": "Ferdinand-Magellan"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1455",
+		"itemLabel": "field hockey",
+		"value": "Field-Hockey",
+		"valueLabel": "Field-Hockey"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q861",
+		"itemLabel": "gallium",
+		"value": "Gallium",
+		"valueLabel": "Gallium"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1449",
+		"itemLabel": "Genoa",
+		"value": "Genoa-Italy",
+		"valueLabel": "Genoa-Italy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1007",
+		"itemLabel": "Guinea-Bissau",
+		"value": "Guinea-Bissau",
+		"valueLabel": "Guinea-Bissau"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1103",
+		"itemLabel": "iodine",
+		"value": "Iodine",
+		"valueLabel": "Iodine"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q935",
+		"itemLabel": "Isaac Newton",
+		"value": "Isaac-Newton",
+		"valueLabel": "Isaac-Newton"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1008",
+		"itemLabel": "Côte d'Ivoire",
+		"value": "Ivory-Coast",
+		"valueLabel": "Ivory-Coast"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q892",
+		"itemLabel": "J. R. R. Tolkien",
+		"value": "J-R-R-Tolkien-author",
+		"valueLabel": "J-R-R-Tolkien-author"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1500",
+		"itemLabel": "José Rizal",
+		"value": "Jose-Rizal-1",
+		"valueLabel": "Jose-Rizal-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q855",
+		"itemLabel": "Joseph Stalin",
+		"value": "Joseph-Stalin",
+		"valueLabel": "Joseph-Stalin"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1749",
+		"itemLabel": "Kaliningrad Oblast",
+		"value": "Kaliningrad-Oblast",
+		"valueLabel": "Kaliningrad-Oblast"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1246",
+		"itemLabel": "Kosovo",
+		"value": "Kosovo",
+		"valueLabel": "Kosovo"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1169",
+		"itemLabel": "Lake Michigan",
+		"value": "Lake-Michigan",
+		"valueLabel": "Lake-Michigan"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1276",
+		"itemLabel": "Leonard Cohen",
+		"value": "Leonard-Cohen",
+		"valueLabel": "Leonard-Cohen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1016",
+		"itemLabel": "Libya",
+		"value": "Libya",
+		"valueLabel": "Libya"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1197",
+		"itemLabel": "Lower Saxony",
+		"value": "Lower-Saxony",
+		"valueLabel": "Lower-Saxony"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1485",
+		"itemLabel": "systemic lupus erythematosus",
+		"value": "Lupus",
+		"valueLabel": "Lupus"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q896",
+		"itemLabel": "Mountain Dew",
+		"value": "Mountain-Dew",
+		"valueLabel": "Mountain-Dew"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1058",
+		"itemLabel": "Narendra Modi",
+		"value": "Narendra-Modi",
+		"valueLabel": "Narendra-Modi"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1553",
+		"itemLabel": "Nebraska",
+		"value": "Nebraska-7",
+		"valueLabel": "Nebraska-7"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q837",
+		"itemLabel": "Nepal",
+		"value": "Nepal",
+		"valueLabel": "Nepal"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1227",
+		"itemLabel": "Nevada",
+		"value": "Nevada-state-1",
+		"valueLabel": "Nevada-state-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q744",
+		"itemLabel": "nickel",
+		"value": "NI",
+		"valueLabel": "NI"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1032",
+		"itemLabel": "Niger",
+		"value": "Niger",
+		"valueLabel": "Niger"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1033",
+		"itemLabel": "Nigeria",
+		"value": "Nigeria",
+		"valueLabel": "Nigeria"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q843",
+		"itemLabel": "Pakistan",
+		"value": "Pakistan",
+		"valueLabel": "Pakistan"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1507",
+		"itemLabel": "Patagonia",
+		"value": "Patagonia",
+		"valueLabel": "Patagonia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1109",
+		"itemLabel": "protactinium",
+		"value": "Protactinium",
+		"valueLabel": "Protactinium"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q273623",
+		"itemLabel": "radio",
+		"value": "Radio",
+		"valueLabel": "Radio"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q872",
+		"itemLabel": "radio broadcasting",
+		"value": "Radio-Broadcasting",
+		"valueLabel": "Radio-Broadcasting"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q952",
+		"itemLabel": "Reggiolo",
+		"value": "Reggiolo",
+		"valueLabel": "Reggiolo"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1511",
+		"itemLabel": "Richard Wagner",
+		"value": "Richard-Wagner-composer",
+		"valueLabel": "Richard-Wagner-composer"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1773",
+		"itemLabel": "Riga",
+		"value": "Rig-2",
+		"valueLabel": "Rig-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1512",
+		"itemLabel": "Robert Louis Stevenson",
+		"value": "Robert-Louis-Stevenson-2",
+		"valueLabel": "Robert-Louis-Stevenson-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1426",
+		"itemLabel": "Roger Federer",
+		"value": "Roger-Federer",
+		"valueLabel": "Roger-Federer"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1086",
+		"itemLabel": "ruthenium",
+		"value": "Ruthenium-1",
+		"valueLabel": "Ruthenium-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q975",
+		"itemLabel": "San Antonio",
+		"value": "San-Antonio-5",
+		"valueLabel": "San-Antonio-5"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q901",
+		"itemLabel": "scientist",
+		"value": "Scientists",
+		"valueLabel": "Scientists"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1471",
+		"itemLabel": "Seine",
+		"value": "Seine-1",
+		"valueLabel": "Seine-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1074",
+		"itemLabel": "skin",
+		"value": "Skin",
+		"valueLabel": "Skin"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q913",
+		"itemLabel": "Socrates",
+		"value": "Socrates",
+		"valueLabel": "Socrates"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1045",
+		"itemLabel": "Somalia",
+		"value": "Somalia",
+		"valueLabel": "Somalia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q958",
+		"itemLabel": "South Sudan",
+		"value": "South-Sudan",
+		"valueLabel": "South-Sudan"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1663",
+		"itemLabel": "Split",
+		"value": "Split",
+		"valueLabel": "Split"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1092",
+		"itemLabel": "Star Trek",
+		"value": "Star-Trek-creative-franchise",
+		"valueLabel": "Star-Trek-creative-franchise"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1022",
+		"itemLabel": "Stuttgart",
+		"value": "Stuttgart",
+		"valueLabel": "Stuttgart"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1049",
+		"itemLabel": "Sudan",
+		"value": "Sudan",
+		"valueLabel": "Sudan"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1060",
+		"itemLabel": "Technical University of Hamburg",
+		"value": "Technical-University-of-Hamburg",
+		"valueLabel": "Technical-University-of-Hamburg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q847",
+		"itemLabel": "tennis",
+		"value": "Tennis",
+		"valueLabel": "Tennis"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1566",
+		"itemLabel": "tobacco",
+		"value": "Tobacco",
+		"valueLabel": "Tobacco"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q945",
+		"itemLabel": "Togo",
+		"value": "Togo",
+		"valueLabel": "Togo"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1036",
+		"itemLabel": "Uganda",
+		"value": "Uganda",
+		"valueLabel": "Uganda"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1477",
+		"itemLabel": "ulcerative colitis",
+		"value": "Ulcerative-Colitis",
+		"valueLabel": "Ulcerative-Colitis"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q881",
+		"itemLabel": "Vietnam",
+		"value": "Vietnam",
+		"valueLabel": "Vietnam"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1370",
+		"itemLabel": "Virginia",
+		"value": "Virginia-state",
+		"valueLabel": "Virginia-state"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q959",
+		"itemLabel": "Vladivostok",
+		"value": "Vladivostok",
+		"valueLabel": "Vladivostok"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2562",
+		"itemLabel": "May 15",
+		"value": "15-May",
+		"valueLabel": "15-May"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2034",
+		"itemLabel": "1900",
+		"value": "1900-1",
+		"valueLabel": "1900-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2480",
+		"itemLabel": "1976",
+		"value": "1976-2",
+		"valueLabel": "1976-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2429",
+		"itemLabel": "1987",
+		"value": "1987-3",
+		"valueLabel": "1987-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2426",
+		"itemLabel": "1988",
+		"value": "1988-2",
+		"valueLabel": "1988-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1988",
+		"itemLabel": "2001",
+		"value": "2001-1",
+		"valueLabel": "2001-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2014",
+		"itemLabel": "2004",
+		"value": "2004-2",
+		"valueLabel": "2004-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1996",
+		"itemLabel": "2009",
+		"value": "2009-1",
+		"valueLabel": "2009-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2052",
+		"itemLabel": "ACF Fiorentina",
+		"value": "ACF-Fiorentina",
+		"valueLabel": "ACF-Fiorentina"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2469",
+		"itemLabel": "Andromeda Galaxy",
+		"value": "Andromeda-Galaxy-3",
+		"valueLabel": "Andromeda-Galaxy-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1811",
+		"itemLabel": "astronomical unit",
+		"value": "Astronomical-Unit",
+		"valueLabel": "Astronomical-Unit"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2216",
+		"itemLabel": "Athabasca River",
+		"value": "Athabasca-River",
+		"valueLabel": "Athabasca-River"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2309",
+		"itemLabel": "AvtoVAZ",
+		"value": "Avtovaz",
+		"valueLabel": "Avtovaz"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1861",
+		"itemLabel": "Bangkok",
+		"value": "Bangkok",
+		"valueLabel": "Bangkok"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2112",
+		"itemLabel": "Bielefeld",
+		"value": "Bielefeld",
+		"valueLabel": "Bielefeld"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2256",
+		"itemLabel": "Birmingham",
+		"value": "Birmingham-UK",
+		"valueLabel": "Birmingham-UK"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2750",
+		"itemLabel": "Bourvil",
+		"value": "Bourvil",
+		"valueLabel": "Bourvil"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2706",
+		"itemLabel": "Bremerhaven",
+		"value": "Bremerhaven",
+		"valueLabel": "Bremerhaven"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1781",
+		"itemLabel": "Budapest",
+		"value": "Budapest",
+		"valueLabel": "Budapest"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2407",
+		"itemLabel": "C++",
+		"value": "C++-programming-language",
+		"valueLabel": "C++-programming-language"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1897",
+		"itemLabel": "Cagliari",
+		"value": "Cagliari-1",
+		"valueLabel": "Cagliari-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2127",
+		"itemLabel": "Charlottetown",
+		"value": "Charlottetown-Prince-Edward-Island",
+		"valueLabel": "Charlottetown-Prince-Edward-Island"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2808",
+		"itemLabel": "Elton John",
+		"value": "Elton-John",
+		"valueLabel": "Elton-John"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2766",
+		"itemLabel": "iPhone",
+		"value": "iPhones-product",
+		"valueLabel": "iPhones-product"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2482",
+		"itemLabel": "Jameson",
+		"value": "Jameson-Irish-Whiskey",
+		"valueLabel": "Jameson-Irish-Whiskey"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2069",
+		"itemLabel": "Juan Manuel Fangio",
+		"value": "Juan-Manuel-Fangio",
+		"valueLabel": "Juan-Manuel-Fangio"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1947",
+		"itemLabel": "Juba",
+		"value": "Juba",
+		"valueLabel": "Juba"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1825",
+		"itemLabel": "Karasjok",
+		"value": "Karasjok",
+		"valueLabel": "Karasjok"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1899",
+		"itemLabel": "Kyiv",
+		"value": "Kyiv",
+		"valueLabel": "Kyiv"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q35676",
+		"itemLabel": "Lada",
+		"value": "Lada",
+		"valueLabel": "Lada"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2868",
+		"itemLabel": "Lima",
+		"value": "Lima-Peru",
+		"valueLabel": "Lima-Peru"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2807",
+		"itemLabel": "Madrid",
+		"value": "Madrid-Spain",
+		"valueLabel": "Madrid-Spain"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2590",
+		"itemLabel": "May 30",
+		"value": "May-30th",
+		"valueLabel": "May-30th"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1894",
+		"itemLabel": "Memphis Depay",
+		"value": "Memphis-Depay",
+		"valueLabel": "Memphis-Depay"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2174",
+		"itemLabel": "Naryan-Mar",
+		"value": "Naryan-Mar",
+		"valueLabel": "Naryan-Mar"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2164",
+		"itemLabel": "Nenets Autonomous Okrug",
+		"value": "Nenets-Autonomous-Okrug",
+		"valueLabel": "Nenets-Autonomous-Okrug"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2348",
+		"itemLabel": "neutron",
+		"value": "Neutrons",
+		"valueLabel": "Neutrons"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2599",
+		"itemLabel": "Sir Paul McCartney",
+		"value": "Paul-McCartney",
+		"valueLabel": "Paul-McCartney"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1979",
+		"itemLabel": "Prince Edward Island",
+		"value": "Prince-Edward-Island",
+		"valueLabel": "Prince-Edward-Island"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1809",
+		"itemLabel": "promethium",
+		"value": "Promethium",
+		"valueLabel": "Promethium"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2214",
+		"itemLabel": "Pskov",
+		"value": "Pskov",
+		"valueLabel": "Pskov"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2887",
+		"itemLabel": "Santiago",
+		"value": "Santiago-Chile",
+		"valueLabel": "Santiago-Chile"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2709",
+		"itemLabel": "Sasha Grey",
+		"value": "Sasha-Grey-pornographic-actress-actor",
+		"valueLabel": "Sasha-Grey-pornographic-actress-actor"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2054",
+		"itemLabel": "Seneca",
+		"value": "Seneca-the-Younger-historical-figure",
+		"valueLabel": "Seneca-the-Younger-historical-figure"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2857",
+		"itemLabel": "September 2",
+		"value": "September-2-1",
+		"valueLabel": "September-2-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2734",
+		"itemLabel": "Skierniewice",
+		"value": "Skierniewice",
+		"valueLabel": "Skierniewice"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2347",
+		"itemLabel": "Smolensk Oblast",
+		"value": "Smolensk-Oblast",
+		"valueLabel": "Smolensk-Oblast"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2184",
+		"itemLabel": "Russian Soviet Federative Socialist Republic",
+		"value": "Soviet-Russia",
+		"valueLabel": "Soviet-Russia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1826",
+		"itemLabel": "Tagbilaran",
+		"value": "Tagbilaran-City",
+		"valueLabel": "Tagbilaran-City"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2789",
+		"itemLabel": "Telgte",
+		"value": "Telgte",
+		"valueLabel": "Telgte"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q1845",
+		"itemLabel": "Bible",
+		"value": "The-Bible",
+		"valueLabel": "The-Bible"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2768",
+		"itemLabel": "Torino Football Club",
+		"value": "Torino-F-C",
+		"valueLabel": "Torino-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2200",
+		"itemLabel": "Tuguegarao",
+		"value": "Tuguegarao",
+		"valueLabel": "Tuguegarao"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2158",
+		"itemLabel": "Valencia",
+		"value": "Valencia-City",
+		"valueLabel": "Valencia-City"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3734",
+		"itemLabel": "Republic of Adygea",
+		"value": "Adygea",
+		"valueLabel": "Adygea"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3968",
+		"itemLabel": "algebra",
+		"value": "Algebra",
+		"valueLabel": "Algebra"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5276",
+		"itemLabel": "Altena",
+		"value": "Altena",
+		"valueLabel": "Altena"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3257",
+		"itemLabel": "Amalthea",
+		"value": "Amalthea",
+		"valueLabel": "Amalthea"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3783",
+		"itemLabel": "Amazonas",
+		"value": "Amazon-River",
+		"valueLabel": "Amazon-River"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3597",
+		"itemLabel": "Ancud",
+		"value": "Ancud",
+		"valueLabel": "Ancud"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3640",
+		"itemLabel": "Ankara",
+		"value": "Ankara-3",
+		"valueLabel": "Ankara-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3942",
+		"itemLabel": "Aschaffenburg",
+		"value": "Aschaffenburg",
+		"valueLabel": "Aschaffenburg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3941",
+		"itemLabel": "Astrakhan Oblast",
+		"value": "Astrakhan-Oblast",
+		"valueLabel": "Astrakhan-Oblast"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3216",
+		"itemLabel": "Aveyron",
+		"value": "Aveyron",
+		"valueLabel": "Aveyron"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5274",
+		"itemLabel": "Balve",
+		"value": "Balve",
+		"valueLabel": "Balve"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3936",
+		"itemLabel": "Bamberg",
+		"value": "Bamberg",
+		"valueLabel": "Bamberg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5372",
+		"itemLabel": "basketball",
+		"value": "Basketball",
+		"valueLabel": "Basketball"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4543",
+		"itemLabel": "beach volleyball",
+		"value": "Beach-Volleyball",
+		"valueLabel": "Beach-Volleyball"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3329",
+		"itemLabel": "Belgorod Oblast",
+		"value": "Belgorod-Oblast",
+		"valueLabel": "Belgorod-Oblast"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5113",
+		"itemLabel": "bird",
+		"value": "Birds",
+		"valueLabel": "Birds"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5707",
+		"itemLabel": "Bjelovar",
+		"value": "Bjelovar",
+		"valueLabel": "Bjelovar"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4127",
+		"itemLabel": "Lake Constance",
+		"value": "Bodensee",
+		"valueLabel": "Bodensee"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5705",
+		"itemLabel": "Catalonia",
+		"value": "Catalonia",
+		"valueLabel": "Catalonia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3933",
+		"itemLabel": "Celle",
+		"value": "Celle",
+		"valueLabel": "Celle"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5300",
+		"itemLabel": "central processing unit",
+		"value": "Central-Processing-Units-CPUs",
+		"valueLabel": "Central-Processing-Units-CPUs"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5333",
+		"itemLabel": "Charles Lyell",
+		"value": "Charles-Lyell-1",
+		"valueLabel": "Charles-Lyell-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4817",
+		"itemLabel": "column",
+		"value": "Column",
+		"valueLabel": "Column"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3851",
+		"itemLabel": "Conchalí",
+		"value": "Conchalí",
+		"valueLabel": "Conchalí"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4951",
+		"itemLabel": "Court of Justice of the European Union",
+		"value": "Court-of-Justice-of-the-European-Union",
+		"valueLabel": "Court-of-Justice-of-the-European-Union"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3866",
+		"itemLabel": "Dodoma",
+		"value": "Dodoma",
+		"valueLabel": "Dodoma"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3886",
+		"itemLabel": "Dorsten",
+		"value": "Dorsten",
+		"valueLabel": "Dorsten"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5468",
+		"itemLabel": "Durban",
+		"value": "Durban-South-Africa",
+		"valueLabel": "Durban-South-Africa"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5294",
+		"itemLabel": "DVD",
+		"value": "DVD",
+		"valueLabel": "DVD"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5608",
+		"itemLabel": "Eminem",
+		"value": "Eminem-musician",
+		"valueLabel": "Eminem-musician"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3303",
+		"itemLabel": "Enceladus",
+		"value": "Enceladus",
+		"valueLabel": "Enceladus"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4440",
+		"itemLabel": "Eric Bana",
+		"value": "Eric-Bana",
+		"valueLabel": "Eric-Bana"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3593",
+		"itemLabel": "Eshtaol",
+		"value": "Eshtaol",
+		"valueLabel": "Eshtaol"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5174",
+		"itemLabel": "Eumetazoa",
+		"value": "Eumetazoa",
+		"valueLabel": "Eumetazoa"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4421",
+		"itemLabel": "forest",
+		"value": "Forests",
+		"valueLabel": "Forests"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4043",
+		"itemLabel": "Fougères",
+		"value": "Fougères",
+		"valueLabel": "Fougères"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5432",
+		"itemLabel": "Francisco de Goya",
+		"value": "Francisco-De-Goya",
+		"valueLabel": "Francisco-De-Goya"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4024",
+		"itemLabel": "Frankfurt (Oder)",
+		"value": "Frankfurt-an-Der-Oder",
+		"valueLabel": "Frankfurt-an-Der-Oder"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3769",
+		"itemLabel": "French Guiana",
+		"value": "French-Guiana",
+		"valueLabel": "French-Guiana"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5588",
+		"itemLabel": "Frida Kahlo",
+		"value": "Frida-Kahlo-artist",
+		"valueLabel": "Frida-Kahlo-artist"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4051",
+		"itemLabel": "Friedrichshafen",
+		"value": "Friedrichshafen",
+		"valueLabel": "Friedrichshafen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5683",
+		"itemLabel": "Geoffrey Chaucer",
+		"value": "Geoffrey-Chaucer",
+		"valueLabel": "Geoffrey-Chaucer"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3874",
+		"itemLabel": "Gießen",
+		"value": "Gießen",
+		"valueLabel": "Gießen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3905",
+		"itemLabel": "Gladbeck",
+		"value": "Gladbeck",
+		"valueLabel": "Gladbeck"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4098",
+		"itemLabel": "Greifswald",
+		"value": "Greifswald",
+		"valueLabel": "Greifswald"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2945",
+		"itemLabel": "history of Canada",
+		"value": "History-of-Canada",
+		"valueLabel": "History-of-Canada"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3140",
+		"itemLabel": "Hudson River",
+		"value": "Hudson-River",
+		"valueLabel": "Hudson-River"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4027",
+		"itemLabel": "Jean Moulin University Lyon 3",
+		"value": "Jean-Moulin-University-Lyon-3",
+		"valueLabel": "Jean-Moulin-University-Lyon-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4538",
+		"itemLabel": "Jonathan Winters",
+		"value": "Jonathan-Winters-1",
+		"valueLabel": "Jonathan-Winters-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5569",
+		"itemLabel": "Kierspe",
+		"value": "Kierspe",
+		"valueLabel": "Kierspe"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5505",
+		"itemLabel": "Lake Victoria",
+		"value": "Lake-Victoria",
+		"valueLabel": "Lake-Victoria"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4934",
+		"itemLabel": "Larry Page",
+		"value": "Larry-Page",
+		"valueLabel": "Larry-Page"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5679",
+		"itemLabel": "Lord Byron",
+		"value": "Lord-Byron-6",
+		"valueLabel": "Lord-Byron-6"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3882",
+		"itemLabel": "Manama",
+		"value": "Manama",
+		"valueLabel": "Manama"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5446",
+		"itemLabel": "Mari El Republic",
+		"value": "Mari-El-1",
+		"valueLabel": "Mari-El-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4271",
+		"itemLabel": "Mark Hoppus",
+		"value": "Mark-Hoppus",
+		"valueLabel": "Mark-Hoppus"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4105",
+		"itemLabel": "Meerbusch",
+		"value": "Meerbusch",
+		"valueLabel": "Meerbusch"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3141",
+		"itemLabel": "Melbourne",
+		"value": "Melbourne-Victoria-Australia-1",
+		"valueLabel": "Melbourne-Victoria-Australia-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4784",
+		"itemLabel": "Metroland",
+		"value": "Metroland",
+		"valueLabel": "Metroland"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2212",
+		"itemLabel": "UTC−07:00",
+		"value": "MST",
+		"valueLabel": "MST"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5152",
+		"itemLabel": "Mustafa Kemal Atatürk",
+		"value": "Mustafa-Kemal-Atatürk",
+		"valueLabel": "Mustafa-Kemal-Atatürk"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5289",
+		"itemLabel": ".NET Framework",
+		"value": "NET-Framework",
+		"valueLabel": "NET-Framework"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3958",
+		"itemLabel": "Neubrandenburg",
+		"value": "Neubrandenburg",
+		"valueLabel": "Neubrandenburg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3879",
+		"itemLabel": "Neumünster",
+		"value": "Neumünster",
+		"valueLabel": "Neumünster"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3392",
+		"itemLabel": "Nile",
+		"value": "Nile",
+		"valueLabel": "Nile"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2981",
+		"itemLabel": "Notre Dame de Paris",
+		"value": "Notre-Dame-de-Paris-1",
+		"valueLabel": "Notre-Dame-de-Paris-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2936",
+		"itemLabel": "Oldenburg",
+		"value": "Oldenburg",
+		"valueLabel": "Oldenburg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4130",
+		"itemLabel": "orbit",
+		"value": "Orbits-astronomy",
+		"valueLabel": "Orbits-astronomy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4190",
+		"itemLabel": "Passau",
+		"value": "Passau",
+		"valueLabel": "Passau"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5721",
+		"itemLabel": "Philippe Pétain",
+		"value": "Philippe-Petain",
+		"valueLabel": "Philippe-Petain"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5153",
+		"itemLabel": "Template:Portal",
+		"value": "Portal-3",
+		"valueLabel": "Portal-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5295",
+		"itemLabel": "random-access memory",
+		"value": "Random-Access-Memory",
+		"valueLabel": "Random-Access-Memory"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3142",
+		"itemLabel": "red",
+		"value": "Red-color-1",
+		"valueLabel": "Red-color-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2978",
+		"itemLabel": "Regensburg",
+		"value": "Regensburg",
+		"valueLabel": "Regensburg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4007",
+		"itemLabel": "Rosenheim",
+		"value": "Rosenheim",
+		"valueLabel": "Rosenheim"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3110",
+		"itemLabel": "San Salvador",
+		"value": "San-Salvador",
+		"valueLabel": "San-Salvador"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5343",
+		"itemLabel": "Saransk",
+		"value": "Saransk",
+		"valueLabel": "Saransk"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q4194",
+		"itemLabel": "Sauerland",
+		"value": "Sauerland",
+		"valueLabel": "Sauerland"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8743",
+		"itemLabel": "Thomas Edison",
+		"value": "Thomas-Alva-Edison-2",
+		"valueLabel": "Thomas-Alva-Edison-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9438",
+		"itemLabel": "Thomas Aquinas",
+		"value": "Thomas-Aquinas",
+		"valueLabel": "Thomas-Aquinas"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9427",
+		"itemLabel": "Timbuktu",
+		"value": "Timbuktu",
+		"valueLabel": "Timbuktu"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7857",
+		"itemLabel": "toilet",
+		"value": "Toilets",
+		"valueLabel": "Toilets"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7218",
+		"itemLabel": "toxicology",
+		"value": "Toxicology",
+		"valueLabel": "Toxicology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7949",
+		"itemLabel": "truth",
+		"value": "Truth",
+		"valueLabel": "Truth"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9969",
+		"itemLabel": "Uithoorn",
+		"value": "Uithoorn",
+		"valueLabel": "Uithoorn"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7842",
+		"itemLabel": "University of Tokyo",
+		"value": "University-of-Tokyo",
+		"valueLabel": "University-of-Tokyo"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9386",
+		"itemLabel": "urethra",
+		"value": "Urethra",
+		"valueLabel": "Urethra"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9612",
+		"itemLabel": "uterus",
+		"value": "Uterus",
+		"valueLabel": "Uterus"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10233",
+		"itemLabel": "V. V. S. Laxman",
+		"value": "V-V-S-Laxman",
+		"valueLabel": "V-V-S-Laxman"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9873",
+		"itemLabel": "Valkenswaard",
+		"value": "Valkenswaard",
+		"valueLabel": "Valkenswaard"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7328",
+		"itemLabel": "Vasco da Gama",
+		"value": "Vasco-da-Gama-2",
+		"valueLabel": "Vasco-da-Gama-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8317",
+		"itemLabel": "visual effects",
+		"value": "Visual-Effects",
+		"valueLabel": "Visual-Effects"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7747",
+		"itemLabel": "Vladimir Putin",
+		"value": "Vladimir-Putin",
+		"valueLabel": "Vladimir-Putin"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5933",
+		"itemLabel": "Westminster Abbey",
+		"value": "Westminster-Abbey",
+		"valueLabel": "Westminster-Abbey"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8288",
+		"itemLabel": "Wikimedia Germany",
+		"value": "Wikimedia-Deutschland",
+		"valueLabel": "Wikimedia-Deutschland"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8171",
+		"itemLabel": "word",
+		"value": "Words",
+		"valueLabel": "Words"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7164",
+		"itemLabel": "World Bank",
+		"value": "World-Bank",
+		"valueLabel": "World-Bank"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10055",
+		"itemLabel": "Woudenberg",
+		"value": "Woudenberg",
+		"valueLabel": "Woudenberg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9738",
+		"itemLabel": "Wu Zetian",
+		"value": "Wu-Zetian",
+		"valueLabel": "Wu-Zetian"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7953",
+		"itemLabel": "Zen",
+		"value": "Zen-1",
+		"valueLabel": "Zen-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11183",
+		"itemLabel": "2100",
+		"value": "2100-1",
+		"valueLabel": "2100-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19521",
+		"itemLabel": "A.S. Saint-Étienne",
+		"value": "A-S-Saint-Étienne",
+		"valueLabel": "A-S-Saint-Étienne"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14274",
+		"itemLabel": "Aarau",
+		"value": "Aarau",
+		"valueLabel": "Aarau"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12577",
+		"itemLabel": "Adamantium",
+		"value": "Adamantium",
+		"valueLabel": "Adamantium"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q39241",
+		"itemLabel": "Adams",
+		"value": "Adams",
+		"valueLabel": "Adams"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11605",
+		"itemLabel": "Adele Goldberg",
+		"value": "Adele-Goldberg",
+		"valueLabel": "Adele-Goldberg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11451",
+		"itemLabel": "agriculture",
+		"value": "Agriculture",
+		"valueLabel": "Agriculture"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10652",
+		"itemLabel": "Alex Salmond",
+		"value": "Alex-Salmond",
+		"valueLabel": "Alex-Salmond"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14400",
+		"itemLabel": "Allosaurus",
+		"value": "Allosaurus",
+		"valueLabel": "Allosaurus"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10353",
+		"itemLabel": "AlunaGeorge",
+		"value": "AlunaGeorge",
+		"valueLabel": "AlunaGeorge"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11081",
+		"itemLabel": "Alzheimer's disease",
+		"value": "Alzheimers-Disease",
+		"valueLabel": "Alzheimers-Disease"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10908",
+		"itemLabel": "Amphibia",
+		"value": "Amphibians",
+		"valueLabel": "Amphibians"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18846",
+		"itemLabel": "Ancient music",
+		"value": "Ancient-Music",
+		"valueLabel": "Ancient-Music"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q17442",
+		"itemLabel": "Anita Borg Institute for Women and Technology",
+		"value": "Anita-Borg-Institute-for-Women-and-Technology",
+		"valueLabel": "Anita-Borg-Institute-for-Women-and-Technology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12166",
+		"itemLabel": "Antares",
+		"value": "Antares-5",
+		"valueLabel": "Antares-5"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10872",
+		"itemLabel": "Archaea",
+		"value": "Archaea",
+		"valueLabel": "Archaea"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12901",
+		"itemLabel": "Assenede",
+		"value": "Assenede",
+		"valueLabel": "Assenede"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q20103",
+		"itemLabel": "Assisi",
+		"value": "Assisi-Italy",
+		"valueLabel": "Assisi-Italy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16559",
+		"itemLabel": "Austin",
+		"value": "Austin-TX",
+		"valueLabel": "Austin-TX"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11411",
+		"itemLabel": "backgammon",
+		"value": "Backgammon",
+		"valueLabel": "Backgammon"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11066",
+		"itemLabel": "Bangkalan",
+		"value": "Bangkalan",
+		"valueLabel": "Bangkalan"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18356",
+		"itemLabel": "Barolo",
+		"value": "Barolo",
+		"valueLabel": "Barolo"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14835",
+		"itemLabel": "Bautzen",
+		"value": "Bautzen",
+		"valueLabel": "Bautzen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13437",
+		"itemLabel": "Benevento",
+		"value": "Benevento",
+		"valueLabel": "Benevento"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14872",
+		"itemLabel": "Bensheim",
+		"value": "Bensheim",
+		"valueLabel": "Bensheim"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14043",
+		"itemLabel": "Bernard Madoff",
+		"value": "Bernie-Madoff",
+		"valueLabel": "Bernie-Madoff"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19316",
+		"itemLabel": "Biên Hòa",
+		"value": "Biên-Hòa",
+		"valueLabel": "Biên-Hòa"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11398",
+		"itemLabel": "biological classification",
+		"value": "Biological-Classification",
+		"valueLabel": "Biological-Classification"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19444",
+		"itemLabel": "Birmingham City F.C.",
+		"value": "Birmingham-City-F-C",
+		"valueLabel": "Birmingham-City-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19797",
+		"itemLabel": "Bishop's Stortford",
+		"value": "Bishops-Stortford-1",
+		"valueLabel": "Bishops-Stortford-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11069",
+		"itemLabel": "Blitar",
+		"value": "Blitar",
+		"valueLabel": "Blitar"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19451",
+		"itemLabel": "Bolton Wanderers F.C.",
+		"value": "Bolton-Wanderers-F-C",
+		"valueLabel": "Bolton-Wanderers-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q155",
+		"itemLabel": "Brazil",
+		"value": "Brazil",
+		"valueLabel": "Brazil"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19571",
+		"itemLabel": "Brentford F.C.",
+		"value": "Brentford-Football-Club",
+		"valueLabel": "Brentford-Football-Club"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11975",
+		"itemLabel": "Britney Spears",
+		"value": "Britney-Spears-19",
+		"valueLabel": "Britney-Spears-19"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19423",
+		"itemLabel": "buffer overflow",
+		"value": "Buffer-Overflow-2",
+		"valueLabel": "Buffer-Overflow-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12107",
+		"itemLabel": "Breton",
+		"value": "Burton-1",
+		"valueLabel": "Burton-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19573",
+		"itemLabel": "Bury F.C.",
+		"value": "Bury-F-C",
+		"valueLabel": "Bury-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10996",
+		"itemLabel": "Bushey",
+		"value": "Bushey",
+		"valueLabel": "Bushey"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11257",
+		"itemLabel": "Cabanes",
+		"value": "Cabanes-Girona",
+		"valueLabel": "Cabanes-Girona"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12094",
+		"itemLabel": "Appenzell Innerrhoden",
+		"value": "Canton-of-Appenzell-Innerrhoden",
+		"valueLabel": "Canton-of-Appenzell-Innerrhoden"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12121",
+		"itemLabel": "Canton of Lucerne",
+		"value": "Canton-of-Lucerne",
+		"valueLabel": "Canton-of-Lucerne"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12724",
+		"itemLabel": "Ticino",
+		"value": "Canton-of-Ticino",
+		"valueLabel": "Canton-of-Ticino"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18662",
+		"itemLabel": "Cardiff City F.C.",
+		"value": "Cardiff-City-F-C",
+		"valueLabel": "Cardiff-City-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10379",
+		"itemLabel": "cardiology",
+		"value": "Cardiology",
+		"valueLabel": "Cardiology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12134",
+		"itemLabel": "celestial sphere",
+		"value": "Celestial-Sphere",
+		"valueLabel": "Celestial-Sphere"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19593",
+		"itemLabel": "Celtic F.C.",
+		"value": "Celtic-F-C",
+		"valueLabel": "Celtic-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12502",
+		"itemLabel": "Charlotte",
+		"value": "Charlotte-Russe",
+		"valueLabel": "Charlotte-Russe"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19849",
+		"itemLabel": "Chiltern Hills",
+		"value": "Chiltern-Hills",
+		"valueLabel": "Chiltern-Hills"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19849",
+		"itemLabel": "Chiltern Hills",
+		"value": "Chilterns",
+		"valueLabel": "Chilterns"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q17427",
+		"itemLabel": "Communist Party of China",
+		"value": "Chinese-Communist-Party-2",
+		"valueLabel": "Chinese-Communist-Party-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13253",
+		"itemLabel": "chocolate milk",
+		"value": "Chocolate-Milk",
+		"valueLabel": "Chocolate-Milk"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12090",
+		"itemLabel": "cholera",
+		"value": "Cholera",
+		"valueLabel": "Cholera"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10915",
+		"itemLabel": "Chordata",
+		"value": "Chordates",
+		"valueLabel": "Chordates"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11599",
+		"itemLabel": "Chuck Taylor All-Stars",
+		"value": "Chuck-Taylor-All-Stars",
+		"valueLabel": "Chuck-Taylor-All-Stars"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13146",
+		"itemLabel": "Civitanova Marche",
+		"value": "Civitanova-Marche",
+		"valueLabel": "Civitanova-Marche"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11460",
+		"itemLabel": "clothing",
+		"value": "Clothing-and-Apparel",
+		"valueLabel": "Clothing-and-Apparel"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q17393",
+		"itemLabel": "Concarneau",
+		"value": "Concarneau",
+		"valueLabel": "Concarneau"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13181",
+		"itemLabel": "Cranberry",
+		"value": "Cranberries",
+		"valueLabel": "Cranberries"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19587",
+		"itemLabel": "Crewe Alexandra F.C.",
+		"value": "Crewe-Alexandra-F-C",
+		"valueLabel": "Crewe-Alexandra-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11571",
+		"itemLabel": "Cristiano Ronaldo",
+		"value": "Cristiano-Ronaldo-football-player",
+		"valueLabel": "Cristiano-Ronaldo-football-player"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13681",
+		"itemLabel": "crowbar",
+		"value": "Crowbars",
+		"valueLabel": "Crowbars"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11983",
+		"itemLabel": "CrunchBang Linux",
+		"value": "Crunchbang",
+		"valueLabel": "Crunchbang"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12038",
+		"itemLabel": "Cthulhu",
+		"value": "Cthulhu",
+		"valueLabel": "Cthulhu"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11639",
+		"itemLabel": "dance",
+		"value": "Dance-performing-art",
+		"valueLabel": "Dance-performing-art"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10520",
+		"itemLabel": "David Beckham",
+		"value": "David-Beckham",
+		"valueLabel": "David-Beckham"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10485",
+		"itemLabel": "Deggendorf",
+		"value": "Deggendorf",
+		"valueLabel": "Deggendorf"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18618",
+		"itemLabel": "Deliverance",
+		"value": "Deliverance",
+		"valueLabel": "Deliverance"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12179",
+		"itemLabel": "Deneb",
+		"value": "Deneb",
+		"valueLabel": "Deneb"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12128",
+		"itemLabel": "dentistry",
+		"value": "Dentistry",
+		"valueLabel": "Dentistry"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11857",
+		"itemLabel": "Detva",
+		"value": "Detva",
+		"valueLabel": "Detva"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11614",
+		"itemLabel": "Diane Greene",
+		"value": "Diane-Greene-7",
+		"valueLabel": "Diane-Greene-7"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11978",
+		"itemLabel": "digestion",
+		"value": "Digestion",
+		"valueLabel": "Digestion"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15865",
+		"itemLabel": "Domžale",
+		"value": "Domzale",
+		"valueLabel": "Domzale"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11349",
+		"itemLabel": "Eagle Nebula",
+		"value": "Eagle-Nebula",
+		"valueLabel": "Eagle-Nebula"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11406",
+		"itemLabel": "electromagnetism",
+		"value": "Electromagnetism",
+		"valueLabel": "Electromagnetism"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11394",
+		"itemLabel": "endangered species",
+		"value": "Endangered-Species",
+		"valueLabel": "Endangered-Species"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19381",
+		"itemLabel": "Lightning",
+		"value": "English-Electric-Lightning",
+		"valueLabel": "English-Electric-Lightning"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8698",
+		"itemLabel": "Great Depression",
+		"value": "Great-Depression-1",
+		"valueLabel": "Great-Depression-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9327",
+		"itemLabel": "Guy de Maupassant",
+		"value": "Guy-De-Maupassant-1",
+		"valueLabel": "Guy-De-Maupassant-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9920",
+		"itemLabel": "Haarlem",
+		"value": "HAarlem-1",
+		"valueLabel": "HAarlem-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6663",
+		"itemLabel": "hamburger",
+		"value": "Hamburgers",
+		"valueLabel": "Hamburgers"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9844",
+		"itemLabel": "Helmond",
+		"value": "Helmond",
+		"valueLabel": "Helmond"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7326",
+		"itemLabel": "Hernán Cortés",
+		"value": "Hernán-Cortés",
+		"valueLabel": "Hernán-Cortés"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7168",
+		"itemLabel": "histology",
+		"value": "Histology",
+		"valueLabel": "Histology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7800",
+		"itemLabel": "history of Bulgaria",
+		"value": "History-of-Bulgaria",
+		"valueLabel": "History-of-Bulgaria"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7778",
+		"itemLabel": "history of France",
+		"value": "History-of-France",
+		"valueLabel": "History-of-France"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7781",
+		"itemLabel": "history of Spain",
+		"value": "History-of-Spain",
+		"valueLabel": "History-of-Spain"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9938",
+		"itemLabel": "Hoorn",
+		"value": "Hoorn",
+		"valueLabel": "Hoorn"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8440",
+		"itemLabel": "Hugo Chávez",
+		"value": "Hugo-Chávez",
+		"valueLabel": "Hugo-Chávez"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10073",
+		"itemLabel": "Hulst",
+		"value": "Hulst",
+		"valueLabel": "Hulst"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7390",
+		"itemLabel": "human voice",
+		"value": "Human-Voice",
+		"valueLabel": "Human-Voice"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7983",
+		"itemLabel": "International Mathematical Olympiad",
+		"value": "Imo-1",
+		"valueLabel": "Imo-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10225",
+		"itemLabel": "Indian National Congress",
+		"value": "Indian-National-Congress",
+		"valueLabel": "Indian-National-Congress"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9653",
+		"itemLabel": "Ipswich Town F.C.",
+		"value": "Ipswich-Town-F-C",
+		"valueLabel": "Ipswich-Town-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9676",
+		"itemLabel": "Isle of Man",
+		"value": "Isle-of-Man",
+		"valueLabel": "Isle-of-Man"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10116",
+		"itemLabel": "Jakarta Barat",
+		"value": "Jakarta-Barat",
+		"valueLabel": "Jakarta-Barat"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7325",
+		"itemLabel": "Jewish people",
+		"value": "Jewish-Ethnicities-and-People",
+		"valueLabel": "Jewish-Ethnicities-and-People"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7226",
+		"itemLabel": "Joan of Arc",
+		"value": "Joan-of-Arc",
+		"valueLabel": "Joan-of-Arc"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8958",
+		"itemLabel": "Johannes Gutenberg Gilipollas",
+		"value": "Johann-Gutenberg",
+		"valueLabel": "Johann-Gutenberg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8963",
+		"itemLabel": "Johannes Kepler",
+		"value": "Johannes-Kepler-3",
+		"valueLabel": "Johannes-Kepler-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7788",
+		"itemLabel": "Khabarovsk Krai",
+		"value": "Khabarovsk-Krai",
+		"valueLabel": "Khabarovsk-Krai"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6246",
+		"itemLabel": "Kleve",
+		"value": "Kleve",
+		"valueLabel": "Kleve"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9081",
+		"itemLabel": "knowledge",
+		"value": "Knowledge-1",
+		"valueLabel": "Knowledge-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7523",
+		"itemLabel": "Kublai Khan",
+		"value": "Kublai-Khan-5",
+		"valueLabel": "Kublai-Khan-5"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6049",
+		"itemLabel": "Kyzyl",
+		"value": "Kyzyl",
+		"valueLabel": "Kyzyl"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9155",
+		"itemLabel": "Lagny-sur-Marne",
+		"value": "Lagny-sur-Marne",
+		"valueLabel": "Lagny-sur-Marne"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8645",
+		"itemLabel": "Lanciano",
+		"value": "Lanciano",
+		"valueLabel": "Lanciano"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8699",
+		"itemLabel": "Leeds Bradford International Airport",
+		"value": "Leeds-Bradford-Airport",
+		"valueLabel": "Leeds-Bradford-Airport"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8236",
+		"itemLabel": "literacy",
+		"value": "Literacy",
+		"valueLabel": "Literacy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8242",
+		"itemLabel": "literature",
+		"value": "Literature",
+		"valueLabel": "Literature"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8484",
+		"itemLabel": "Lycée du Parc",
+		"value": "Lycée-Du-Parc",
+		"valueLabel": "Lycée-Du-Parc"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10253",
+		"itemLabel": "Makar Sankranti",
+		"value": "Makar-Sankranti-1",
+		"valueLabel": "Makar-Sankranti-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7828",
+		"itemLabel": "Marge Simpson",
+		"value": "Marge-Simpson-2",
+		"valueLabel": "Marge-Simpson-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8441",
+		"itemLabel": "man",
+		"value": "Men",
+		"valueLabel": "Men"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8998",
+		"itemLabel": "Mo Yan",
+		"value": "Mo-Yan-2",
+		"valueLabel": "Mo-Yan-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8141",
+		"itemLabel": "Modern Hebrew",
+		"value": "Modern-Hebrew",
+		"valueLabel": "Modern-Hebrew"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9102",
+		"itemLabel": "Monaco Grand Prix",
+		"value": "Monaco-Grand-Prix",
+		"valueLabel": "Monaco-Grand-Prix"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9246",
+		"itemLabel": "Mongolian",
+		"value": "Mongolian",
+		"valueLabel": "Mongolian"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q356707",
+		"itemLabel": "Mountain",
+		"value": "Mountains",
+		"valueLabel": "Mountains"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9038",
+		"itemLabel": "Muḥammad ibn Mūsā al-Khwārizmī",
+		"value": "Muḥammad-Ibn-Mūsā-al-Khwārizmī",
+		"valueLabel": "Muḥammad-Ibn-Mūsā-al-Khwārizmī"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9458",
+		"itemLabel": "Muhammad",
+		"value": "Muhammad-Islamic-prophet",
+		"valueLabel": "Muhammad-Islamic-prophet"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7365",
+		"itemLabel": "muscle",
+		"value": "Muscles",
+		"valueLabel": "Muscles"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8330",
+		"itemLabel": "Contemporary Arts Museum of Lyon",
+		"value": "Musée-Dart-Contemporain-De-Lyon",
+		"valueLabel": "Musée-Dart-Contemporain-De-Lyon"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q638",
+		"itemLabel": "music",
+		"value": "Music",
+		"valueLabel": "Music"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9949",
+		"itemLabel": "Naarden",
+		"value": "Naarden",
+		"valueLabel": "Naarden"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7721",
+		"itemLabel": "Napoleon III",
+		"value": "Napoleon-III",
+		"valueLabel": "Napoleon-III"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6555",
+		"itemLabel": "Narbonne",
+		"value": "Narbonne",
+		"valueLabel": "Narbonne"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10113",
+		"itemLabel": "North Jakarta",
+		"value": "North-Jakarta",
+		"valueLabel": "North-Jakarta"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5812",
+		"itemLabel": "Novak Djokovic",
+		"value": "Novak-Djokovic-6",
+		"valueLabel": "Novak-Djokovic-6"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8261",
+		"itemLabel": "novel",
+		"value": "Novels",
+		"valueLabel": "Novels"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9855",
+		"itemLabel": "Nuenen, Gerwen en Nederwetten",
+		"value": "Nuenen",
+		"valueLabel": "Nuenen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9857",
+		"itemLabel": "Oisterwijk",
+		"value": "Oisterwijk",
+		"valueLabel": "Oisterwijk"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10016",
+		"itemLabel": "Oldenzaal",
+		"value": "Oldenzaal",
+		"valueLabel": "Oldenzaal"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10018",
+		"itemLabel": "Ommen",
+		"value": "Ommen",
+		"valueLabel": "Ommen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9519",
+		"itemLabel": "Orbassano",
+		"value": "Orbassano",
+		"valueLabel": "Orbassano"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7342",
+		"itemLabel": "Oświęcim",
+		"value": "Oświęcim",
+		"valueLabel": "Oświęcim"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8358",
+		"itemLabel": "Oullins",
+		"value": "Oullins",
+		"valueLabel": "Oullins"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7198",
+		"itemLabel": "Ovid",
+		"value": "Ovid",
+		"valueLabel": "Ovid"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8378",
+		"itemLabel": "Palencia",
+		"value": "Palencia",
+		"valueLabel": "Palencia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7205",
+		"itemLabel": "paleontology",
+		"value": "Paleontology",
+		"valueLabel": "Paleontology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10282",
+		"itemLabel": "Pamplona",
+		"value": "Pamplona",
+		"valueLabel": "Pamplona"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7208",
+		"itemLabel": "pathology",
+		"value": "Pathology",
+		"valueLabel": "Pathology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9629",
+		"itemLabel": "peritoneum",
+		"value": "Peritoneum",
+		"valueLabel": "Peritoneum"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9896",
+		"itemLabel": "pesto",
+		"value": "Pesto",
+		"valueLabel": "Pesto"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7951",
+		"itemLabel": "Petropavlovsk-Kamchatsky",
+		"value": "Petropavlovsk-Kamchatsky",
+		"valueLabel": "Petropavlovsk-Kamchatsky"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9628",
+		"itemLabel": "Pharynx",
+		"value": "Pharynx",
+		"valueLabel": "Pharynx"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7547",
+		"itemLabel": "Phobos",
+		"value": "Phobos",
+		"valueLabel": "Phobos"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6293",
+		"itemLabel": "photographic film",
+		"value": "Photographic-Film",
+		"valueLabel": "Photographic-Film"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9163",
+		"itemLabel": "polytheism",
+		"value": "Polytheism",
+		"valueLabel": "Polytheism"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9492",
+		"itemLabel": "probability",
+		"value": "Probability-statistics-1",
+		"valueLabel": "Probability-statistics-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7281",
+		"itemLabel": "propaganda",
+		"value": "Propaganda",
+		"valueLabel": "Propaganda"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9625",
+		"itemLabel": "prostate",
+		"value": "Prostate",
+		"valueLabel": "Prostate"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8054",
+		"itemLabel": "protein",
+		"value": "Proteins-biochemistry",
+		"valueLabel": "Proteins-biochemistry"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7551",
+		"itemLabel": "Pussy Riot",
+		"value": "Pussy-Riot-band",
+		"valueLabel": "Pussy-Riot-band"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7192",
+		"itemLabel": "Qin Shi Huang",
+		"value": "Qin-Shi-Huang-1",
+		"valueLabel": "Qin-Shi-Huang-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8461",
+		"itemLabel": "racism",
+		"value": "Racism",
+		"valueLabel": "Racism"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9444",
+		"itemLabel": "rainforest",
+		"value": "Rainforest-2",
+		"valueLabel": "Rainforest-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10266",
+		"itemLabel": "Raksha Bandhan",
+		"value": "Raksha-Bandhan-festival",
+		"valueLabel": "Raksha-Bandhan-festival"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10300",
+		"itemLabel": "Rayo Vallecano",
+		"value": "Rayo-Vallecano",
+		"valueLabel": "Rayo-Vallecano"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10231",
+		"itemLabel": "Rivoli",
+		"value": "Rivoli",
+		"valueLabel": "Rivoli"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7749",
+		"itemLabel": "rock and roll",
+		"value": "Rock-Roll-5",
+		"valueLabel": "Rock-Roll-5"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7737",
+		"itemLabel": "Russian",
+		"value": "Russian-language-1",
+		"valueLabel": "Russian-language-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7797",
+		"itemLabel": "Sakhalin Oblast",
+		"value": "Sakhalin-Oblast",
+		"valueLabel": "Sakhalin-Oblast"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7525",
+		"itemLabel": "Sevastopol",
+		"value": "Sebastopol",
+		"valueLabel": "Sebastopol"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9585",
+		"itemLabel": "Shia Islam",
+		"value": "Shia-Islam",
+		"valueLabel": "Shia-Islam"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7197",
+		"itemLabel": "Simone de Beauvoir",
+		"value": "Simone-de-Beauvoir",
+		"valueLabel": "Simone-de-Beauvoir"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9137",
+		"itemLabel": "Singapore Grand Prix",
+		"value": "Singapore-Grand-Prix",
+		"valueLabel": "Singapore-Grand-Prix"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7462",
+		"itemLabel": "Song dynasty",
+		"value": "Song-Dynasty",
+		"valueLabel": "Song-Dynasty"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7366",
+		"itemLabel": "song",
+		"value": "Songs",
+		"valueLabel": "Songs"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5906",
+		"itemLabel": "Stade",
+		"value": "Stade",
+		"valueLabel": "Stade"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6472",
+		"itemLabel": "stellar evolution",
+		"value": "Stellar-Evolution",
+		"valueLabel": "Stellar-Evolution"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q7524",
+		"itemLabel": "Sue Gardner",
+		"value": "Sue-Gardner-1",
+		"valueLabel": "Sue-Gardner-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8573",
+		"itemLabel": "Sun Yat-sen",
+		"value": "Sun-Yat-Sen",
+		"valueLabel": "Sun-Yat-Sen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9503",
+		"itemLabel": "suspense",
+		"value": "Suspense",
+		"valueLabel": "Suspense"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5856",
+		"itemLabel": "Synthetic fiber",
+		"value": "Synthetic-Fiber",
+		"valueLabel": "Synthetic-Fiber"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9260",
+		"itemLabel": "Tajik",
+		"value": "Tajik-Language-1",
+		"valueLabel": "Tajik-Language-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q9683",
+		"itemLabel": "Tang dynasty",
+		"value": "Tang-Dynasty",
+		"valueLabel": "Tang-Dynasty"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13687",
+		"itemLabel": "Enna",
+		"value": "Enna",
+		"valueLabel": "Enna"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18788",
+		"itemLabel": "Epik High",
+		"value": "Epik-High-1",
+		"valueLabel": "Epik-High-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14392",
+		"itemLabel": "E",
+		"value": "Epsilon",
+		"valueLabel": "Epsilon"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13230",
+		"itemLabel": "Ferdinand de Saussure",
+		"value": "Ferdinand-De-Saussure",
+		"valueLabel": "Ferdinand-De-Saussure"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13139",
+		"itemLabel": "Fermo",
+		"value": "Fermo",
+		"valueLabel": "Fermo"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15409",
+		"itemLabel": "Figaró-Montmany",
+		"value": "Figaró-Montmany",
+		"valueLabel": "Figaró-Montmany"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12044",
+		"itemLabel": "Flying Spaghetti Monster",
+		"value": "Flying-Spaghetti-Monster-3",
+		"valueLabel": "Flying-Spaghetti-Monster-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19565",
+		"itemLabel": "Football League One",
+		"value": "Football-League-1",
+		"valueLabel": "Football-League-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15672",
+		"itemLabel": "Four Corners",
+		"value": "Four-Corners",
+		"valueLabel": "Four-Corners"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15869",
+		"itemLabel": "Freddie Mercury",
+		"value": "Freddie-Mercury",
+		"valueLabel": "Freddie-Mercury"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14075",
+		"itemLabel": "free content",
+		"value": "Free-Content",
+		"valueLabel": "Free-Content"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18708",
+		"itemLabel": "Fulham F.C.",
+		"value": "Fulham-F-C",
+		"valueLabel": "Fulham-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19014",
+		"itemLabel": "Garden of Eden",
+		"value": "Garden-of-Eden",
+		"valueLabel": "Garden-of-Eden"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10518",
+		"itemLabel": "Garmisch-Partenkirchen",
+		"value": "Garmisch-Partenkirchen",
+		"valueLabel": "Garmisch-Partenkirchen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15775",
+		"itemLabel": "Gelendzhik",
+		"value": "Gelendzhik",
+		"valueLabel": "Gelendzhik"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16078",
+		"itemLabel": "Georgsmarienhütte",
+		"value": "Georgsmarienhütte",
+		"valueLabel": "Georgsmarienhütte"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10384",
+		"itemLabel": "geriatrics",
+		"value": "Geriatrics",
+		"valueLabel": "Geriatrics"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10387",
+		"itemLabel": "gerontology",
+		"value": "Gerontology",
+		"valueLabel": "Gerontology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12273",
+		"itemLabel": "Gijón",
+		"value": "Gijon",
+		"valueLabel": "Gijon"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12020",
+		"itemLabel": "Google News",
+		"value": "Google-News",
+		"valueLabel": "Google-News"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12831",
+		"itemLabel": "Gossip",
+		"value": "Gossip",
+		"valueLabel": "Gossip"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19154",
+		"itemLabel": "Graham Norton",
+		"value": "Graham-Norton-7",
+		"valueLabel": "Graham-Norton-7"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18515",
+		"itemLabel": "Grimsby Town F.C.",
+		"value": "Grimsby-Town-F-C",
+		"valueLabel": "Grimsby-Town-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q17012",
+		"itemLabel": "Guadeloupe",
+		"value": "Guadeloupe",
+		"valueLabel": "Guadeloupe"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15176",
+		"itemLabel": "Guangxi Zhuang Autonomous Region",
+		"value": "Guangxi",
+		"valueLabel": "Guangxi"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12630",
+		"itemLabel": "Gulf of Mexico",
+		"value": "Gulf-of-Mexico",
+		"valueLabel": "Gulf-of-Mexico"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19038",
+		"itemLabel": "Guria",
+		"value": "Guria",
+		"valueLabel": "Guria"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18951",
+		"itemLabel": "Half-Life 2: Episode One",
+		"value": "Half-Life-2-Episode-One",
+		"valueLabel": "Half-Life-2-Episode-One"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10656",
+		"itemLabel": "Hall effect",
+		"value": "Hall-Effect",
+		"valueLabel": "Hall-Effect"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19785",
+		"itemLabel": "Harpenden",
+		"value": "Harpenden",
+		"valueLabel": "Harpenden"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11613",
+		"itemLabel": "Harry S. Truman",
+		"value": "Harry-S-Truman-1",
+		"valueLabel": "Harry-S-Truman-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11961",
+		"itemLabel": "Heracles Almelo",
+		"value": "Heracles-Almelo",
+		"valueLabel": "Heracles-Almelo"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18336",
+		"itemLabel": "heraldry",
+		"value": "Heraldry",
+		"valueLabel": "Heraldry"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16100",
+		"itemLabel": "Herrenberg",
+		"value": "Herrenberg",
+		"valueLabel": "Herrenberg"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12548",
+		"itemLabel": "Holy Roman Empire",
+		"value": "Holy-Roman-Empire",
+		"valueLabel": "Holy-Roman-Empire"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q3269236",
+		"itemLabel": "Hormones",
+		"value": "Hormones",
+		"valueLabel": "Hormones"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12429",
+		"itemLabel": "Houghton",
+		"value": "Houghton",
+		"valueLabel": "Houghton"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19473",
+		"itemLabel": "Huddersfield Town F.C.",
+		"value": "Huddersfield-Town-F-C",
+		"valueLabel": "Huddersfield-Town-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12246",
+		"itemLabel": "Huelva",
+		"value": "Huelva",
+		"valueLabel": "Huelva"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11967",
+		"itemLabel": "Huesca",
+		"value": "Huesca",
+		"valueLabel": "Huesca"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10578",
+		"itemLabel": "Hydra",
+		"value": "Hydra",
+		"valueLabel": "Hydra"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12837",
+		"itemLabel": "Iberian Peninsula",
+		"value": "Iberian-Peninsula",
+		"valueLabel": "Iberian-Peninsula"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12253",
+		"itemLabel": "Watson",
+		"value": "IBM-Watson",
+		"valueLabel": "IBM-Watson"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13661",
+		"itemLabel": "Iglesias",
+		"value": "Iglesias",
+		"valueLabel": "Iglesias"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15950",
+		"itemLabel": "Igualada",
+		"value": "Igualada",
+		"valueLabel": "Igualada"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18237",
+		"itemLabel": "instinct",
+		"value": "Instinct",
+		"valueLabel": "Instinct"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12457",
+		"itemLabel": "International System of Units",
+		"value": "International-System-of-Units",
+		"valueLabel": "International-System-of-Units"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11281",
+		"itemLabel": "internet troll",
+		"value": "Internet-Troll",
+		"valueLabel": "Internet-Troll"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14094",
+		"itemLabel": "iPod Touch",
+		"value": "iPod-Touch",
+		"valueLabel": "iPod-Touch"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16392",
+		"itemLabel": "isopropyl alcohol",
+		"value": "Isopropyl-Alcohol",
+		"valueLabel": "Isopropyl-Alcohol"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13160",
+		"itemLabel": "Jalisco",
+		"value": "Jalisco",
+		"valueLabel": "Jalisco"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16311",
+		"itemLabel": "James T. Kirk",
+		"value": "James-T-Kirk",
+		"valueLabel": "James-T-Kirk"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10510",
+		"itemLabel": "Jenson Button",
+		"value": "Jenson-Button",
+		"valueLabel": "Jenson-Button"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10615",
+		"itemLabel": "Jepara",
+		"value": "Jepara",
+		"valueLabel": "Jepara"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16963",
+		"itemLabel": "Jiangsu",
+		"value": "Jiangsu-2",
+		"valueLabel": "Jiangsu-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18430",
+		"itemLabel": "Joseph E. Stiglitz",
+		"value": "Joseph-Stiglitz",
+		"valueLabel": "Joseph-Stiglitz"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12877",
+		"itemLabel": "Java OpenStreetMap Editor",
+		"value": "Josm",
+		"valueLabel": "Josm"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q81240",
+		"itemLabel": "Judges",
+		"value": "Judges",
+		"valueLabel": "Judges"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11184",
+		"itemLabel": "Julian calendar",
+		"value": "Julian-Calendar",
+		"valueLabel": "Julian-Calendar"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14267",
+		"itemLabel": "Julian day",
+		"value": "Julian-Day-6",
+		"valueLabel": "Julian-Day-6"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10616",
+		"itemLabel": "Karanganyar",
+		"value": "Karanganyar",
+		"valueLabel": "Karanganyar"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14805",
+		"itemLabel": "Kaufbeuren",
+		"value": "Kaufbeuren",
+		"valueLabel": "Kaufbeuren"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11930",
+		"itemLabel": "Kevin Costner",
+		"value": "Kevin-Costner",
+		"valueLabel": "Kevin-Costner"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19807",
+		"itemLabel": "Kings Langley",
+		"value": "Kings-Langley",
+		"valueLabel": "Kings-Langley"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11503",
+		"itemLabel": "Klungkung",
+		"value": "Klungkung",
+		"valueLabel": "Klungkung"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15382",
+		"itemLabel": "Krishna district",
+		"value": "Krishna-615",
+		"valueLabel": "Krishna-615"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13987",
+		"itemLabel": "Kyushu",
+		"value": "Kyushu",
+		"valueLabel": "Kyushu"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14475",
+		"itemLabel": "Laja",
+		"value": "Laja-Chile",
+		"valueLabel": "Laja-Chile"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13841",
+		"itemLabel": "Lanao del Norte",
+		"value": "Lanao-Del-Norte",
+		"valueLabel": "Lanao-Del-Norte"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11974",
+		"itemLabel": "Las Palmas de Gran Canaria",
+		"value": "Las-Palmas-Gran-Canaria",
+		"valueLabel": "Las-Palmas-Gran-Canaria"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12585",
+		"itemLabel": "Latin America",
+		"value": "Latin-America",
+		"valueLabel": "Latin-America"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19481",
+		"itemLabel": "Leicester City F.C.",
+		"value": "Leicester-City-F-C",
+		"valueLabel": "Leicester-City-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15173",
+		"itemLabel": "lip",
+		"value": "Lips",
+		"valueLabel": "Lips"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13172",
+		"itemLabel": "Living Things",
+		"value": "Living-Things",
+		"valueLabel": "Living-Things"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11935",
+		"itemLabel": "Locarno",
+		"value": "Locarno",
+		"valueLabel": "Locarno"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q20075",
+		"itemLabel": "London Underground",
+		"value": "London-Underground",
+		"valueLabel": "London-Underground"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13888",
+		"itemLabel": "Luchino Visconti",
+		"value": "Luchino-Visconti",
+		"valueLabel": "Luchino-Visconti"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14116",
+		"itemLabel": "macOS",
+		"value": "macOS",
+		"valueLabel": "macOS"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18224",
+		"itemLabel": "Maersk",
+		"value": "Maersk",
+		"valueLabel": "Maersk"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11408",
+		"itemLabel": "magnetic field",
+		"value": "Magnetic-Fields",
+		"valueLabel": "Magnetic-Fields"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12156",
+		"itemLabel": "malaria",
+		"value": "Malaria",
+		"valueLabel": "Malaria"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18656",
+		"itemLabel": "Manchester United F.C.",
+		"value": "Manchester-United",
+		"valueLabel": "Manchester-United"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10819",
+		"itemLabel": "Mariano Rajoy",
+		"value": "Mariano-Rajoy",
+		"valueLabel": "Mariano-Rajoy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q17905",
+		"itemLabel": "Martin Schulz",
+		"value": "Martin-Schulz-8",
+		"valueLabel": "Martin-Schulz-8"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10886",
+		"itemLabel": "Medieval cuisine",
+		"value": "Medieval-Cuisine",
+		"valueLabel": "Medieval-Cuisine"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11767",
+		"itemLabel": "Mesopotamia",
+		"value": "Mesopotamia",
+		"valueLabel": "Mesopotamia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q6257",
+		"itemLabel": "Mettmann (district)",
+		"value": "Mettmann",
+		"valueLabel": "Mettmann"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16140",
+		"itemLabel": "Meursault",
+		"value": "Meursault",
+		"valueLabel": "Meursault"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12432",
+		"itemLabel": "Michigan Technological University",
+		"value": "Michigan-Technological-University",
+		"valueLabel": "Michigan-Technological-University"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10731",
+		"itemLabel": "Mick Foley",
+		"value": "Mick-Foley",
+		"valueLabel": "Mick-Foley"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11266",
+		"itemLabel": "Microsoft PowerPoint",
+		"value": "Microsoft-PowerPoint",
+		"valueLabel": "Microsoft-PowerPoint"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11248",
+		"itemLabel": "Windows XP",
+		"value": "Microsoft-Windows-XP",
+		"valueLabel": "Microsoft-Windows-XP"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19201",
+		"itemLabel": "Mike Shinoda",
+		"value": "Mike-Shinoda-8",
+		"valueLabel": "Mike-Shinoda-8"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11096",
+		"itemLabel": "Mojokerto",
+		"value": "Mojokerto",
+		"valueLabel": "Mojokerto"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12418",
+		"itemLabel": "Mona Lisa",
+		"value": "Mona-Lisa",
+		"valueLabel": "Mona-Lisa"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16401",
+		"itemLabel": "Monty Python's Flying Circus",
+		"value": "Monty-Pythons-Flying-Circus",
+		"valueLabel": "Monty-Pythons-Flying-Circus"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16007",
+		"itemLabel": "Mörfelden-Walldorf",
+		"value": "Mörfelden-Walldorf",
+		"valueLabel": "Mörfelden-Walldorf"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11273",
+		"itemLabel": "Moving Picture Experts Group",
+		"value": "MPEG",
+		"valueLabel": "MPEG"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14005",
+		"itemLabel": "MusicBrainz",
+		"value": "MusicBrainz",
+		"valueLabel": "MusicBrainz"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12152",
+		"itemLabel": "myocardial infarction",
+		"value": "Myocardial-Infarction",
+		"valueLabel": "Myocardial-Infarction"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11468",
+		"itemLabel": "nanotechnology",
+		"value": "Nanotechnology",
+		"valueLabel": "Nanotechnology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13862",
+		"itemLabel": "Negros Occidental",
+		"value": "Negros-Occidental",
+		"valueLabel": "Negros-Occidental"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16085",
+		"itemLabel": "Neuruppin",
+		"value": "Neuruppin",
+		"valueLabel": "Neuruppin"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10664",
+		"itemLabel": "Neville Chamberlain",
+		"value": "Neville-Chamberlain",
+		"valueLabel": "Neville-Chamberlain"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18716",
+		"itemLabel": "Newcastle United F.C.",
+		"value": "Newcastle-United-F-C",
+		"valueLabel": "Newcastle-United-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18721",
+		"itemLabel": "Norwich City F.C.",
+		"value": "Norwich-City-F-C",
+		"valueLabel": "Norwich-City-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19921",
+		"itemLabel": "Nuclear winter",
+		"value": "Nuclear-Winter",
+		"valueLabel": "Nuclear-Winter"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12618",
+		"itemLabel": "Olot",
+		"value": "Olot",
+		"valueLabel": "Olot"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16691",
+		"itemLabel": "OpenSUSE",
+		"value": "openSUSE",
+		"valueLabel": "openSUSE"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18557",
+		"itemLabel": "Opeth",
+		"value": "Opeth",
+		"valueLabel": "Opeth"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13903",
+		"itemLabel": "Orion Nebula",
+		"value": "Orion-Nebula",
+		"valueLabel": "Orion-Nebula"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q17629",
+		"itemLabel": "Ovada",
+		"value": "Ovada",
+		"valueLabel": "Ovada"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14635",
+		"itemLabel": "Palopo",
+		"value": "Palopo",
+		"valueLabel": "Palopo"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13871",
+		"itemLabel": "Pangasinan",
+		"value": "Pangasinan",
+		"valueLabel": "Pangasinan"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14636",
+		"itemLabel": "Pare-Pare",
+		"value": "Parepare",
+		"valueLabel": "Parepare"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10515",
+		"itemLabel": "Pavo",
+		"value": "PAVO",
+		"valueLabel": "PAVO"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19429",
+		"itemLabel": "Petrovaradin",
+		"value": "Petrovaradin",
+		"valueLabel": "Petrovaradin"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13824",
+		"itemLabel": "phase velocity",
+		"value": "Phase-Velocity",
+		"valueLabel": "Phase-Velocity"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q17193",
+		"itemLabel": "Philippine peso",
+		"value": "Philippine-Peso",
+		"valueLabel": "Philippine-Peso"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10995",
+		"itemLabel": "Pholcidae",
+		"value": "Pholcidae",
+		"valueLabel": "Pholcidae"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13129",
+		"itemLabel": "Pirate Party Germany",
+		"value": "Pirate-Party-Germany",
+		"valueLabel": "Pirate-Party-Germany"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10680",
+		"itemLabel": "PlayStation 2",
+		"value": "PlayStation-2-video-game-console",
+		"valueLabel": "PlayStation-2-video-game-console"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10677",
+		"itemLabel": "PlayStation",
+		"value": "PlayStation-video-game-console",
+		"valueLabel": "PlayStation-video-game-console"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12164",
+		"itemLabel": "Ponferrada",
+		"value": "Ponferrada",
+		"valueLabel": "Ponferrada"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12411",
+		"itemLabel": "Pontevedra",
+		"value": "Pontevedra-Spain",
+		"valueLabel": "Pontevedra-Spain"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14658",
+		"itemLabel": "POSIX",
+		"value": "POSIX",
+		"valueLabel": "POSIX"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19775",
+		"itemLabel": "Potters Bar",
+		"value": "Potters-Bar",
+		"valueLabel": "Potters-Bar"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18680",
+		"itemLabel": "Prefrontal cortex",
+		"value": "Prefrontal-Cortex",
+		"valueLabel": "Prefrontal-Cortex"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11995",
+		"itemLabel": "pregnancy",
+		"value": "Pregnancy",
+		"valueLabel": "Pregnancy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15905",
+		"itemLabel": "Prevalje",
+		"value": "Prevalje",
+		"valueLabel": "Prevalje"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18606",
+		"itemLabel": "Procedural memory",
+		"value": "Procedural-Memory",
+		"valueLabel": "Procedural-Memory"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19081",
+		"itemLabel": "prokaryotes",
+		"value": "Prokaryotes",
+		"valueLabel": "Prokaryotes"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10892",
+		"itemLabel": "protist",
+		"value": "Protist",
+		"valueLabel": "Protist"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14266",
+		"itemLabel": "Proxima Centauri",
+		"value": "Proxima-Centauri-3",
+		"valueLabel": "Proxima-Centauri-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11189",
+		"itemLabel": "proxy server",
+		"value": "Proxy-Servers",
+		"valueLabel": "Proxy-Servers"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13765",
+		"itemLabel": "Puigcerdà",
+		"value": "Puigcerdà",
+		"valueLabel": "Puigcerdà"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12709",
+		"itemLabel": "Pyrénées-Orientales",
+		"value": "Pyrénées-Orientales",
+		"valueLabel": "Pyrénées-Orientales"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16955",
+		"itemLabel": "Tsinghua University",
+		"value": "Qinghua-University",
+		"valueLabel": "Qinghua-University"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18335",
+		"itemLabel": "radiation",
+		"value": "Radiation",
+		"valueLabel": "Radiation"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19912",
+		"itemLabel": "Radio France Internationale",
+		"value": "Radio-France-Internationale",
+		"valueLabel": "Radio-France-Internationale"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12780",
+		"itemLabel": "Rashad Khalifa",
+		"value": "Rashad-Khalifa",
+		"valueLabel": "Rashad-Khalifa"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q17936",
+		"itemLabel": "rationalisation",
+		"value": "Rationalisation",
+		"valueLabel": "Rationalisation"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10315",
+		"itemLabel": "Real Sociedad",
+		"value": "Real-Sociedad",
+		"valueLabel": "Real-Sociedad"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18748",
+		"itemLabel": "reliability",
+		"value": "Reliability",
+		"valueLabel": "Reliability"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12705",
+		"itemLabel": "renewable energy",
+		"value": "Renewable-Energy-1",
+		"valueLabel": "Renewable-Energy-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15050",
+		"itemLabel": "Rhea",
+		"value": "Rhea",
+		"valueLabel": "Rhea"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12335",
+		"itemLabel": "Ripoll",
+		"value": "Ripoll",
+		"valueLabel": "Ripoll"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11053",
+		"itemLabel": "RNA",
+		"value": "RNA",
+		"valueLabel": "RNA"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10707",
+		"itemLabel": "Robert Mugabe",
+		"value": "Robert-Mugabe",
+		"valueLabel": "Robert-Mugabe"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q218",
+		"itemLabel": "Romania",
+		"value": "Romania",
+		"valueLabel": "Romania"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13920",
+		"itemLabel": "Room to Read",
+		"value": "Room-to-Read-1",
+		"valueLabel": "Room-to-Read-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19804",
+		"itemLabel": "Royston",
+		"value": "Royston-Hertfordshire",
+		"valueLabel": "Royston-Hertfordshire"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10962",
+		"itemLabel": "rugby league",
+		"value": "Rugby-League",
+		"valueLabel": "Rugby-League"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16640",
+		"itemLabel": "Rugby World Cup",
+		"value": "Rugby-World-Cup",
+		"valueLabel": "Rugby-World-Cup"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15914",
+		"itemLabel": "Ruše",
+		"value": "Ruse",
+		"valueLabel": "Ruse"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14499",
+		"itemLabel": "Samarinda",
+		"value": "Samarinda-Indonesia",
+		"valueLabel": "Samarinda-Indonesia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11132",
+		"itemLabel": "Sandra Day O'Connor",
+		"value": "Sandra-Day-OConnor",
+		"valueLabel": "Sandra-Day-OConnor"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12875",
+		"itemLabel": "Santa Catalina",
+		"value": "SANTA-CATALINA",
+		"valueLabel": "SANTA-CATALINA"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19097",
+		"itemLabel": "sect",
+		"value": "Sects",
+		"valueLabel": "Sects"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16052",
+		"itemLabel": "Seelze",
+		"value": "Seelze",
+		"valueLabel": "Seelze"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10687",
+		"itemLabel": "Semarang",
+		"value": "Semarang",
+		"valueLabel": "Semarang"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12482",
+		"itemLabel": "set theory",
+		"value": "Set-Theory",
+		"valueLabel": "Set-Theory"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14536",
+		"itemLabel": "Seth Meyers",
+		"value": "Seth-Meyers",
+		"valueLabel": "Seth-Meyers"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19626",
+		"itemLabel": "Shrewsbury Town F.C.",
+		"value": "Shrewsbury-Town-F-C",
+		"valueLabel": "Shrewsbury-Town-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14793",
+		"itemLabel": "SIL International",
+		"value": "SIL-International",
+		"valueLabel": "SIL-International"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15922",
+		"itemLabel": "Škofja Loka",
+		"value": "Skofja-Loka",
+		"valueLabel": "Skofja-Loka"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19071",
+		"itemLabel": "Soca",
+		"value": "Soca",
+		"valueLabel": "Soca"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11592",
+		"itemLabel": "Sonoma",
+		"value": "Sonoma",
+		"valueLabel": "Sonoma"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16011",
+		"itemLabel": "Spandau Ballet",
+		"value": "Spandau-Ballet",
+		"valueLabel": "Spandau-Ballet"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12583",
+		"itemLabel": "Spanish–American War",
+		"value": "Spanish-American-War",
+		"valueLabel": "Spanish-American-War"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10742",
+		"itemLabel": "autonomous community of Spain",
+		"value": "Spanish-Autonomous-Communities",
+		"valueLabel": "Spanish-Autonomous-Communities"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15308",
+		"itemLabel": "Speer",
+		"value": "Speer",
+		"valueLabel": "Speer"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18833",
+		"itemLabel": "Microsoft SharePoint",
+		"value": "Spps",
+		"valueLabel": "Spps"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12511",
+		"itemLabel": "stairs",
+		"value": "Stairs",
+		"valueLabel": "Stairs"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16290",
+		"itemLabel": "Star Trek: The Next Generation",
+		"value": "Star-Trek-The-Next-Generation-TV-series",
+		"valueLabel": "Star-Trek-The-Next-Generation-TV-series"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11759",
+		"itemLabel": "Stone Age",
+		"value": "Stone-Age",
+		"valueLabel": "Stone-Age"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q17516",
+		"itemLabel": "street art",
+		"value": "Street-Art",
+		"valueLabel": "Street-Art"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11002",
+		"itemLabel": "sugar",
+		"value": "Sugars",
+		"valueLabel": "Sugars"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13497",
+		"itemLabel": "Swiss cuisine",
+		"value": "Swiss-Cuisine",
+		"valueLabel": "Swiss-Cuisine"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11016",
+		"itemLabel": "technology",
+		"value": "Technology",
+		"valueLabel": "Technology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q5398426",
+		"itemLabel": "television series",
+		"value": "Television-Series",
+		"valueLabel": "Television-Series"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11466",
+		"itemLabel": "temperature",
+		"value": "Temperature",
+		"valueLabel": "Temperature"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13695",
+		"itemLabel": "Tenochtitlan",
+		"value": "Tenochtitlan",
+		"valueLabel": "Tenochtitlan"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13923",
+		"itemLabel": "The Grim Adventures of Billy & Mandy",
+		"value": "The-Grim-Adventures-of-Billy-and-Mandy",
+		"valueLabel": "The-Grim-Adventures-of-Billy-and-Mandy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12149",
+		"itemLabel": "Thein Sein",
+		"value": "Thein-Sein",
+		"valueLabel": "Thein-Sein"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11473",
+		"itemLabel": "thermodynamics",
+		"value": "Thermodynamics",
+		"valueLabel": "Thermodynamics"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18938",
+		"itemLabel": "Thomas Jane",
+		"value": "Thomas-Jane-3",
+		"valueLabel": "Thomas-Jane-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16399",
+		"itemLabel": "thyroid gland",
+		"value": "Thyroid",
+		"valueLabel": "Thyroid"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15336",
+		"itemLabel": "Tikhvin",
+		"value": "Tikhvin",
+		"valueLabel": "Tikhvin"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11259",
+		"itemLabel": "Times Square",
+		"value": "Times-Square",
+		"valueLabel": "Times-Square"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15779",
+		"itemLabel": "toluene",
+		"value": "Toluene",
+		"valueLabel": "Toluene"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14296",
+		"itemLabel": "top-level domain",
+		"value": "Top-Level-Domains-1",
+		"valueLabel": "Top-Level-Domains-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12423",
+		"itemLabel": "Torcy",
+		"value": "Torcy",
+		"valueLabel": "Torcy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12062",
+		"itemLabel": "Torgau",
+		"value": "Torgau",
+		"valueLabel": "Torgau"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15337",
+		"itemLabel": "Tosno",
+		"value": "Tosno",
+		"valueLabel": "Tosno"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13664",
+		"itemLabel": "Trapani",
+		"value": "Trapani",
+		"valueLabel": "Trapani"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19821",
+		"itemLabel": "triangle",
+		"value": "Triangles",
+		"valueLabel": "Triangles"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14384",
+		"itemLabel": "Triceratops",
+		"value": "Triceratops",
+		"valueLabel": "Triceratops"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q20098",
+		"itemLabel": "Tricorder",
+		"value": "Tricorder",
+		"valueLabel": "Tricorder"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10407",
+		"itemLabel": "UD Almería",
+		"value": "UD-Almeria",
+		"valueLabel": "UD-Almeria"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11703",
+		"itemLabel": "United States Virgin Islands",
+		"value": "United-States-Virgin-Islands",
+		"valueLabel": "United-States-Virgin-Islands"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18786",
+		"itemLabel": "United World Colleges",
+		"value": "United-World-Colleges-1",
+		"valueLabel": "United-World-Colleges-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q15574",
+		"itemLabel": "University of Adelaide",
+		"value": "University-of-Adelaide",
+		"valueLabel": "University-of-Adelaide"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13241",
+		"itemLabel": "vanilla",
+		"value": "Vanilla",
+		"valueLabel": "Vanilla"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q10339",
+		"itemLabel": "Venaria Reale",
+		"value": "Venaria-Reale",
+		"valueLabel": "Venaria-Reale"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q12579",
+		"itemLabel": "Vibranium",
+		"value": "Vibranium",
+		"valueLabel": "Vibranium"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13395",
+		"itemLabel": "Viterbo",
+		"value": "Viterbo-1",
+		"valueLabel": "Viterbo-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q14956",
+		"itemLabel": "Wesseling",
+		"value": "Wesseling",
+		"valueLabel": "Wesseling"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q16354",
+		"itemLabel": "whiteboard",
+		"value": "Whiteboard-1",
+		"valueLabel": "Whiteboard-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q17459",
+		"itemLabel": "Wikia",
+		"value": "Wikia",
+		"valueLabel": "Wikia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11869",
+		"itemLabel": "William Henry Harrison",
+		"value": "William-Henry-Harrison",
+		"valueLabel": "William-Henry-Harrison"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11215",
+		"itemLabel": "Windows 7",
+		"value": "Windows-7",
+		"valueLabel": "Windows-7"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11246",
+		"itemLabel": "Windows Server 2003",
+		"value": "Windows-Server-2003",
+		"valueLabel": "Windows-Server-2003"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q11230",
+		"itemLabel": "Windows Vista",
+		"value": "Windows-Vista",
+		"valueLabel": "Windows-Vista"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q19500",
+		"itemLabel": "Wolverhampton Wanderers F.C.",
+		"value": "Wolverhampton-Wanderers-F-C",
+		"valueLabel": "Wolverhampton-Wanderers-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q13166",
+		"itemLabel": "WordPress",
+		"value": "WordPress",
+		"valueLabel": "WordPress"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q18529",
+		"itemLabel": "Wrexham F.C.",
+		"value": "Wrexham-F-C",
+		"valueLabel": "Wrexham-F-C"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34653",
+		"itemLabel": "1990s",
+		"value": "1990s",
+		"valueLabel": "1990s"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25335",
+		"itemLabel": "4th century BC",
+		"value": "4th-Century-BCE",
+		"valueLabel": "4th-Century-BCE"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23357",
+		"itemLabel": "Abraham Maslow",
+		"value": "Abraham-Maslow",
+		"valueLabel": "Abraham-Maslow"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q32043",
+		"itemLabel": "addition",
+		"value": "Addition",
+		"valueLabel": "Addition"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34811",
+		"itemLabel": "Age of Empires",
+		"value": "Age-of-Empires",
+		"valueLabel": "Age-of-Empires"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30232",
+		"itemLabel": "Agile software development",
+		"value": "Agile-Software-Development-1",
+		"valueLabel": "Agile-Software-Development-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26298",
+		"itemLabel": "Agricultural Bank of China",
+		"value": "Agricultural-Bank-of-China",
+		"valueLabel": "Agricultural-Bank-of-China"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34670",
+		"itemLabel": "Albert Camus",
+		"value": "Albert-Camus-author",
+		"valueLabel": "Albert-Camus-author"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25691",
+		"itemLabel": "alligator farm",
+		"value": "Alligator-Farm",
+		"valueLabel": "Alligator-Farm"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31165",
+		"itemLabel": "AlloCiné",
+		"value": "AlloCiné",
+		"valueLabel": "AlloCiné"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29279",
+		"itemLabel": "Amancio Ortega",
+		"value": "Amancio-Ortega",
+		"valueLabel": "Amancio-Ortega"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22237",
+		"itemLabel": "Amy Klobuchar",
+		"value": "Amy-Klobuchar",
+		"valueLabel": "Amy-Klobuchar"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30595",
+		"itemLabel": "Anand Karaj",
+		"value": "Anand-Karaj",
+		"valueLabel": "Anand-Karaj"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25314",
+		"itemLabel": "angiosperms",
+		"value": "Angiosperms",
+		"valueLabel": "Angiosperms"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25228",
+		"itemLabel": "Anguilla",
+		"value": "Anguilla",
+		"valueLabel": "Anguilla"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33875",
+		"itemLabel": "Ojibwe",
+		"value": "Anishinabemowin",
+		"valueLabel": "Anishinabemowin"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26841",
+		"itemLabel": "Anthropocene",
+		"value": "Anthropocene",
+		"valueLabel": "Anthropocene"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23404",
+		"itemLabel": "anthropology",
+		"value": "Anthropology",
+		"valueLabel": "Anthropology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29120",
+		"itemLabel": "Apache Hadoop",
+		"value": "Apache-Hadoop",
+		"valueLabel": "Apache-Hadoop"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28797",
+		"itemLabel": "applied science",
+		"value": "Applied-Sciences",
+		"valueLabel": "Applied-Sciences"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31945",
+		"itemLabel": "Arabian Peninsula",
+		"value": "Arabian-Peninsula",
+		"valueLabel": "Arabian-Peninsula"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23498",
+		"itemLabel": "archaeology",
+		"value": "Archaeology",
+		"valueLabel": "Archaeology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30059",
+		"itemLabel": "arrondissement",
+		"value": "Arrondissements",
+		"valueLabel": "Arrondissements"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29401",
+		"itemLabel": "Assamese",
+		"value": "Assamese-1",
+		"valueLabel": "Assamese-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23809",
+		"itemLabel": "atomic number",
+		"value": "Atomic-Number",
+		"valueLabel": "Atomic-Number"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27995",
+		"itemLabel": "Bangued",
+		"value": "Bangued-Abra",
+		"valueLabel": "Bangued-Abra"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25475",
+		"itemLabel": "Batumi",
+		"value": "Batumi",
+		"valueLabel": "Batumi"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34952",
+		"itemLabel": "Benga language",
+		"value": "Benga",
+		"valueLabel": "Benga"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27432",
+		"itemLabel": "Bethlehem Steel",
+		"value": "Bethlehem-Steel",
+		"valueLabel": "Bethlehem-Steel"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29250",
+		"itemLabel": "Bill Murray",
+		"value": "Bill-Murray-33",
+		"valueLabel": "Bill-Murray-33"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25368",
+		"itemLabel": "Bivalvia",
+		"value": "Bivalvia",
+		"valueLabel": "Bivalvia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29256",
+		"itemLabel": "black box",
+		"value": "Blackbox",
+		"valueLabel": "Blackbox"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22702",
+		"itemLabel": "Book burning",
+		"value": "Book-Burning",
+		"valueLabel": "Book-Burning"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25873",
+		"itemLabel": "Boris Berezovsky",
+		"value": "Boris-Berezovsky",
+		"valueLabel": "Boris-Berezovsky"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25305",
+		"itemLabel": "British Virgin Islands",
+		"value": "British-Virgin-Islands",
+		"valueLabel": "British-Virgin-Islands"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33469",
+		"itemLabel": "Ban Me Thuot",
+		"value": "Buon-Ma-Thuot",
+		"valueLabel": "Buon-Ma-Thuot"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27436",
+		"itemLabel": "Cadillac",
+		"value": "Cadillac-2",
+		"valueLabel": "Cadillac-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23047",
+		"itemLabel": "Cahors",
+		"value": "Cahors",
+		"valueLabel": "Cahors"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q32919",
+		"itemLabel": "Cambrian explosion",
+		"value": "Cambrian-Explosion",
+		"valueLabel": "Cambrian-Explosion"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26853",
+		"itemLabel": "Camilo Cienfuegos",
+		"value": "Camilo-Cienfuegos-1",
+		"valueLabel": "Camilo-Cienfuegos-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33490",
+		"itemLabel": "Cappadocia",
+		"value": "Cappadocia",
+		"valueLabel": "Cappadocia"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28924",
+		"itemLabel": "Catacombs of Paris",
+		"value": "Catacombs",
+		"valueLabel": "Catacombs"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q32141",
+		"itemLabel": "Cathay Pacific",
+		"value": "Cathay-Pacific",
+		"valueLabel": "Cathay-Pacific"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28255",
+		"itemLabel": "cdv Software Entertainment",
+		"value": "CDV-Software-Entertainment-AG",
+		"valueLabel": "CDV-Software-Entertainment-AG"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25293",
+		"itemLabel": "Celtic languages",
+		"value": "Celtic-Languages",
+		"valueLabel": "Celtic-Languages"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27433",
+		"itemLabel": "Central Africa",
+		"value": "Central-Africa",
+		"valueLabel": "Central-Africa"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27611",
+		"itemLabel": "Central America",
+		"value": "Central-America",
+		"valueLabel": "Central-America"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23138",
+		"itemLabel": "Chaos Computer Club",
+		"value": "Chaos-Computer-Club",
+		"valueLabel": "Chaos-Computer-Club"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23907",
+		"itemLabel": "cheetah",
+		"value": "Cheetahs",
+		"valueLabel": "Cheetahs"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29491",
+		"itemLabel": "Chris Smalling",
+		"value": "Chris-Smalling-1",
+		"valueLabel": "Chris-Smalling-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29610",
+		"itemLabel": "Chrysler",
+		"value": "Chrysler-company-1",
+		"valueLabel": "Chrysler-company-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q20413",
+		"itemLabel": "Città di Castello",
+		"value": "Città-Di-Castello",
+		"valueLabel": "Città-Di-Castello"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q24489",
+		"itemLabel": "coal",
+		"value": "Coal",
+		"valueLabel": "Coal"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25309",
+		"itemLabel": "Blattodea",
+		"value": "Cockroaches",
+		"valueLabel": "Cockroaches"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23382",
+		"itemLabel": "cognitivism",
+		"value": "Cognitivism",
+		"valueLabel": "Cognitivism"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28784",
+		"itemLabel": "Colligative properties",
+		"value": "Colligative-Properties-1",
+		"valueLabel": "Colligative-Properties-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31392",
+		"itemLabel": "Comenius University in Bratislava",
+		"value": "Comenius-University-in-Bratislava",
+		"valueLabel": "Comenius-University-in-Bratislava"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30216",
+		"itemLabel": "common law",
+		"value": "Common-Law-1",
+		"valueLabel": "Common-Law-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25866",
+		"itemLabel": "community organizing",
+		"value": "Community-Organizing",
+		"valueLabel": "Community-Organizing"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q32566",
+		"itemLabel": "computed tomography",
+		"value": "Computed-Tomography",
+		"valueLabel": "Computed-Tomography"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26988",
+		"itemLabel": "Cook Islands",
+		"value": "Cook-Islands",
+		"valueLabel": "Cook-Islands"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31485",
+		"itemLabel": "Cousin marriage",
+		"value": "Cousin-Marriage",
+		"valueLabel": "Cousin-Marriage"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q32554",
+		"itemLabel": "cracker",
+		"value": "Cracker",
+		"valueLabel": "Cracker"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31487",
+		"itemLabel": "Kraków",
+		"value": "Cracow",
+		"valueLabel": "Cracow"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27543",
+		"itemLabel": "Datsun",
+		"value": "Datsun",
+		"valueLabel": "Datsun"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31981",
+		"itemLabel": "David Alaba",
+		"value": "David-Alaba-1",
+		"valueLabel": "David-Alaba-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30873",
+		"itemLabel": "Dell Inc.",
+		"value": "Dell-company",
+		"valueLabel": "Dell-company"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29484",
+		"itemLabel": "demographics of Iran",
+		"value": "Demographics-of-Iran",
+		"valueLabel": "Demographics-of-Iran"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27617",
+		"itemLabel": "denazification",
+		"value": "Denazification",
+		"valueLabel": "Denazification"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28081",
+		"itemLabel": "Dhankuta District",
+		"value": "Dhankuta",
+		"valueLabel": "Dhankuta"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29770",
+		"itemLabel": "Dior Homme",
+		"value": "Dior-Homme",
+		"valueLabel": "Dior-Homme"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34316",
+		"itemLabel": "Doctor Who",
+		"value": "Doctor-Who-TV-series",
+		"valueLabel": "Doctor-Who-TV-series"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q32907",
+		"itemLabel": "dominoes",
+		"value": "Dominoes",
+		"valueLabel": "Dominoes"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22686",
+		"itemLabel": "Donald Trump",
+		"value": "Donald-Trump-politician-business-person",
+		"valueLabel": "Donald-Trump-politician-business-person"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34302",
+		"itemLabel": "doubt",
+		"value": "Doubt",
+		"valueLabel": "Doubt"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q20474",
+		"itemLabel": "dubstep",
+		"value": "Dubstep",
+		"valueLabel": "Dubstep"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q21196",
+		"itemLabel": "Easter",
+		"value": "Easter",
+		"valueLabel": "Easter"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27468",
+		"itemLabel": "Eastern Europe",
+		"value": "Eastern-Europe",
+		"valueLabel": "Eastern-Europe"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q32486",
+		"itemLabel": "Eastern Shore of Maryland",
+		"value": "Eastern-Shore-of-Maryland",
+		"valueLabel": "Eastern-Shore-of-Maryland"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23766",
+		"itemLabel": "Ebenezer Howard",
+		"value": "Ebenezer-Howard",
+		"valueLabel": "Ebenezer-Howard"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27841",
+		"itemLabel": "economic anthropology",
+		"value": "Economic-Anthropology",
+		"valueLabel": "Economic-Anthropology"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q20875",
+		"itemLabel": "Edward VII",
+		"value": "Edward-VII",
+		"valueLabel": "Edward-VII"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30865",
+		"itemLabel": "Eiki batista",
+		"value": "Eike-Batista",
+		"valueLabel": "Eike-Batista"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27137",
+		"itemLabel": "electric power",
+		"value": "Electric-Power",
+		"valueLabel": "Electric-Power"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25358",
+		"itemLabel": "electrical resistance",
+		"value": "Electrical-Resistance",
+		"valueLabel": "Electrical-Resistance"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26336",
+		"itemLabel": "electrostatics",
+		"value": "Electrostatics",
+		"valueLabel": "Electrostatics"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q2494062",
+		"itemLabel": "Emoticons",
+		"value": "Emoticons",
+		"valueLabel": "Emoticons"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27968",
+		"itemLabel": "English studies",
+		"value": "English-Studies",
+		"valueLabel": "English-Studies"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29243",
+		"itemLabel": "epaulette shark",
+		"value": "Epaulette-Shark",
+		"valueLabel": "Epaulette-Shark"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26939",
+		"itemLabel": "Epigenetics",
+		"value": "Epigenetics",
+		"valueLabel": "Epigenetics"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25419",
+		"itemLabel": "Escherichia coli",
+		"value": "Escherichia-Coli",
+		"valueLabel": "Escherichia-Coli"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33580",
+		"itemLabel": "Fermi paradox",
+		"value": "Fermi-Paradox",
+		"valueLabel": "Fermi-Paradox"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q152",
+		"itemLabel": "fish",
+		"value": "Fish",
+		"valueLabel": "Fish"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34807",
+		"itemLabel": "Foie gras",
+		"value": "Foie-Gras",
+		"valueLabel": "Foie-Gras"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22703",
+		"itemLabel": "Forbach",
+		"value": "Forbach",
+		"valueLabel": "Forbach"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22692",
+		"itemLabel": "freedom of speech",
+		"value": "Freedom-of-Speech",
+		"valueLabel": "Freedom-of-Speech"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q24067",
+		"itemLabel": "Friends of Animals",
+		"value": "Friends-of-Animals",
+		"valueLabel": "Friends-of-Animals"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26027",
+		"itemLabel": "Frontier Psychiatrist",
+		"value": "Frontier-Psychiatrist",
+		"valueLabel": "Frontier-Psychiatrist"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26503",
+		"itemLabel": "Funen",
+		"value": "Funen",
+		"valueLabel": "Funen"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25943",
+		"itemLabel": "G-Star",
+		"value": "G-Star",
+		"valueLabel": "G-Star"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q20398",
+		"itemLabel": "Gangnam District",
+		"value": "Gangnam-District",
+		"valueLabel": "Gangnam-District"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22733",
+		"itemLabel": "garage",
+		"value": "Garages",
+		"valueLabel": "Garages"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q8543",
+		"itemLabel": "Germersheim",
+		"value": "Germersheim",
+		"valueLabel": "Germersheim"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34274",
+		"itemLabel": "gospel",
+		"value": "Gospels",
+		"valueLabel": "Gospels"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q24962",
+		"itemLabel": "Graham Chapman",
+		"value": "Graham-Chapman-2",
+		"valueLabel": "Graham-Chapman-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25355",
+		"itemLabel": "Greenlandic",
+		"value": "Greenlandic-Language",
+		"valueLabel": "Greenlandic-Language"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30942",
+		"itemLabel": "Guido van Rossum",
+		"value": "Guido-van-Rossum-1",
+		"valueLabel": "Guido-van-Rossum-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29712",
+		"itemLabel": "Hanoi – Amsterdam High School",
+		"value": "Hà-Nội-Amsterdam",
+		"valueLabel": "Hà-Nội-Amsterdam"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25294",
+		"itemLabel": "hammer",
+		"value": "Hammer-2",
+		"valueLabel": "Hammer-2"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33767",
+		"itemLabel": "hand",
+		"value": "Hands",
+		"valueLabel": "Hands"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33748",
+		"itemLabel": "Hannover 96",
+		"value": "Hannover-96",
+		"valueLabel": "Hannover-96"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29245",
+		"itemLabel": "Hastings",
+		"value": "Hastings-1",
+		"valueLabel": "Hastings-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26771",
+		"itemLabel": "Hedera",
+		"value": "Hedera",
+		"valueLabel": "Hedera"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23479",
+		"itemLabel": "HIM",
+		"value": "Him-band",
+		"valueLabel": "Him-band"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27730",
+		"itemLabel": "history of dance",
+		"value": "History-of-Dance",
+		"valueLabel": "History-of-Dance"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28042",
+		"itemLabel": "Holbæk",
+		"value": "Holbæk",
+		"valueLabel": "Holbæk"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26773",
+		"itemLabel": "Hornbill",
+		"value": "Hornbill",
+		"valueLabel": "Hornbill"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26545",
+		"itemLabel": "horseradish",
+		"value": "Horseradish",
+		"valueLabel": "Horseradish"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31711",
+		"itemLabel": "House of Saud",
+		"value": "House-of-Saud",
+		"valueLabel": "House-of-Saud"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22660",
+		"itemLabel": "Illkirch-Graffenstaden",
+		"value": "Illkirch-Graffenstaden",
+		"valueLabel": "Illkirch-Graffenstaden"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34516",
+		"itemLabel": "imagination",
+		"value": "Imagination",
+		"valueLabel": "Imagination"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22716",
+		"itemLabel": "imperative mood",
+		"value": "Imperative-Mood",
+		"valueLabel": "Imperative-Mood"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28573",
+		"itemLabel": "Inca",
+		"value": "Incan-Empire",
+		"valueLabel": "Incan-Empire"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33577",
+		"itemLabel": "Indo-Aryan languages",
+		"value": "Indo-Aryan-Languages",
+		"valueLabel": "Indo-Aryan-Languages"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28954",
+		"itemLabel": "Indoor soccer",
+		"value": "Indoor-Soccer-1",
+		"valueLabel": "Indoor-Soccer-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26463",
+		"itemLabel": "Industrial and Commercial Bank of China",
+		"value": "Industrial-and-Commercial-Bank-of-China",
+		"valueLabel": "Industrial-and-Commercial-Bank-of-China"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26989",
+		"itemLabel": "Infosys",
+		"value": "Infosys",
+		"valueLabel": "Infosys"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22890",
+		"itemLabel": "Ireland",
+		"value": "Ireland-island",
+		"valueLabel": "Ireland-island"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34092",
+		"itemLabel": "Ispica",
+		"value": "Ispica",
+		"valueLabel": "Ispica"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29755",
+		"itemLabel": "Iveco Bus",
+		"value": "Iveco-Bus",
+		"valueLabel": "Iveco-Bus"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29247",
+		"itemLabel": "Getty Center",
+		"value": "J-Paul-Getty-Museum",
+		"valueLabel": "J-Paul-Getty-Museum"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30113",
+		"itemLabel": "Jeep",
+		"value": "Jeep",
+		"valueLabel": "Jeep"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31565",
+		"itemLabel": "Jerash",
+		"value": "Jerash",
+		"valueLabel": "Jerash"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34405",
+		"itemLabel": "Jingdezhen",
+		"value": "Jingdezhen-1",
+		"valueLabel": "Jingdezhen-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27184",
+		"itemLabel": "Jive Records",
+		"value": "JIVE-Records",
+		"valueLabel": "JIVE-Records"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25014",
+		"itemLabel": "John Cleese",
+		"value": "John-Cleese",
+		"valueLabel": "John-Cleese"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25834",
+		"itemLabel": "Kaikoura",
+		"value": "Kaikoura",
+		"valueLabel": "Kaikoura"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33168",
+		"itemLabel": "Kalvakuntla Chandrashekar",
+		"value": "Kalvakuntla-Chandrashekar-Rao",
+		"valueLabel": "Kalvakuntla-Chandrashekar-Rao"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22714",
+		"itemLabel": "Karl May",
+		"value": "Karl-May-1",
+		"valueLabel": "Karl-May-1"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26485",
+		"itemLabel": "Keller",
+		"value": "Keller-Texas",
+		"valueLabel": "Keller-Texas"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34755",
+		"itemLabel": "Kickstarter",
+		"value": "Kickstarter",
+		"valueLabel": "Kickstarter"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29999",
+		"itemLabel": "Kingdom of the Netherlands",
+		"value": "Kingdom-of-the-Netherlands",
+		"valueLabel": "Kingdom-of-the-Netherlands"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27163",
+		"itemLabel": "Kladovo",
+		"value": "Kladovo",
+		"valueLabel": "Kladovo"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26328",
+		"itemLabel": "Knightsbridge",
+		"value": "Knightsbridge",
+		"valueLabel": "Knightsbridge"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q21184",
+		"itemLabel": "Køge",
+		"value": "Køge",
+		"valueLabel": "Køge"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34239",
+		"itemLabel": "Konkani",
+		"value": "Konkani",
+		"valueLabel": "Konkani"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31681",
+		"itemLabel": "Kony 2012",
+		"value": "KONY-2012",
+		"valueLabel": "KONY-2012"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22661",
+		"itemLabel": "Missionary Church of Kopimism",
+		"value": "Kopimism",
+		"valueLabel": "Kopimism"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q24720",
+		"itemLabel": "Korean calligraphy",
+		"value": "Korean-Calligraphy",
+		"valueLabel": "Korean-Calligraphy"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q24307",
+		"itemLabel": "Korematsu v. United States",
+		"value": "Korematsu-Vs-United-States",
+		"valueLabel": "Korematsu-Vs-United-States"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27532",
+		"itemLabel": "Lacertidae",
+		"value": "Lacertidae",
+		"valueLabel": "Lacertidae"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30419",
+		"itemLabel": "Lagawe",
+		"value": "Lagawe-Ifugao",
+		"valueLabel": "Lagawe-Ifugao"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27192",
+		"itemLabel": "Lamar Hunt U.S. Open Cup",
+		"value": "Lamar-Hunt-US-Open-Cup",
+		"valueLabel": "Lamar-Hunt-US-Open-Cup"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27589",
+		"itemLabel": "Gull",
+		"value": "Laridae",
+		"valueLabel": "Laridae"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34027",
+		"itemLabel": "latitude",
+		"value": "Latitude",
+		"valueLabel": "Latitude"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26228",
+		"itemLabel": "LG Optimus L3",
+		"value": "LG-Optimus-L3",
+		"valueLabel": "LG-Optimus-L3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q597",
+		"itemLabel": "Lisbon",
+		"value": "Lisbon",
+		"valueLabel": "Lisbon"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31953",
+		"itemLabel": "LittleBigPlanet",
+		"value": "LittleBigPlanet",
+		"valueLabel": "LittleBigPlanet"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29261",
+		"itemLabel": "F-35 Lightning II",
+		"value": "Lockheed-Martin-F-35-Lightning-II",
+		"valueLabel": "Lockheed-Martin-F-35-Lightning-II"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q22723",
+		"itemLabel": "loess",
+		"value": "Loess",
+		"valueLabel": "Loess"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q25433",
+		"itemLabel": "Low German",
+		"value": "Low-German",
+		"valueLabel": "Low-German"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28918",
+		"itemLabel": "Luce Irigaray",
+		"value": "Luce-Irigaray",
+		"valueLabel": "Luce-Irigaray"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30204",
+		"itemLabel": "magnetic induction",
+		"value": "Magnetic-Induction",
+		"valueLabel": "Magnetic-Induction"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30198",
+		"itemLabel": "marsh",
+		"value": "Marsh",
+		"valueLabel": "Marsh"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29251",
+		"itemLabel": "F-15 Eagle",
+		"value": "McDonnell-Douglas-F-15-Eagle",
+		"valueLabel": "McDonnell-Douglas-F-15-Eagle"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34503",
+		"itemLabel": "Mehmed the Conqueror",
+		"value": "Mehmed-the-Conqueror",
+		"valueLabel": "Mehmed-the-Conqueror"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33349",
+		"itemLabel": "Melitopol",
+		"value": "Melitopol",
+		"valueLabel": "Melitopol"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23529",
+		"itemLabel": "Message in a bottle",
+		"value": "Message-in-a-Bottle-3",
+		"valueLabel": "Message-in-a-Bottle-3"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29876",
+		"itemLabel": "Middle America",
+		"value": "Middle-America",
+		"valueLabel": "Middle-America"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q29032",
+		"itemLabel": "Miloš Zeman",
+		"value": "Miloš-Zeman",
+		"valueLabel": "Miloš-Zeman"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q31356",
+		"itemLabel": "Mingora",
+		"value": "Mingora",
+		"valueLabel": "Mingora"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33204",
+		"itemLabel": "Móng Cái",
+		"value": "Móng-Cái",
+		"valueLabel": "Móng-Cái"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q34605",
+		"itemLabel": "Montagnana",
+		"value": "Montagnana",
+		"valueLabel": "Montagnana"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26388",
+		"itemLabel": "phase of the moon",
+		"value": "Moon-Phases",
+		"valueLabel": "Moon-Phases"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30081",
+		"itemLabel": "multilingualism",
+		"value": "Multilingualism",
+		"valueLabel": "Multilingualism"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q23402",
+		"itemLabel": "Musée d'Orsay",
+		"value": "Musée-dOrsay",
+		"valueLabel": "Musée-dOrsay"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q30642",
+		"itemLabel": "natural language processing",
+		"value": "Natural-Language-Processing",
+		"valueLabel": "Natural-Language-Processing"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q219203",
+		"itemLabel": "NEC",
+		"value": "NEC",
+		"valueLabel": "NEC"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28193",
+		"itemLabel": "The New World",
+		"value": "New-World",
+		"valueLabel": "New-World"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q28775",
+		"itemLabel": "Nicotinamide adenine dinucleotide",
+		"value": "Nicotinamide-Adenine-Dinucleotide",
+		"valueLabel": "Nicotinamide-Adenine-Dinucleotide"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q33838",
+		"itemLabel": "Niger-Congo languages",
+		"value": "Niger-Congo-Languages",
+		"valueLabel": "Niger-Congo-Languages"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q26086",
+		"itemLabel": "Normative economics",
+		"value": "Normative-Economics",
+		"valueLabel": "Normative-Economics"
+	},
+	{
+		"item": "http://www.wikidata.org/entity/Q27381",
+		"itemLabel": "North Africa",
+		"value": "North-Africa",
+		"valueLabel": "North-Africa"
+	}
+]

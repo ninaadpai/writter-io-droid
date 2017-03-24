@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Writter</string>
+    <string name="subtitle">Expand the horizon of your knowledge</string>
+    <string name="whatsthis">Blog, ask, answer. Share your thoughts, views and facts with the community</string>
+    <string name="usegoogle">Google</string>
+    <string name="usefacebook">Facebook</string>
+    <string name="alternativeor">you can also use</string>
+    <string name="or">or</string>
+    <string name="emailhint">Email</string>
+    <string name="pwdhint">Password</string>
+    <string name="mainactivitygobtn">Go</string>
+    <string name="nameHint">First &amp; Last Name</string>
+    <string name="setuphint">Thanks for signing up! We would like to know a bit more about you.</string>
+    <string name="chooseTopics">Add at least 5 topics to personalize your home.</string>
+    <string name="login">Log In</string>
+    <string name="signup">Sign Up</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_feed">Feed</string>
+    <string name="title_blog">My Blog</string>
+    <string name="title_trending">Trending</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chosen_favorites">Nothing Selected</string>
+</resources>
