@@ -2,6 +2,7 @@ package io.writter.ninaadpai.writter;
 
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,13 +10,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FeedFragment extends Fragment {
-
 
     public FeedFragment() {
         // Required empty public constructor
@@ -26,8 +32,13 @@ public class FeedFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.i("Demo","FeedFragment onCreateView");
+        View view = inflater.inflate(R.layout.fragment_feed, container, false);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_feed, container, false);
+        Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/RobotoSlab-Regular.ttf");
+        EditText searchFeed = (EditText)view.findViewById(R.id.searchFeed);
+        searchFeed.setTypeface(domineBold);
+        return view;
     }
 
     @Override
@@ -55,7 +66,6 @@ public class FeedFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.i("Demo","FeedFragment onActivityCreated");
-
     }
 
     @Override
