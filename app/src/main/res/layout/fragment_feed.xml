@@ -8,13 +8,16 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher"
+        android:background="@android:color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/searchFeed"
@@ -27,11 +30,11 @@
         android:hint="@string/feed_edittext_hint"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:textSize="12sp"
         android:inputType="textPersonName"
-        android:layout_below="@+id/imageView2" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/feedRecycler"
@@ -41,5 +44,5 @@
         android:layout_alignLeft="@+id/searchFeed"
         android:layout_alignRight="@+id/searchFeed"
         android:layout_alignStart="@+id/searchFeed"
-        android:layout_below="@+id/searchFeed" />
+        android:layout_below="@+id/toolbar" />
 </RelativeLayout>

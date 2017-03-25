@@ -8,8 +8,11 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.squareup.picasso.Picasso;
 import java.util.List;
 
@@ -19,12 +22,13 @@ import java.util.List;
 
 public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHolder> {
     private static final String TAG = "CustomAdapter";
-
+    private Context context;
     private List<Post> mDataSet;
     private Typeface domineBold;
-    public FeedListAdapter(List<Post> dataSet, Typeface domineBold) {
+    public FeedListAdapter(FragmentActivity f, List<Post> dataSet, Typeface domineBold) {
         this.mDataSet = dataSet;
         this.domineBold = domineBold;
+        this.context = f;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -73,15 +77,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
 
            @Override
            public void onClick(View v) {
-               if(viewHolder.likedImage.getDrawable().getConstantState() == v.getResources().getDrawable(R.drawable.like).getConstantState()){
-                   viewHolder.likedImage.setImageResource(R.drawable.liked);
-             //      notifyItemChanged(position);
-               }
-               if(viewHolder.likedImage.getDrawable().getConstantState() == v.getResources().getDrawable(R.drawable.liked).getConstantState()){
-                   viewHolder.likedImage.setImageResource(R.drawable.like);
-              //     notifyItemChanged(position);
-               }
-
+               viewHolder.likedImage.setImageResource(R.drawable.liked);
            }
        });
     }
