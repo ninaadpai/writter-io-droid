@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -30,7 +31,7 @@ import java.util.List;
 
 public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHolder> {
     private static final String TAG = "CustomAdapter";
-    private Context context;
+    private static Context context;
     private List<Post> mDataSet;
     private Typeface domineBold;
     private Typeface share;
@@ -51,6 +52,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         private TextView likeCount;
         private TextView commentCount;
         private ImageView addToNetwork;
+        private int width;
         boolean likedBool = false;
         private AlertDialog.Builder addToNW;
         public ViewHolder(View v) {
@@ -69,6 +71,9 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             commentCount = (TextView) v.findViewById(R.id.commentCount);
             addToNetwork = (ImageView) v.findViewById(R.id.addUser);
             addToNW = new AlertDialog.Builder(v.getContext());
+            WindowManager window = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+            width = window.getDefaultDisplay().getWidth();
+
         }
     }
 
@@ -92,7 +97,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
        viewHolder.postDesc.setText(p.getPostDesc());
        viewHolder.postDesc.setTypeface(domineBold);
        viewHolder.likeCount.setTypeface(share);
-       viewHolder.likeCount.setText("27k");
+       viewHolder.likeCount.setText("27.2k");
        viewHolder.commentCount.setTypeface(share);
        viewHolder.commentCount.setText("5.5k");
        viewHolder.likedImage.setOnClickListener(new View.OnClickListener() {
@@ -118,16 +123,33 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                                     public void run() {
                                         viewHolder.addToNetwork.animate()
                                                 .alpha(0.0f)
-                                                .setDuration(500)
+                                                .setDuration(1000)
+                                                .setListener(new AnimatorListenerAdapter() {
+                                                    @Override
+                                                    public void onAnimationEnd(Animator animation) {
+                                                        super.onAnimationEnd(animation);
+                                                        viewHolder.addToNetwork.setImageResource(R.drawable.added);
+                                                    }
+                                                });
+                                    }
+                                },0);
+                                viewHolder.addToNetwork.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        viewHolder.addToNetwork.animate()
+                                                .alpha(0.0f)
+                                                .setDuration(3000)
+                                                .translationX(viewHolder.width)
                                                 .setListener(new AnimatorListenerAdapter() {
                                                     @Override
                                                     public void onAnimationEnd(Animator animation) {
                                                         super.onAnimationEnd(animation);
                                                         viewHolder.addToNetwork.setVisibility(View.GONE);
+                                                        notifyItemChanged(position);
                                                     }
                                                 });
                                     }
-                                },3000);
+                                },0);
                             }
                         }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
