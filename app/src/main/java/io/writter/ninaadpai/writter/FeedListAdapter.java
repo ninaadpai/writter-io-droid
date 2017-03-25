@@ -14,6 +14,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
+
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 /**
@@ -25,9 +28,13 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
     private Context context;
     private List<Post> mDataSet;
     private Typeface domineBold;
-    public FeedListAdapter(FragmentActivity f, List<Post> dataSet, Typeface domineBold) {
+    private Typeface share;
+
+    public FeedListAdapter(FragmentActivity f, List<Post> dataSet, Typeface domineBold, Typeface share) {
         this.mDataSet = dataSet;
         this.domineBold = domineBold;
+        this.share = share;
+
         this.context = f;
     }
 
@@ -37,6 +44,8 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         private TextView postQuestion;
         private TextView postDesc;
         private ImageView likedImage;
+        private TextView likeCount;
+        private TextView commentCount;
         boolean likedBool = false;
         public ViewHolder(View v) {
             super(v);
@@ -50,6 +59,9 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             postQuestion = (TextView) v.findViewById(R.id.postQuestion);
             postDesc = (TextView) v.findViewById(R.id.postDesc);
             likedImage = (ImageView) v.findViewById(R.id.likeDetails);
+            likeCount = (TextView) v.findViewById(R.id.likeCount);
+            commentCount = (TextView) v.findViewById(R.id.commentCount);
+
         }
     }
 
@@ -72,7 +84,10 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         viewHolder.postQuestion.setTypeface(domineBold);
        viewHolder.postDesc.setText(p.getPostDesc());
        viewHolder.postDesc.setTypeface(domineBold);
-
+       viewHolder.likeCount.setTypeface(share);
+       viewHolder.likeCount.setText("27k");
+       viewHolder.commentCount.setTypeface(share);
+       viewHolder.commentCount.setText("5.5k");
        viewHolder.likedImage.setOnClickListener(new View.OnClickListener() {
 
            @Override

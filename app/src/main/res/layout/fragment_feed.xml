@@ -45,4 +45,16 @@
         android:layout_alignRight="@+id/searchFeed"
         android:layout_alignStart="@+id/searchFeed"
         android:layout_below="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/clearSearch"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/searchFeed"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="6dp"
+        app:srcCompat="@drawable/ic_cancel_white_18dp" />
+
 </RelativeLayout>
