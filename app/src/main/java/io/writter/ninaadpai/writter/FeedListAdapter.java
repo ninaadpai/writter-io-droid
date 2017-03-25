@@ -53,11 +53,9 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         private TextView commentCount;
         private ImageView addToNetwork;
         private int width;
-        boolean likedBool = false;
         private AlertDialog.Builder addToNW;
         public ViewHolder(View v) {
             super(v);
-            // Define click listener for the ViewHolder's View.
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -73,7 +71,6 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             addToNW = new AlertDialog.Builder(v.getContext());
             WindowManager window = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
             width = window.getDefaultDisplay().getWidth();
-
         }
     }
 
@@ -123,7 +120,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                                     public void run() {
                                         viewHolder.addToNetwork.animate()
                                                 .alpha(0.0f)
-                                                .setDuration(1000)
+                                                .setDuration(500)
                                                 .setListener(new AnimatorListenerAdapter() {
                                                     @Override
                                                     public void onAnimationEnd(Animator animation) {
@@ -138,7 +135,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                                     public void run() {
                                         viewHolder.addToNetwork.animate()
                                                 .alpha(0.0f)
-                                                .setDuration(3000)
+                                                .setDuration(4000)
                                                 .translationX(viewHolder.width)
                                                 .setListener(new AnimatorListenerAdapter() {
                                                     @Override

@@ -1,8 +1,10 @@
 package io.writter.ninaadpai.writter;
 
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,13 +13,17 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +35,7 @@ import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
  * A simple {@link Fragment} subclass.
  */
 public class FeedFragment extends Fragment {
-
+    EditText searchFeed;
     public FeedFragment() {
         // Required empty public constructor
     }
@@ -42,23 +48,46 @@ public class FeedFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_feed, container, false);
         final Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/RobotoSlab-Regular.ttf");
         final Typeface share = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Share-Bold.ttf");
-
-        final EditText searchFeed = (EditText)view.findViewById(R.id.searchFeed);
+        final InputMethodManager inputManager = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        searchFeed = (EditText)view.findViewById(R.id.searchFeed);
         final ImageView clearSearch = (ImageView) view.findViewById(R.id.clearSearch);
+        final Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+        searchFeed.setFocusableInTouchMode(false);
+        searchFeed.setFocusable(false);
+        searchFeed.setFocusableInTouchMode(true);
+        searchFeed.setFocusable(true);
+        searchFeed.setCursorVisible(false);
+        final RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) toolbar.getLayoutParams();
         clearSearch.setVisibility(View.INVISIBLE);
         searchFeed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus)
+                if(hasFocus) {
                     clearSearch.setVisibility(View.VISIBLE);
-                else
+                    params.height = 500;
+                    toolbar.animate().setDuration(200);
+                    toolbar.setLayoutParams(params);
+                    toolbar.requestLayout();
+                }
+                else {
                     clearSearch.setVisibility(View.INVISIBLE);
+                    params.height = 170;
+                    toolbar.setLayoutParams(params);
+                    toolbar.requestLayout();
+                    inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+                }
             }
         });
+
         clearSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+                searchFeed.clearFocus();
                 searchFeed.setText("");
+                params.height = 170;
+                toolbar.setLayoutParams(params);
+                toolbar.requestLayout();
             }
         });
         searchFeed.setTypeface(domineBold);
@@ -88,11 +117,16 @@ public class FeedFragment extends Fragment {
 
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onResume() {
         super.onResume();
         Log.i("Demo","FeedFragment onResume");
-
+        searchFeed.setFocusableInTouchMode(false);
+        searchFeed.setFocusable(false);
+        searchFeed.setFocusableInTouchMode(true);
+        searchFeed.setFocusable(true);
+        searchFeed.setCursorVisible(false);
     }
 
     @Override
@@ -108,11 +142,16 @@ public class FeedFragment extends Fragment {
         Log.i("Demo","FeedFragment onActivityCreated");
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onStart() {
         super.onStart();
         Log.i("Demo","FeedFragment onStart");
-
+        searchFeed.setFocusableInTouchMode(false);
+        searchFeed.setFocusable(false);
+        searchFeed.setFocusableInTouchMode(true);
+        searchFeed.setFocusable(true);
+        searchFeed.setCursorVisible(false);
     }
 
     @Override
