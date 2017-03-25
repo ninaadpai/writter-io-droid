@@ -1,10 +1,15 @@
 package io.writter.ninaadpai.writter;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +39,6 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         this.mDataSet = dataSet;
         this.domineBold = domineBold;
         this.share = share;
-
         this.context = f;
     }
 
@@ -46,7 +50,9 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         private ImageView likedImage;
         private TextView likeCount;
         private TextView commentCount;
+        private ImageView addToNetwork;
         boolean likedBool = false;
+        private AlertDialog.Builder addToNW;
         public ViewHolder(View v) {
             super(v);
             // Define click listener for the ViewHolder's View.
@@ -61,7 +67,8 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             likedImage = (ImageView) v.findViewById(R.id.likeDetails);
             likeCount = (TextView) v.findViewById(R.id.likeCount);
             commentCount = (TextView) v.findViewById(R.id.commentCount);
-
+            addToNetwork = (ImageView) v.findViewById(R.id.addUser);
+            addToNW = new AlertDialog.Builder(v.getContext());
         }
     }
 
@@ -93,6 +100,43 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
            @Override
            public void onClick(View v) {
                viewHolder.likedImage.setImageResource(R.drawable.liked);
+           }
+       });
+       viewHolder.addToNetwork.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Log.i("Clicked", "Add");
+                viewHolder.addToNW.setTitle("Send a request")
+                .setMessage("Are you sure to want to send a follow request?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                                viewHolder.addToNetwork.setImageResource(R.drawable.added);
+                                viewHolder.addToNetwork.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        viewHolder.addToNetwork.animate()
+                                                .alpha(0.0f)
+                                                .setDuration(500)
+                                                .setListener(new AnimatorListenerAdapter() {
+                                                    @Override
+                                                    public void onAnimationEnd(Animator animation) {
+                                                        super.onAnimationEnd(animation);
+                                                        viewHolder.addToNetwork.setVisibility(View.GONE);
+                                                    }
+                                                });
+                                    }
+                                },3000);
+                            }
+                        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                }).setCancelable(false);
+               AlertDialog alert = viewHolder.addToNW.create();
+               alert.show();
            }
        });
     }
