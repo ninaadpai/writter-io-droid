@@ -8,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -40,7 +41,7 @@ public class FeedFragment extends Fragment {
         searchFeed.setTypeface(domineBold);
         final FragmentActivity f = getActivity();
         final RecyclerView feedRecycler = (RecyclerView)view.findViewById(R.id.feedRecycler);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this.getActivity());
+        LinearLayoutManager layoutManager = new GridLayoutManager(this.getActivity(), 1);
         feedRecycler.setLayoutManager(layoutManager);
         final List<Post> posts = new ArrayList<>();
         posts.add(new Post("","Ninaad Pai","Workout","6 hrs","What kind of protein is suitable for Ectomorph?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
@@ -52,7 +53,7 @@ public class FeedFragment extends Fragment {
 
         final FeedListAdapter feedListAdapter = new FeedListAdapter(posts, domineBold);
         feedRecycler.setAdapter(feedListAdapter);
-        feedRecycler.setItemAnimator(new DefaultItemAnimator());
+        //feedRecycler.setItemAnimator(new DefaultItemAnimator());
         return view;
     }
 

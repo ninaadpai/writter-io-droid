@@ -22,10 +22,18 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
 
     private List<Post> mDataSet;
     private Typeface domineBold;
+    public FeedListAdapter(List<Post> dataSet, Typeface domineBold) {
+        this.mDataSet = dataSet;
+        this.domineBold = domineBold;
+    }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView textView;
-
+        private ImageView profileImage;
+        private TextView postDetails;
+        private TextView postQuestion;
+        private TextView postDesc;
+        private ImageView likedImage;
+        boolean likedBool = false;
         public ViewHolder(View v) {
             super(v);
             // Define click listener for the ViewHolder's View.
@@ -34,26 +42,48 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                 public void onClick(View v) {
                 }
             });
-            textView = (TextView) v.findViewById(R.id.postDetails);
+            postDetails = (TextView) v.findViewById(R.id.postDetails);
+            postQuestion = (TextView) v.findViewById(R.id.postQuestion);
+            postDesc = (TextView) v.findViewById(R.id.postDesc);
+            likedImage = (ImageView) v.findViewById(R.id.likeDetails);
         }
     }
-    public FeedListAdapter(List<Post> dataSet, Typeface domineBold) {
-        mDataSet = dataSet;
-    }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         // Create a new view.
         View v = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.feed_recycler_row, viewGroup, false);
-
+        v.setClickable(true);
+        v.setFocusableInTouchMode(true);
         return new ViewHolder(v);
     }
 
    @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
        final Post p = mDataSet.get(position);
-        viewHolder.textView.setText(p.getUploadedBy()+" | "+p.getTopicString()+" | "+p.getUploadedTime());
-        viewHolder.textView.setTypeface(domineBold);
+        viewHolder.postDetails.setText(p.getUploadedBy()+" \t\t "+p.getTopicString()+" \t\t "+p.getUploadedTime());
+        viewHolder.postDetails.setTypeface(domineBold);
+        viewHolder.postQuestion.setText(p.getPostQuestion());
+        viewHolder.postQuestion.setTypeface(domineBold);
+       viewHolder.postDesc.setText(p.getPostDesc());
+       viewHolder.postDesc.setTypeface(domineBold);
+
+       viewHolder.likedImage.setOnClickListener(new View.OnClickListener() {
+
+           @Override
+           public void onClick(View v) {
+               if(viewHolder.likedImage.getDrawable().getConstantState() == v.getResources().getDrawable(R.drawable.like).getConstantState()){
+                   viewHolder.likedImage.setImageResource(R.drawable.liked);
+             //      notifyItemChanged(position);
+               }
+               if(viewHolder.likedImage.getDrawable().getConstantState() == v.getResources().getDrawable(R.drawable.liked).getConstantState()){
+                   viewHolder.likedImage.setImageResource(R.drawable.like);
+              //     notifyItemChanged(position);
+               }
+
+           }
+       });
     }
     @Override
     public int getItemCount() {
