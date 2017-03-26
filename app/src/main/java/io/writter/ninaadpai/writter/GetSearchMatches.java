@@ -14,15 +14,17 @@ class GetSearchMatches {
     public GetSearchMatches(DashboardActivity dashboardActivity) {
     }
 
-    public String execute(String s, ArrayList<String> list) {
+    public List<String> execute(String s, ArrayList<String> list) {
         String res = null;
+        List<String> possibleMatches = new ArrayList<>();
+
         if(s.length() > 0) {
             for (String string : list) {
-                if (string.matches("(?i)" + s + ".*")) {
-                    res = string;
+                if (string.matches("(?i).*"+s+".*")) {
+                    possibleMatches.add(string);
                 }
             }
         }
-        return res;
+        return possibleMatches;
     }
 }

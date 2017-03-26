@@ -30,18 +30,25 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class DashboardActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     Class fragmentClass;
     EditText searchFeed;
-    ImageView clearSearch;
     Typeface domineBold;
     Fragment fragment = FeedFragment.class.newInstance();
-    String[] values = new String[] { "What is the best time to visit California in terms of weather?",
-            "Who won the most number of grand slams of tennis?", "Who is the biggest earner in hollywood in 2016?", "I am a rookie in CS, which book do I use for Python?"
-            ,"When is Pirates of the Caribbean 5th part releasing?", "Stomach Cancer Symptoms"};
+    String[] values = new String[] {
+            "What is the best time to visit California in terms of weather?",
+            "Who won the most number of grand slams of tennis?",
+            "Who won nobel peace prize in 2014?",
+            "Who is the biggest earner in hollywood in 2016?",
+            "Who is the biggest name in bollywood?",
+            "I am a rookie in CS, which book do I use for Python?"
+            ,"When is Pirates of the Caribbean 5th part releasing?",
+            "Stomach Cancer Symptoms"
+    };
 
     private FragmentManager fragmentManager;
 
@@ -59,7 +66,6 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     private void selectedFragment(MenuItem item) {
-      //  Fragment fragment = null;
         fragmentClass = null;
         switch(item.getItemId()) {
             case R.id.navigation_home:
@@ -143,9 +149,9 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 //Log.i("Typing:", s.toString());
-                StringBuilder sb = new StringBuilder();
-                sb.append(new GetSearchMatches(DashboardActivity.this).execute(s.toString(), list));
-                Log.i("Best match", sb.toString());
+                List<String> best = null;
+                best = (new GetSearchMatches(DashboardActivity.this).execute(s.toString(), list));
+                Log.i("Best match", String.valueOf(best));
             }
 
             @Override

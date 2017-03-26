@@ -41,10 +41,16 @@ public class SearchFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_search, container, false);
 
         final ListView searchRes = (ListView) view.findViewById(R.id.searchResults);
-        String[] values = new String[] { "What is the best time to visit California in terms of weather?",
-        "Who won the most number of grand slams of tennis?", "Who is the biggest earner in hollywood in 2016?", "I am a rookie in CS, which book do I use for Python?"
-        ,"When is Pirates of the Caribbean 5th part releasing?", "Stomach Cancer Symptoms"};
-        final ArrayList<String> list = new ArrayList<>();
+        String[] values = new String[] {
+                "What is the best time to visit California in terms of weather?",
+                "Who won the most number of grand slams of tennis?",
+                "Who won nobel peace prize in 2014?",
+                "Who is the biggest earner in hollywood in 2016?",
+                "Who is the biggest name in bollywood?",
+                "I am a rookie in CS, which book do I use for Python?"
+                ,"When is Pirates of the Caribbean 5th part releasing?",
+                "Stomach Cancer Symptoms"
+        }; final ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < values.length; ++i) {
             list.add(values[i]);
         }
