@@ -24,7 +24,7 @@
             android:theme="?attr/actionBarTheme">
             <EditText
                 android:id="@+id/searchFeed"
-                android:layout_width="300dp"
+                android:layout_width="310dp"
                 android:layout_height="30dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="10dp"

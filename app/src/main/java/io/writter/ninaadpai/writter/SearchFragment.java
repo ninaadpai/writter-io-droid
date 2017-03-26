@@ -2,6 +2,7 @@ package io.writter.ninaadpai.writter;
 
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 
 /**
@@ -16,7 +26,8 @@ import android.view.ViewGroup;
  */
 public class SearchFragment extends Fragment {
 
-
+    Typeface domineBold;
+    SearchResAdapter adapter;
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -27,7 +38,28 @@ public class SearchFragment extends Fragment {
                              Bundle savedInstanceState) {
         Log.i("Demo","SearchFragment onCreateView");
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false);
+        View view = inflater.inflate(R.layout.fragment_search, container, false);
+
+        final ListView searchRes = (ListView) view.findViewById(R.id.searchResults);
+        String[] values = new String[] { "What is the best time to visit California in terms of weather?",
+        "Who won the most number of grand slams of tennis?", "Who is the biggest earner in hollywood in 2016?", "I am a rookie in CS, which book do I use for Python?"
+        ,"When is Pirates of the Caribbean 5th part releasing?", "Stomach Cancer Symptoms"};
+        final ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < values.length; ++i) {
+            list.add(values[i]);
+        }
+        adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, list, domineBold);
+        searchRes.setAdapter(adapter);
+        domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/RobotoSlab-Regular.ttf");
+        TextView searchTitle = (TextView)view.findViewById(R.id.searchFragTitle);
+        Button questionPost = (Button) view.findViewById(R.id.questionPostBtn);
+        CheckBox anonymousCheckbox = (CheckBox) view.findViewById(R.id.anonymousCheckbox);
+        questionPost.setTypeface(domineBold);
+        anonymousCheckbox.setTypeface(domineBold);
+        searchTitle.setTypeface(domineBold);
+        List<String> results = new ArrayList<>();
+
+        return view;
     }
 
     @Override
@@ -75,5 +107,4 @@ public class SearchFragment extends Fragment {
     public interface onFragmentInteractionListener {
         public void moveToNextFragment();
     }
-
 }

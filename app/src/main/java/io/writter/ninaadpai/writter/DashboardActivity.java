@@ -14,7 +14,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -26,6 +29,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class DashboardActivity extends AppCompatActivity {
 
     Toolbar toolbar;
@@ -34,6 +39,9 @@ public class DashboardActivity extends AppCompatActivity {
     ImageView clearSearch;
     Typeface domineBold;
     Fragment fragment = FeedFragment.class.newInstance();
+    String[] values = new String[] { "What is the best time to visit California in terms of weather?",
+            "Who won the most number of grand slams of tennis?", "Who is the biggest earner in hollywood in 2016?", "I am a rookie in CS, which book do I use for Python?"
+            ,"When is Pirates of the Caribbean 5th part releasing?", "Stomach Cancer Symptoms"};
 
     private FragmentManager fragmentManager;
 
@@ -89,7 +97,10 @@ public class DashboardActivity extends AppCompatActivity {
         Log.i("Demo","Dashboard: onCreate after");
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         FrameLayout touchInterceptor = (FrameLayout)findViewById(R.id.flContent);
-
+        final ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < values.length; ++i) {
+            list.add(values[i]);
+        }
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         tx.replace(R.id.flContent, new FeedFragment()).commit();
@@ -123,7 +134,25 @@ public class DashboardActivity extends AppCompatActivity {
                 }
             }
         });
+        searchFeed.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                //Log.i("Typing:", s.toString());
+                StringBuilder sb = new StringBuilder();
+                sb.append(new GetSearchMatches(DashboardActivity.this).execute(s.toString(), list));
+                Log.i("Best match", sb.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
         clearSearch.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

@@ -23,8 +23,10 @@
     <string name="feed_edittext_hint">Ask a question, search anything...</string>
     <string name="no_blog">Oops! You haven\'t started your blog yet</string>
     <string name="set_up_blog">Set It Up</string>
+    <string name="search_frag_title">MOST TRENDING SEARCHES NOW.</string>
+    <string name="anonymous_string">Anonymously</string>
+    <string name="question_post_btn">Post</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="chosen_favorites">Nothing Selected</string>
-    <string name="posting_details">Ninaad Pai   Working Out     6 hrs</string>
 </resources>
