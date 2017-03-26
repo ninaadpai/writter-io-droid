@@ -43,49 +43,6 @@ public class FeedFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_feed, container, false);
         final Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/RobotoSlab-Regular.ttf");
         final Typeface share = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Share-Bold.ttf");
-        final InputMethodManager inputManager = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        searchFeed = (EditText)view.findViewById(R.id.searchFeed);
-        final ImageView clearSearch = (ImageView) view.findViewById(R.id.clearSearch);
-        final Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        searchFeed.setFocusableInTouchMode(false);
-        searchFeed.setFocusable(false);
-        searchFeed.setFocusableInTouchMode(true);
-        searchFeed.setFocusable(true);
-//        searchFeed.setCursorVisible(false);
-        final RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) toolbar.getLayoutParams();
-        clearSearch.setVisibility(View.INVISIBLE);
-        searchFeed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus) {
-                    clearSearch.setVisibility(View.VISIBLE);
-                    params.height = 500;
-                    toolbar.animate().setDuration(200);
-                    toolbar.setLayoutParams(params);
-                    toolbar.requestLayout();
-                }
-                else {
-                    clearSearch.setVisibility(View.INVISIBLE);
-                    params.height = 165;
-                    toolbar.setLayoutParams(params);
-                    toolbar.requestLayout();
-                    inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-                }
-            }
-        });
-
-        clearSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-                searchFeed.clearFocus();
-                searchFeed.setText("");
-                params.height = 165;
-                toolbar.setLayoutParams(params);
-                toolbar.requestLayout();
-            }
-        });
-        searchFeed.setTypeface(domineBold);
         final FragmentActivity f = getActivity();
         final RecyclerView feedRecycler = (RecyclerView)view.findViewById(R.id.feedRecycler);
         LinearLayoutManager layoutManager = new GridLayoutManager(this.getActivity(), 1);
@@ -117,11 +74,6 @@ public class FeedFragment extends Fragment {
     public void onResume() {
         super.onResume();
         Log.i("Demo","FeedFragment onResume");
-        searchFeed.setFocusableInTouchMode(false);
-        searchFeed.setFocusable(false);
-        searchFeed.setFocusableInTouchMode(true);
-        searchFeed.setFocusable(true);
-  //      searchFeed.setCursorVisible(false);
     }
 
     @Override
@@ -142,11 +94,6 @@ public class FeedFragment extends Fragment {
     public void onStart() {
         super.onStart();
         Log.i("Demo","FeedFragment onStart");
-        searchFeed.setFocusableInTouchMode(false);
-        searchFeed.setFocusable(false);
-        searchFeed.setFocusableInTouchMode(true);
-        searchFeed.setFocusable(true);
-    //    searchFeed.setCursorVisible(false);
     }
 
     @Override

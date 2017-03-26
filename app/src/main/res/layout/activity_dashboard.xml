@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context="io.writter.ninaadpai.writter.DashboardActivity">
 
     <RelativeLayout
@@ -13,11 +15,44 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
-
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+            <EditText
+                android:id="@+id/searchFeed"
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/feed_search_edittext"
+                android:drawableLeft="@drawable/ic_search_white_24dp"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="@string/feed_edittext_hint"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="12sp" />
+            <ImageView
+                android:id="@+id/clearSearch"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/toolbar"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/ic_cancel_white_18dp" />
+        </android.support.v7.widget.Toolbar>
         <FrameLayout
             android:id="@+id/flContent"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar2">
+        </FrameLayout>
     </RelativeLayout>
 
     <android.support.design.widget.BottomNavigationView

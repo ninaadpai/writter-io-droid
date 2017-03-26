@@ -10,56 +10,12 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@android:color/black"
-        android:theme="?attr/actionBarTheme">
-    </android.support.v7.widget.Toolbar>
-
-    <EditText
-        android:id="@+id/searchFeed"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/feed_search_edittext"
-        android:drawableLeft="@drawable/ic_search_white_24dp"
-        android:drawablePadding="5dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:hint="@string/feed_edittext_hint"
-        android:inputType="textPersonName"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:textSize="12sp" />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/feedRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignEnd="@+id/toolbar"
-        android:layout_alignLeft="@+id/toolbar"
-        android:layout_alignRight="@+id/toolbar"
-        android:layout_alignStart="@+id/toolbar"
         android:layout_gravity="center_vertical"
         android:gravity="center_vertical"
-        android:layout_weight="1"
-        android:layout_below="@+id/toolbar" />
-
-    <ImageView
-        android:id="@+id/clearSearch"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/toolbar"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="15dp"
-        app:srcCompat="@drawable/ic_cancel_white_18dp" />
+        android:layout_weight="1" />
 
 </RelativeLayout>
