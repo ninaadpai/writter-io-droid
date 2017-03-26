@@ -1,6 +1,4 @@
 package io.writter.ninaadpai.writter;
-
-
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Typeface;
@@ -14,6 +12,8 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -29,11 +29,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
-
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class FeedFragment extends Fragment {
     EditText searchFeed;
     public FeedFragment() {
@@ -56,7 +51,7 @@ public class FeedFragment extends Fragment {
         searchFeed.setFocusable(false);
         searchFeed.setFocusableInTouchMode(true);
         searchFeed.setFocusable(true);
-        searchFeed.setCursorVisible(false);
+//        searchFeed.setCursorVisible(false);
         final RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) toolbar.getLayoutParams();
         clearSearch.setVisibility(View.INVISIBLE);
         searchFeed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -71,7 +66,7 @@ public class FeedFragment extends Fragment {
                 }
                 else {
                     clearSearch.setVisibility(View.INVISIBLE);
-                    params.height = 170;
+                    params.height = 165;
                     toolbar.setLayoutParams(params);
                     toolbar.requestLayout();
                     inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
@@ -85,7 +80,7 @@ public class FeedFragment extends Fragment {
                 inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                 searchFeed.clearFocus();
                 searchFeed.setText("");
-                params.height = 170;
+                params.height = 165;
                 toolbar.setLayoutParams(params);
                 toolbar.requestLayout();
             }
@@ -126,7 +121,7 @@ public class FeedFragment extends Fragment {
         searchFeed.setFocusable(false);
         searchFeed.setFocusableInTouchMode(true);
         searchFeed.setFocusable(true);
-        searchFeed.setCursorVisible(false);
+  //      searchFeed.setCursorVisible(false);
     }
 
     @Override
@@ -151,7 +146,7 @@ public class FeedFragment extends Fragment {
         searchFeed.setFocusable(false);
         searchFeed.setFocusableInTouchMode(true);
         searchFeed.setFocusable(true);
-        searchFeed.setCursorVisible(false);
+    //    searchFeed.setCursorVisible(false);
     }
 
     @Override

@@ -120,23 +120,8 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                                     public void run() {
                                         viewHolder.addToNetwork.animate()
                                                 .alpha(0.0f)
-                                                .setDuration(500)
-                                                .setListener(new AnimatorListenerAdapter() {
-                                                    @Override
-                                                    public void onAnimationEnd(Animator animation) {
-                                                        super.onAnimationEnd(animation);
-                                                        viewHolder.addToNetwork.setImageResource(R.drawable.added);
-                                                    }
-                                                });
-                                    }
-                                },0);
-                                viewHolder.addToNetwork.postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        viewHolder.addToNetwork.animate()
-                                                .alpha(0.0f)
-                                                .setDuration(4000)
-                                                .translationX(viewHolder.width)
+                                                .rotation(45)
+                                                .setDuration(1500)
                                                 .setListener(new AnimatorListenerAdapter() {
                                                     @Override
                                                     public void onAnimationEnd(Animator animation) {
@@ -144,9 +129,27 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                                                         viewHolder.addToNetwork.setVisibility(View.GONE);
                                                         notifyItemChanged(position);
                                                     }
+
                                                 });
                                     }
-                                },0);
+                                },5000);
+//                                viewHolder.addToNetwork.postDelayed(new Runnable() {
+//                                    @Override
+//                                    public void run() {
+//                                        viewHolder.addToNetwork.animate()
+//                                                .alpha(0.0f)
+//                                                .setDuration(10000)
+//                                                .(viewHolder.width)
+//                                                .setListener(new AnimatorListenerAdapter() {
+//                                                    @Override
+//                                                    public void onAnimationEnd(Animator animation) {
+//                                                        super.onAnimationEnd(animation);
+//                                                        viewHolder.addToNetwork.setVisibility(View.GONE);
+//                                                        notifyItemChanged(position);
+//                                                    }
+//                                                });
+//                                    }
+//                                },0);
                             }
                         }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
