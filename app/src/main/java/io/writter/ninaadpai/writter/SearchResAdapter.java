@@ -20,7 +20,7 @@ class SearchResAdapter extends ArrayAdapter<String> {
     Context mContext;
     int mResource;
     Typeface domineBold;
-    public SearchResAdapter(Context context, int search_res_item_row, ArrayList<String> list, Typeface domineBold) {
+    public SearchResAdapter(Context context, int search_res_item_row, List<String> list, Typeface domineBold) {
         super(context, search_res_item_row, list);
         //super(context, list);
         this.mContext = context;

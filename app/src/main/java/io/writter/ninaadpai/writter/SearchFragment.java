@@ -1,6 +1,5 @@
 package io.writter.ninaadpai.writter;
 
-
 import android.content.Context;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -20,7 +19,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -28,6 +26,8 @@ public class SearchFragment extends Fragment {
 
     Typeface domineBold;
     SearchResAdapter adapter;
+    List<String> searchResults;
+
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -39,8 +39,8 @@ public class SearchFragment extends Fragment {
         Log.i("Demo","SearchFragment onCreateView");
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_search, container, false);
+        ListView searchRes = (ListView) view.findViewById(R.id.searchResults);
 
-        final ListView searchRes = (ListView) view.findViewById(R.id.searchResults);
         String[] values = new String[] {
                 "What is the best time to visit California in terms of weather?",
                 "Who won the most number of grand slams of tennis?",
@@ -50,11 +50,12 @@ public class SearchFragment extends Fragment {
                 "I am a rookie in CS, which book do I use for Python?"
                 ,"When is Pirates of the Caribbean 5th part releasing?",
                 "Stomach Cancer Symptoms"
-        }; final ArrayList<String> list = new ArrayList<>();
+        };
+        final ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < values.length; ++i) {
             list.add(values[i]);
         }
-        adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, list, domineBold);
+        adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, getArguments().getStringArrayList("message"), domineBold);
         searchRes.setAdapter(adapter);
         domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/RobotoSlab-Regular.ttf");
         TextView searchTitle = (TextView)view.findViewById(R.id.searchFragTitle);
@@ -63,8 +64,6 @@ public class SearchFragment extends Fragment {
         questionPost.setTypeface(domineBold);
         anonymousCheckbox.setTypeface(domineBold);
         searchTitle.setTypeface(domineBold);
-        List<String> results = new ArrayList<>();
-
         return view;
     }
 

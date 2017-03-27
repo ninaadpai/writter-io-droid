@@ -133,24 +133,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                                                 });
                                     }
                                 },5000);
-//                                viewHolder.addToNetwork.postDelayed(new Runnable() {
-//                                    @Override
-//                                    public void run() {
-//                                        viewHolder.addToNetwork.animate()
-//                                                .alpha(0.0f)
-//                                                .setDuration(10000)
-//                                                .(viewHolder.width)
-//                                                .setListener(new AnimatorListenerAdapter() {
-//                                                    @Override
-//                                                    public void onAnimationEnd(Animator animation) {
-//                                                        super.onAnimationEnd(animation);
-//                                                        viewHolder.addToNetwork.setVisibility(View.GONE);
-//                                                        notifyItemChanged(position);
-//                                                    }
-//                                                });
-//                                    }
-//                                },0);
-                            }
+                          }
                         }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

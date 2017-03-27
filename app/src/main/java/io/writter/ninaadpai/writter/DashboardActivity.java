@@ -128,8 +128,6 @@ public class DashboardActivity extends AppCompatActivity {
             public void onFocusChange(View v, boolean hasFocus) {
                 if(hasFocus) {
                     clearSearch.setVisibility(View.VISIBLE);
-                    FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-                    tx.replace(R.id.flContent, new SearchFragment()).commit();
                 }
                 else if(!hasFocus) {
                     clearSearch.setVisibility(View.INVISIBLE);
@@ -150,8 +148,16 @@ public class DashboardActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 //Log.i("Typing:", s.toString());
                 List<String> best = null;
-                best = (new GetSearchMatches(DashboardActivity.this).execute(s.toString(), list));
-                Log.i("Best match", String.valueOf(best));
+                best = new GetSearchMatches(DashboardActivity.this).execute(s.toString(), list);
+                if(best.size() > 0) {
+                    FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+                    Bundle bundle = new Bundle();
+                    bundle.putStringArrayList("message", (ArrayList<String>) best);
+                    SearchFragment fragInfo = new SearchFragment();
+                    fragInfo.setArguments(bundle);
+                    tx.replace(R.id.flContent, fragInfo);
+                    tx.commit();
+                }
             }
 
             @Override
