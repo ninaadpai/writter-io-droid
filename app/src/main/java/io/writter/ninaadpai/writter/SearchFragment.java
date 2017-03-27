@@ -55,10 +55,17 @@ public class SearchFragment extends Fragment {
         for (int i = 0; i < values.length; ++i) {
             list.add(values[i]);
         }
-        adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, getArguments().getStringArrayList("message"), domineBold);
+        TextView searchTitle = (TextView)view.findViewById(R.id.searchFragTitle);
+
+        ArrayList<String> topResults = getArguments().getStringArrayList("message");
+        Log.i("Top Results Size:", String.valueOf(topResults.size()));
+        if(topResults.size() > 0)
+            searchTitle.setText("YOUR SEARCH MATCHES");
+        else if(topResults.size() <= 1)
+            searchTitle.setText("DON'T SEE WHAT YOU'RE SEARCHING FOR? POST IT!");
+        adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, topResults, domineBold);
         searchRes.setAdapter(adapter);
         domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/RobotoSlab-Regular.ttf");
-        TextView searchTitle = (TextView)view.findViewById(R.id.searchFragTitle);
         Button questionPost = (Button) view.findViewById(R.id.questionPostBtn);
         CheckBox anonymousCheckbox = (CheckBox) view.findViewById(R.id.anonymousCheckbox);
         questionPost.setTypeface(domineBold);

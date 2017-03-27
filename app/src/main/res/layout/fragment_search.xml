@@ -25,7 +25,7 @@
     <ListView
         android:id="@+id/searchResults"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="@dimen/search_result_list_view_height"
         android:layout_alignEnd="@+id/questionPostBtn"
         android:layout_alignLeft="@+id/searchFragTitle"
         android:layout_alignRight="@+id/questionPostBtn"

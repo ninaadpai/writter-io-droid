@@ -149,14 +149,16 @@ public class DashboardActivity extends AppCompatActivity {
                 //Log.i("Typing:", s.toString());
                 List<String> best = null;
                 best = new GetSearchMatches(DashboardActivity.this).execute(s.toString(), list);
-                if(best.size() > 0) {
-                    FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-                    Bundle bundle = new Bundle();
-                    bundle.putStringArrayList("message", (ArrayList<String>) best);
-                    SearchFragment fragInfo = new SearchFragment();
-                    fragInfo.setArguments(bundle);
-                    tx.replace(R.id.flContent, fragInfo);
-                    tx.commit();
+                if(best != null) {
+                    if(best.size() > 0) {
+                        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+                        Bundle bundle = new Bundle();
+                        bundle.putStringArrayList("message", (ArrayList<String>) best);
+                        SearchFragment fragInfo = new SearchFragment();
+                        fragInfo.setArguments(bundle);
+                        tx.replace(R.id.flContent, fragInfo);
+                        tx.commit();
+                    }
                 }
             }
 

@@ -15,7 +15,6 @@ class GetSearchMatches {
     }
 
     public List<String> execute(String s, ArrayList<String> list) {
-        String res = null;
         List<String> possibleMatches = new ArrayList<>();
 
         if(s.length() > 0) {
@@ -25,6 +24,8 @@ class GetSearchMatches {
                 }
             }
         }
+        if(possibleMatches.size() == list.size())
+            return null;
         return possibleMatches;
     }
 }
