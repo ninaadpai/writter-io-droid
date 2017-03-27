@@ -1,12 +1,17 @@
 package io.writter.ninaadpai.writter;
 
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 
 /**
@@ -25,7 +30,13 @@ public class BlogFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         Log.i("Demo","BlogFragment onCreateView");
-        return inflater.inflate(R.layout.fragment_blog, container, false);
+        View view1 =  inflater.inflate(R.layout.fragment_blog, container, false);
+        Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/RobotoSlab-Regular.ttf");
+        TextView noBlog = (TextView)view1.findViewById(R.id.noBlog);
+        Button setUpBlog = (Button) view1.findViewById(R.id.setUpBlog);
+        noBlog.setTypeface(domineBold);
+        setUpBlog.setTypeface(domineBold);
+        return view1;
     }
 
 }

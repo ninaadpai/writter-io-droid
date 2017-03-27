@@ -72,6 +72,12 @@ public class MainActivity extends AppCompatActivity {
         whatsThis.setTypeface(domineBold);
         termsOfService.setTypeface(domineBold);
         termsOfService.setText(Html.fromHtml("By clicking Sign Up you automatically agree to the <u>Terms of Use</u>"));
+        termsOfService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TermsOfUseActivity.class));
+            }
+        });
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = null;
         signupbtn.setOnClickListener(new View.OnClickListener() {

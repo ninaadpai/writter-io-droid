@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="io.writter.ninaadpai.writter.SearchFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:id="@+id/searchFragTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/search_frag_title"
+        android:textColor="@android:color/black"
+        android:textSize="11sp" />
+
+    <ListView
+        android:id="@+id/searchResults"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_result_list_view_height"
+        android:layout_alignEnd="@+id/questionPostBtn"
+        android:layout_alignLeft="@+id/searchFragTitle"
+        android:layout_alignRight="@+id/questionPostBtn"
+        android:layout_alignStart="@+id/searchFragTitle"
+        android:layout_below="@+id/searchFragTitle"
+       />
+
+    <CheckBox
+        android:id="@+id/anonymousCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/anonymous_string"
+        android:textColor="@android:color/black"
+        android:theme="@style/MyCheckBox"
+        android:layout_alignBaseline="@+id/questionPostBtn"
+        android:layout_alignBottom="@+id/questionPostBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/questionPostBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question_post_btn"
+        android:background="@color/writterGreen"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_below="@+id/searchResults"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
