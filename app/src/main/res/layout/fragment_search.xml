@@ -31,7 +31,7 @@
         android:layout_alignRight="@+id/questionPostBtn"
         android:layout_alignStart="@+id/searchFragTitle"
         android:layout_below="@+id/searchFragTitle"
-        android:layout_marginTop="10dp" />
+       />
 
     <CheckBox
         android:id="@+id/anonymousCheckbox"

@@ -1,6 +1,11 @@
 package io.writter.ninaadpai.writter;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -26,8 +31,12 @@ public class SearchFragment extends Fragment {
 
     Typeface domineBold;
     SearchResAdapter adapter;
-    List<String> searchResults;
-
+    TextView searchTitle;
+    ArrayList<String> topResults;
+    ListView searchRes;
+    boolean postWarning = false;
+    boolean anonymous = false;
+    CheckBox anonymousCheckbox;
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -39,7 +48,7 @@ public class SearchFragment extends Fragment {
         Log.i("Demo","SearchFragment onCreateView");
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_search, container, false);
-        ListView searchRes = (ListView) view.findViewById(R.id.searchResults);
+        searchRes = (ListView) view.findViewById(R.id.searchResults);
 
         String[] values = new String[] {
                 "What is the best time to visit California in terms of weather?",
@@ -55,23 +64,35 @@ public class SearchFragment extends Fragment {
         for (int i = 0; i < values.length; ++i) {
             list.add(values[i]);
         }
-        TextView searchTitle = (TextView)view.findViewById(R.id.searchFragTitle);
+        searchTitle = (TextView)view.findViewById(R.id.searchFragTitle);
 
-        ArrayList<String> topResults = getArguments().getStringArrayList("message");
+        topResults = getArguments().getStringArrayList("message");
         Log.i("Top Results Size:", String.valueOf(topResults.size()));
         if(topResults.size() > 0)
             searchTitle.setText("YOUR SEARCH MATCHES");
-        else if(topResults.size() <= 1)
+        else if(topResults.size() == list.size()-1)
             searchTitle.setText("DON'T SEE WHAT YOU'RE SEARCHING FOR? POST IT!");
         adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, topResults, domineBold);
         searchRes.setAdapter(adapter);
         domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/RobotoSlab-Regular.ttf");
         Button questionPost = (Button) view.findViewById(R.id.questionPostBtn);
-        CheckBox anonymousCheckbox = (CheckBox) view.findViewById(R.id.anonymousCheckbox);
+        anonymousCheckbox = (CheckBox) view.findViewById(R.id.anonymousCheckbox);
         questionPost.setTypeface(domineBold);
         anonymousCheckbox.setTypeface(domineBold);
         searchTitle.setTypeface(domineBold);
+//        anonymousCheckbox.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(anonymousCheckbox.isChecked())
+//                    anonymous = true;
+//            }
+//        });
         return view;
+    }
+
+    private void provideWarning() {
+        searchTitle.setText("ARE YOU SURE YOU WANT TO POST THIS QUESTION?");
+        searchRes.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -87,11 +108,16 @@ public class SearchFragment extends Fragment {
         Log.i("Demo","SearchFragment onResume");
 
     }
-
+    IQuestion mListener;
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
         Log.i("Demo","SearchFragment onAttach");
+        try{
+            mListener = (IQuestion) activity;
+        }catch(ClassCastException e) {
+            throw new ClassCastException(activity.toString()+" should implement IQuestion.");
+        }
 
     }
 
@@ -99,6 +125,25 @@ public class SearchFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.i("Demo","SearchFragment onActivityCreated");
+        getActivity().findViewById(R.id.questionPostBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!postWarning) {
+                    postWarning = true;
+                    provideWarning();
+                }
+                if(postWarning) {
+                    mListener.startUpload();
+                    if(anonymousCheckbox.isChecked())
+                        anonymous = true;
+                    else
+                        anonymous = false;
+                    mListener.postQuestion(anonymous);
+                    mListener.doneUpload();
+                }
+                mListener.destroySearchFragment();
+            }
+        });
 
     }
 
@@ -118,5 +163,12 @@ public class SearchFragment extends Fragment {
 
     public interface onFragmentInteractionListener {
         public void moveToNextFragment();
+    }
+
+    static public interface IQuestion {
+        void postQuestion(boolean anonymous);
+        void startUpload();
+        void doneUpload();
+        void destroySearchFragment();
     }
 }

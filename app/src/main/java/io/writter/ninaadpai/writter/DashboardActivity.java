@@ -1,6 +1,7 @@
 package io.writter.ninaadpai.writter;
 
 import android.annotation.TargetApi;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Rect;
 import android.graphics.Typeface;
@@ -29,15 +30,26 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 
-public class DashboardActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion {
 
     Toolbar toolbar;
     Class fragmentClass;
     EditText searchFeed;
     Typeface domineBold;
+    ProgressDialog progressDialog;
+    ImageView clearSearch;
+    InputMethodManager inputManager;
     Fragment fragment = FeedFragment.class.newInstance();
     String[] values = new String[] {
             "What is the best time to visit California in terms of weather?",
@@ -49,6 +61,8 @@ public class DashboardActivity extends AppCompatActivity {
             ,"When is Pirates of the Caribbean 5th part releasing?",
             "Stomach Cancer Symptoms"
     };
+    FirebaseAuth firebaseAuth;
+    DatabaseReference databaseReference;
 
     private FragmentManager fragmentManager;
 
@@ -107,12 +121,15 @@ public class DashboardActivity extends AppCompatActivity {
         for (int i = 0; i < values.length; ++i) {
             list.add(values[i]);
         }
+        firebaseAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         tx.replace(R.id.flContent, new FeedFragment()).commit();
-        final InputMethodManager inputManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
         searchFeed = (EditText)findViewById(R.id.searchFeed);
-        final ImageView clearSearch = (ImageView) findViewById(R.id.clearSearch);
+        clearSearch = (ImageView) findViewById(R.id.clearSearch);
         searchFeed.setFocusableInTouchMode(false);
         searchFeed.setFocusable(false);
         searchFeed.setFocusableInTouchMode(true);
@@ -134,7 +151,6 @@ public class DashboardActivity extends AppCompatActivity {
                     inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                     FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
                     tx.replace(R.id.flContent, new FeedFragment()).commit();
-
                 }
             }
         });
@@ -170,7 +186,7 @@ public class DashboardActivity extends AppCompatActivity {
         clearSearch.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                searchFeed.setText("");
+                if(searchFeed.getText().toString().isEmpty()){
                 inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                 v = getCurrentFocus();
                 if ( v instanceof EditText) {
@@ -180,7 +196,11 @@ public class DashboardActivity extends AppCompatActivity {
                         v.clearFocus();
                         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                         imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
+                        }
                     }
+                }
+                else {
+                    searchFeed.setText("");
                 }
                 return false;
             }
@@ -220,5 +240,38 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.i("Demo","Dashboard: onResume");
+    }
+
+    @Override
+    public void postQuestion(boolean anonymously) {
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        String text = searchFeed.getText().toString().trim();
+        StringBuilder questionText = new StringBuilder();
+        questionText.append(text.substring(0,1).toUpperCase() + text.substring(1));
+        Object questionTimeStamp= ServerValue.TIMESTAMP;
+        databaseReference.child(firebaseUser.getUid()).child("questions").push().setValue(new Question(questionText.toString(),questionTimeStamp, "General"));
+
+    }
+    @Override
+    public void destroySearchFragment() {
+        clearSearch.setVisibility(View.INVISIBLE);
+        searchFeed.setText("");
+        inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
+        tx.replace(R.id.flContent, new FeedFragment()).commit();
+    }
+
+    @Override
+    public void startUpload() {
+        progressDialog = new ProgressDialog(DashboardActivity.this);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Uploading Your Question...");
+        progressDialog.show();
+    }
+
+    @Override
+    public void doneUpload() {
+        progressDialog.dismiss();
     }
 }
