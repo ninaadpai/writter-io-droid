@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,32 +13,39 @@
         android:id="@+id/searchFragTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="9dp"
         android:text="@string/search_frag_title"
         android:textColor="@android:color/black"
-        android:textSize="11sp" />
+        android:textSize="11sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/checkquestionImg"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_above="@+id/questionPostBtn"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/searchFragTitle"
+        app:srcCompat="@drawable/confirm_search" />
 
     <ListView
         android:id="@+id/searchResults"
         android:layout_width="match_parent"
         android:layout_height="@dimen/search_result_list_view_height"
-        android:layout_alignEnd="@+id/questionPostBtn"
-        android:layout_alignLeft="@+id/searchFragTitle"
-        android:layout_alignRight="@+id/questionPostBtn"
-        android:layout_alignStart="@+id/searchFragTitle"
         android:layout_below="@+id/searchFragTitle"
-       />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <CheckBox
         android:id="@+id/anonymousCheckbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/anonymous_string"
+        android:textSize="11sp"
         android:textColor="@android:color/black"
         android:theme="@style/MyCheckBox"
         android:layout_alignBaseline="@+id/questionPostBtn"
@@ -50,8 +58,8 @@
         android:layout_height="wrap_content"
         android:text="@string/question_post_btn"
         android:background="@color/writterGreen"
-        android:layout_marginRight="14dp"
-        android:layout_marginEnd="14dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp"
         android:layout_below="@+id/searchResults"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />

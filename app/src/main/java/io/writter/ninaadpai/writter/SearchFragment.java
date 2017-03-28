@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -37,6 +38,7 @@ public class SearchFragment extends Fragment {
     boolean postWarning = false;
     boolean anonymous = false;
     CheckBox anonymousCheckbox;
+    ImageView checkquestionImg;
     public SearchFragment() {
         // Required empty public constructor
     }
@@ -69,30 +71,21 @@ public class SearchFragment extends Fragment {
         topResults = getArguments().getStringArrayList("message");
         Log.i("Top Results Size:", String.valueOf(topResults.size()));
         if(topResults.size() > 0)
-            searchTitle.setText("YOUR SEARCH MATCHES");
+            searchTitle.setText("Your Search Matches");
         else if(topResults.size() == list.size()-1)
-            searchTitle.setText("DON'T SEE WHAT YOU'RE SEARCHING FOR? POST IT!");
+            searchTitle.setText("Don't see what you're searching for? Post it!");
         adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, topResults, domineBold);
         searchRes.setAdapter(adapter);
-        domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/RobotoSlab-Regular.ttf");
+        domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Arimo-Bold.ttf");
         Button questionPost = (Button) view.findViewById(R.id.questionPostBtn);
         anonymousCheckbox = (CheckBox) view.findViewById(R.id.anonymousCheckbox);
+        checkquestionImg = (ImageView) view.findViewById(R.id.checkquestionImg);
+        checkquestionImg.setVisibility(View.INVISIBLE);
         questionPost.setTypeface(domineBold);
         anonymousCheckbox.setTypeface(domineBold);
+        //Typeface arimoBold = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Arimo-Bold.ttf");
         searchTitle.setTypeface(domineBold);
-//        anonymousCheckbox.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(anonymousCheckbox.isChecked())
-//                    anonymous = true;
-//            }
-//        });
         return view;
-    }
-
-    private void provideWarning() {
-        searchTitle.setText("ARE YOU SURE YOU WANT TO POST THIS QUESTION?");
-        searchRes.setVisibility(View.INVISIBLE);
     }
 
     @Override
@@ -128,20 +121,22 @@ public class SearchFragment extends Fragment {
         getActivity().findViewById(R.id.questionPostBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!postWarning) {
-                    postWarning = true;
-                    provideWarning();
-                }
-                if(postWarning) {
+                if(postWarning == true ) {
                     mListener.startUpload();
-                    if(anonymousCheckbox.isChecked())
+                    if(anonymousCheckbox.isChecked()) {
                         anonymous = true;
-                    else
+                        mListener.postQuestion(anonymous);
+                        mListener.doneUpload();
+                        mListener.destroySearchFragment();
+                    }
+                    else {
                         anonymous = false;
-                    mListener.postQuestion(anonymous);
-                    mListener.doneUpload();
+                        mListener.postQuestion(anonymous);
+                        mListener.doneUpload();
+                        mListener.destroySearchFragment();
+                    }
                 }
-                mListener.destroySearchFragment();
+                provideWarning();
             }
         });
 
@@ -159,6 +154,13 @@ public class SearchFragment extends Fragment {
         super.onDestroy();
         Log.i("Demo","SearchFragment onDestroy");
 
+    }
+
+    private void provideWarning() {
+        searchTitle.setText("Please confirm if the question is correct and press post again.");
+        searchRes.setVisibility(View.INVISIBLE);
+        checkquestionImg.setVisibility(View.VISIBLE);
+        postWarning = true;
     }
 
     public interface onFragmentInteractionListener {

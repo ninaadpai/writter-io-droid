@@ -10,12 +10,23 @@ import java.util.Objects;
 
 public class Question implements Serializable {
     String questionText, category;
+    boolean anonymous;
     Object uploadTime;
 
-    public Question(String questionText, Object uploadTime, String category) {
+    public Question(String questionText, Object uploadTime, String category, boolean anonymous) {
         this.questionText = questionText;
         this.category = category;
         this.uploadTime = uploadTime;
+        this.anonymous = anonymous;
+
+    }
+
+    public boolean isAnonymous() {
+        return anonymous;
+    }
+
+    public void setAnonymous(boolean anonymous) {
+        this.anonymous = anonymous;
     }
 
     public Object getUploadTime() {
@@ -48,6 +59,7 @@ public class Question implements Serializable {
                 "timeStamp='" + uploadTime + '\'' +
                 "questionText='" + questionText + '\'' +
                 ", category='" + category + '\'' +
+                ", anonymous='" + anonymous +
                 '}';
     }
 }

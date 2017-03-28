@@ -54,13 +54,30 @@
         android:id="@+id/topicList"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:layout_below="@+id/topicEditText"
         android:layout_marginTop="10dp"
-        android:layout_alignLeft="@+id/topicEditText"
-        android:layout_alignStart="@+id/topicEditText"
-        android:layout_alignRight="@+id/topicEditText"
-        android:layout_alignEnd="@+id/topicEditText" />
+        />
 
+    <TextView
+        android:id="@+id/chosenFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topicList"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/white"
+        android:text="@string/chosen_favorites" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/favoriteRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/gobtn1"
+        android:layout_below="@id/chosenFavorites"
+        android:layout_marginTop="10dp" />
     <Button
         android:id="@+id/gobtn1"
         android:layout_width="wrap_content"
@@ -74,27 +91,5 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:id="@+id/chosenFavorites"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/topicEditText"
-        android:layout_alignStart="@+id/topicEditText"
-        android:layout_below="@+id/topicList"
-        android:layout_marginTop="8dp"
-        android:textColor="@android:color/white"
-        android:text="@string/chosen_favorites" />
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/favoriteRecycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/gobtn1"
-        android:layout_marginTop="10dp"
-        android:layout_alignEnd="@+id/topicEditText"
-        android:layout_alignLeft="@+id/topicEditText"
-        android:layout_alignRight="@+id/topicEditText"
-        android:layout_alignStart="@+id/topicEditText"
-        android:layout_below="@+id/chosenFavorites" />
 
 </RelativeLayout>

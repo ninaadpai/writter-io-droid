@@ -38,7 +38,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
 
     public FeedListAdapter(FragmentActivity f, List<Post> dataSet, Typeface domineBold, Typeface share) {
         this.mDataSet = dataSet;
-        this.domineBold = domineBold;
+        this.domineBold = MainActivity.domineBold;
         this.share = share;
         this.context = f;
     }

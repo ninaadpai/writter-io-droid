@@ -48,12 +48,12 @@ public class FeedFragment extends Fragment {
         LinearLayoutManager layoutManager = new GridLayoutManager(this.getActivity(), 1);
         feedRecycler.setLayoutManager(layoutManager);
         final List<Post> posts = new ArrayList<>();
-//        posts.add(new Post("","Ninaad Pai","Workout","6 hrs","What kind of protein is suitable for Ectomorph? I would like to know a bit better about diet tips for fat loss.".replace("?","?\n"),"Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
-//        posts.add(new Post("","Ojasvini Bali","Travel","23 mins","Best time to travel to Indonesia?","I wanted to travel to Indonesia this year, what are the best places to see around there?"));
-//        posts.add(new Post("","Ketan Joshi","Health","2 hrs","Caloric deficit diet?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
-//        posts.add(new Post("","Neeraj Pai","Workout","6 hrs","What kind of protein is suitable for Ectomorph?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
-//        posts.add(new Post("","Akshay Sathe","Workout","6 hrs","What kind of protein is suitable for Ectomorph?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
-//        posts.add(new Post("","Amey Kelkar","Workout","6 hrs","What kind of protein is suitable for Ectomorph?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
+        posts.add(new Post("","Ninaad Pai","Workout","6 hrs","What kind of protein is suitable for Ectomorph? I would like to know a bit better about diet tips for fat loss.".replace("?","?\n"),"Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
+        posts.add(new Post("","Ojasvini Bali","Travel","23 mins","Best time to travel to Indonesia?","I wanted to travel to Indonesia this year, what are the best places to see around there?"));
+        posts.add(new Post("","Ketan Joshi","Health","2 hrs","Caloric deficit diet?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
+        posts.add(new Post("","Neeraj Pai","Workout","6 hrs","What kind of protein is suitable for Ectomorph?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
+        posts.add(new Post("","Akshay Sathe","Workout","6 hrs","What kind of protein is suitable for Ectomorph?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
+        posts.add(new Post("","Amey Kelkar","Workout","6 hrs","What kind of protein is suitable for Ectomorph?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
 
         final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts, domineBold, share);
         feedRecycler.setAdapter(feedListAdapter);
