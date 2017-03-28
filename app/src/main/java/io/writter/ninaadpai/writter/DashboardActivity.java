@@ -134,7 +134,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         searchFeed.setFocusable(false);
         searchFeed.setFocusableInTouchMode(true);
         searchFeed.setFocusable(true);
-        domineBold = Typeface.createFromAsset(getAssets(),"fonts/RobotoSlab-Regular.ttf");
+        domineBold = Typeface.createFromAsset(getAssets(),"fonts/Arimo-Bold.ttf");
         clearSearch.setVisibility(View.INVISIBLE);
         inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
         searchFeed.setTypeface(domineBold);
@@ -162,7 +162,6 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                //Log.i("Typing:", s.toString());
                 List<String> best = null;
                 best = new GetSearchMatches(DashboardActivity.this).execute(s.toString(), list);
                 if(best != null) {
@@ -249,8 +248,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         StringBuilder questionText = new StringBuilder();
         questionText.append(text.substring(0,1).toUpperCase() + text.substring(1));
         Object questionTimeStamp= ServerValue.TIMESTAMP;
-        databaseReference.child(firebaseUser.getUid()).child("questions").push().setValue(new Question(questionText.toString(),questionTimeStamp, "General"));
-
+        databaseReference.child(firebaseUser.getUid()).child("questions").push().setValue(new Question(questionText.toString(),questionTimeStamp, "General", anonymously));
     }
     @Override
     public void destroySearchFragment() {
@@ -259,6 +257,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         tx.replace(R.id.flContent, new FeedFragment()).commit();
+
     }
 
     @Override
