@@ -34,7 +34,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     TextView appTitle, subTitle, alternateOr, useGoogle, useFacebook, whatsThis, termsOfService;
-    Typeface novaOval, domineBold;
+    Typeface novaOval;
+    public static Typeface domineBold;
     EditText emailEdit, passwordEdit;
     Button signupbtn, loginbtn;
     AlertDialog.Builder builder;

@@ -1,8 +1,11 @@
 package io.writter.ninaadpai.writter;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -13,6 +16,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -50,6 +54,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     ProgressDialog progressDialog;
     ImageView clearSearch;
     InputMethodManager inputManager;
+    AlertDialog.Builder questionPostedDialog;
     Fragment fragment = FeedFragment.class.newInstance();
     String[] values = new String[] {
             "What is the best time to visit California in terms of weather?",
@@ -257,7 +262,17 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
         FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
         tx.replace(R.id.flContent, new FeedFragment()).commit();
-
+        questionPostedDialog = new AlertDialog.Builder(this);
+        questionPostedDialog.setTitle("Question Posted")
+                .setMessage("You will get a notification if someone responds to it.")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+        }).setCancelable(false);
+        AlertDialog alert = questionPostedDialog.create();
+        alert.show();
     }
 
     @Override
