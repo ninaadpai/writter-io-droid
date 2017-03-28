@@ -35,7 +35,7 @@ public class SearchFragment extends Fragment {
     TextView searchTitle;
     ArrayList<String> topResults;
     ListView searchRes;
-    boolean postWarning = false;
+    static boolean postWarning = false;
     boolean anonymous = false;
     CheckBox anonymousCheckbox;
     ImageView checkquestionImg;
@@ -122,21 +122,19 @@ public class SearchFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(postWarning == true ) {
-                    mListener.startUpload();
                     if(anonymousCheckbox.isChecked()) {
                         anonymous = true;
-                        mListener.postQuestion(anonymous);
-                        mListener.doneUpload();
-                        mListener.destroySearchFragment();
                     }
                     else {
                         anonymous = false;
-                        mListener.postQuestion(anonymous);
-                        mListener.doneUpload();
-                        mListener.destroySearchFragment();
                     }
+                    mListener.startUpload();
+                    mListener.postQuestion(anonymous);
+                    mListener.doneUpload();
+                    mListener.destroySearchFragment();
                 }
                 provideWarning();
+                //mListener.sanitizeQuestionText();
             }
         });
 
@@ -172,5 +170,7 @@ public class SearchFragment extends Fragment {
         void startUpload();
         void doneUpload();
         void destroySearchFragment();
+        void sanitizeQuestionText();
+
     }
 }

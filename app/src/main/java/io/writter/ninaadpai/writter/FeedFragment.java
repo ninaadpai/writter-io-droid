@@ -25,12 +25,24 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import org.json.JSONException;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
 public class FeedFragment extends Fragment {
-    EditText searchFeed;
+    FirebaseAuth firebaseAuth;
+    DatabaseReference databaseReference;
+    public static List<Post> posts = new ArrayList<>();
+    Post p;
     public FeedFragment() {
         // Required empty public constructor
     }
@@ -47,18 +59,35 @@ public class FeedFragment extends Fragment {
         final RecyclerView feedRecycler = (RecyclerView)view.findViewById(R.id.feedRecycler);
         LinearLayoutManager layoutManager = new GridLayoutManager(this.getActivity(), 1);
         feedRecycler.setLayoutManager(layoutManager);
-        final List<Post> posts = new ArrayList<>();
-        posts.add(new Post("","Ninaad Pai","Workout","6 hrs","What kind of protein is suitable for Ectomorph? I would like to know a bit better about diet tips for fat loss.".replace("?","?\n"),"Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
-        posts.add(new Post("","Ojasvini Bali","Travel","23 mins","Best time to travel to Indonesia?","I wanted to travel to Indonesia this year, what are the best places to see around there?"));
-        posts.add(new Post("","Ketan Joshi","Health","2 hrs","Caloric deficit diet?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
-        posts.add(new Post("","Neeraj Pai","Workout","6 hrs","What kind of protein is suitable for Ectomorph?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
-        posts.add(new Post("","Akshay Sathe","Workout","6 hrs","What kind of protein is suitable for Ectomorph?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
-        posts.add(new Post("","Amey Kelkar","Workout","6 hrs","What kind of protein is suitable for Ectomorph?","Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"));
+        firebaseAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("questions_pool");
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot dS : dataSnapshot.getChildren()) {
+                   // Log.i("Questions", String.valueOf(dS.getValue()));
+                     p = new Post("",
+                            String.valueOf(dS.child("userId").getValue()),
+                             String.valueOf(dS.child("category").getValue()),
+                             String.valueOf(dS.child("uploadTime").getValue()),
+                             String.valueOf(dS.child("questionText").getValue()),
+                            "");
+             //       Log.i("Post", String.valueOf(p));
+                    posts.add(p);
+                }
+                final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts, domineBold, share);
+                feedRecycler.setAdapter(feedListAdapter);
+                feedRecycler.setHasFixedSize(true);
+                feedRecycler.setItemAnimator(new SlideInUpAnimator());
+            }
 
-        final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts, domineBold, share);
-        feedRecycler.setAdapter(feedListAdapter);
-        feedRecycler.setHasFixedSize(true);
-        feedRecycler.setItemAnimator(new SlideInUpAnimator());
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+      //  Log.i("Posts",posts.toString());
         return view;
     }
 

@@ -16,11 +16,11 @@
 
         <ImageView
             android:id="@+id/profileImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_marginLeft="5dp"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/default_profile" />
 
         <LinearLayout
             android:layout_width="287dp"
@@ -44,10 +44,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="@android:color/black"
-                android:textSize="14dp"
+                android:textSize="13dp"
                 android:ellipsize="end"
-                android:maxLines="3"
-                android:textStyle="bold" />
+                android:maxLines="3"/>
 
             <TextView
                 android:id="@+id/postDesc"
@@ -58,8 +57,7 @@
                 android:textColor="@color/loginBackground"
                 android:textSize="11dp"
                 android:ellipsize="end"
-                android:maxLines="2"
-                android:textStyle="bold" />
+                android:maxLines="2"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

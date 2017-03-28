@@ -3,6 +3,7 @@ package io.writter.ninaadpai.writter;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -33,7 +35,7 @@ public class SetUpNameActivity extends AppCompatActivity {
     TextView chooseTopicsHint;
     static TextView recyclerTitle;
     EditText firstLastName;
-    public static Typeface novaOval, domineBold;
+    static Typeface domineBold;
     ListView topicList;
     TopicAdapter adapter;
     FavoriteAdapter fadapter;
@@ -45,6 +47,8 @@ public class SetUpNameActivity extends AppCompatActivity {
     public static List<String> favorites;
     FirebaseAuth firebaseAuth;
     DatabaseReference databaseReference;
+    FirebaseAuth mAuthListener;
+    String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,8 +66,7 @@ public class SetUpNameActivity extends AppCompatActivity {
         recyclerTitle = (TextView) findViewById(R.id.chosenFavorites);
         frecyclerView = (RecyclerView) findViewById(R.id.favoriteRecycler);
         goBtn = (Button) findViewById(R.id.gobtn1);
-        novaOval = Typeface.createFromAsset(getAssets(),"fonts/NovaOval.ttf");
-        domineBold = Typeface.createFromAsset(getAssets(),"fonts/RobotoSlab-Regular.ttf");
+        domineBold = Typeface.createFromAsset(getAssets(),"fonts/Arimo-Bold.ttf");
         goBtn.setTypeface(domineBold);
         goBtn.setText("SKIP FOR NOW");
         favorites = new ArrayList<>();
@@ -73,7 +76,6 @@ public class SetUpNameActivity extends AppCompatActivity {
         topicEditText.setTypeface(domineBold);
         recyclerTitle.setTypeface(domineBold);
         databaseReference = FirebaseDatabase.getInstance().getReference();
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("global_topics");
         topics = new ArrayList<>();
         topics.add("Technology");
         topics.add("Fashion");
@@ -99,7 +101,7 @@ public class SetUpNameActivity extends AppCompatActivity {
         goBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String name = firstLastName.getText().toString().trim();
+                name = firstLastName.getText().toString().trim();
                 if(!(name.matches("(.*) (.*)")) || TextUtils.isEmpty(name)) {
                     builder = new AlertDialog.Builder(SetUpNameActivity.this);
                     builder.setTitle("Your Name").setMessage("Please enter a proper first and last name.")
@@ -113,7 +115,19 @@ public class SetUpNameActivity extends AppCompatActivity {
                     alert.show();
                 }
                 else {
-                    updateUserName(name);
+
+                    WritterUser user =  new WritterUser(name, favorites);
+                    FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                    databaseReference.child(firebaseUser.getUid()).setValue(user);
+                    if(firebaseUser!=null){
+                                UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                        .setDisplayName(name).build();
+                                firebaseUser.updateProfile(profileUpdates);
+                                Intent intent = new Intent(SetUpNameActivity.this, DashboardActivity.class);
+                                startActivity(intent);
+
+                        }
+
                 }
             }
         });
@@ -155,12 +169,5 @@ public class SetUpNameActivity extends AppCompatActivity {
     private void populateList(List<String> topics) {
         adapter = new TopicAdapter(this, R.layout.setup_listview_row, topics, domineBold);
         topicList.setAdapter(adapter);
-    }
-
-    private void updateUserName(String name) {
-        WritterUser user =  new WritterUser(name, favorites);
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
-        databaseReference.child(firebaseUser.getUid()).setValue(user);
-        startActivity(new Intent(SetUpNameActivity.this, DashboardActivity.class));
     }
 }

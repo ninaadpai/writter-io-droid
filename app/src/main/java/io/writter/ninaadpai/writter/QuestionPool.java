@@ -5,24 +5,17 @@ package io.writter.ninaadpai.writter;
  */
 //CURRENTLY NOT IN USE
 public class QuestionPool {
-    String userName, userId, questionText, category;
+    String userId, questionText, category;
     Object uploadTime;
+    boolean anonymous;
 
-    public QuestionPool(String userName, String userId, String questionText, String category, Object uploadTime) {
-        this.userName = userName;
+    public QuestionPool(String userId, String questionText, String category, Object uploadTime, boolean anonymous) {
         this.userId = userId;
         this.questionText = questionText;
         this.category = category;
         this.uploadTime = uploadTime;
+        this.anonymous = anonymous;
     }
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
     public String getUserId() {
         return userId;
     }
@@ -31,12 +24,12 @@ public class QuestionPool {
         this.userId = userId;
     }
 
-    public String getUestionText() {
+    public String getQuestionText() {
         return questionText;
     }
 
-    public void setUestionText(String uestionText) {
-        this.questionText = uestionText;
+    public void setQuestionText(String questionText) {
+        this.questionText = questionText;
     }
 
     public String getCategory() {
@@ -55,14 +48,22 @@ public class QuestionPool {
         this.uploadTime = uploadTime;
     }
 
+    public boolean getAnonymous() {
+        return anonymous;
+    }
+
+    public void setAnonymous(boolean uploadTime) {
+        this.anonymous = anonymous;
+    }
+
     @Override
     public String toString() {
         return "QuestionPool{" +
-                "userName" + userName +'\'' +
                 "userId='" + userId + '\'' +
                 ", questionText='" + questionText + '\'' +
                 ", category='" + category + '\'' +
-                ", uploadTime=" + uploadTime +
+                ", uploadTime=" + uploadTime  + '\'' +
+                ", anonymous=" + anonymous +
                 '}';
     }
 }

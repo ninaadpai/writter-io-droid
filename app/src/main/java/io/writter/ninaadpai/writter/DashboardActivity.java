@@ -36,14 +36,18 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion {
 
@@ -54,6 +58,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     ProgressDialog progressDialog;
     ImageView clearSearch;
     InputMethodManager inputManager;
+    static String userName;
     AlertDialog.Builder questionPostedDialog;
     Fragment fragment = FeedFragment.class.newInstance();
     String[] values = new String[] {
@@ -253,8 +258,9 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         StringBuilder questionText = new StringBuilder();
         questionText.append(text.substring(0,1).toUpperCase() + text.substring(1));
         Object questionTimeStamp= ServerValue.TIMESTAMP;
-        databaseReference.child(firebaseUser.getUid()).child("questions").push().setValue(new Question(questionText.toString(),questionTimeStamp, "General", anonymously));
+        databaseReference.child("questions_pool").push().setValue(new QuestionPool(firebaseUser.getUid(), questionText.toString(),"General", questionTimeStamp, anonymously));
     }
+
     @Override
     public void destroySearchFragment() {
         clearSearch.setVisibility(View.INVISIBLE);
@@ -264,7 +270,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         tx.replace(R.id.flContent, new FeedFragment()).commit();
         questionPostedDialog = new AlertDialog.Builder(this);
         questionPostedDialog.setTitle("Question Posted")
-                .setMessage("You will get a notification if someone responds to it.")
+                .setMessage("You will be notified when someone responds to it.")
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -276,11 +282,24 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     }
 
     @Override
+    public void sanitizeQuestionText() {
+        String specialChars = "/*!@#$%^&*()\"{}_[]|\\/<>,.";
+
+        StringBuffer questionStr = new StringBuffer();
+        questionStr.append(searchFeed.getText().toString().trim());
+        if(specialChars.substring(questionStr.length() - 1).equals(searchFeed.getText().toString().trim())) {
+            questionStr.append(questionStr.substring(0, questionStr.length()-1));
+            questionStr.append("?");
+            searchFeed.setText(questionStr.toString());
+        }
+    }
+
+    @Override
     public void startUpload() {
         progressDialog = new ProgressDialog(DashboardActivity.this);
         progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDialog.setCancelable(false);
-        progressDialog.setMessage("Uploading Your Question...");
+        progressDialog.setMessage("Posting Your Question...");
         progressDialog.show();
     }
 

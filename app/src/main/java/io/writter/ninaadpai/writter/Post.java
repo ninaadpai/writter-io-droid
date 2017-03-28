@@ -67,7 +67,7 @@ public class Post {
     public String toString() {
         return "Post{" +
                 "imgUrl='" + imgUrl + '\'' +
-                "uploadedBy='" + uploadedBy + '\'' +
+                ", uploadedBy='" + uploadedBy + '\'' +
                 ", topicString='" + topicString + '\'' +
                 ", uploadedTime='" + uploadedTime + '\'' +
                 ", postQuestion='" + postQuestion + '\'' +
