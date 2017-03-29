@@ -66,7 +66,7 @@ public class SetUpNameActivity extends AppCompatActivity {
         recyclerTitle = (TextView) findViewById(R.id.chosenFavorites);
         frecyclerView = (RecyclerView) findViewById(R.id.favoriteRecycler);
         goBtn = (Button) findViewById(R.id.gobtn1);
-        domineBold = Typeface.createFromAsset(getAssets(),"fonts/NotoSans-Bold.ttf");
+        domineBold = Typeface.createFromAsset(getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
         goBtn.setTypeface(domineBold);
         goBtn.setText("SKIP FOR NOW");
         favorites = new ArrayList<>();

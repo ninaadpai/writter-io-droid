@@ -2,6 +2,8 @@ package io.writter.ninaadpai.writter;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +11,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+
+import org.w3c.dom.Text;
 
 
 /**
@@ -16,6 +24,7 @@ import android.view.ViewGroup;
  */
 public class ProfileFragment extends Fragment {
 
+    FirebaseAuth firebaseAuth;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -27,7 +36,25 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         Log.i("Demo","ProfileFragment onCreateView");
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        View view =  inflater.inflate(R.layout.fragment_profile, container, false);
+        TextView userName = (TextView) view.findViewById(R.id.userName);
+        TextView tagLine = (TextView) view.findViewById(R.id.tagLine);
+        TextView location = (TextView) view.findViewById(R.id.location);
+        firebaseAuth = firebaseAuth.getInstance();
+
+        Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
+        userName.setTypeface(domineBold);
+        tagLine.setTypeface(domineBold);
+        location.setTypeface(domineBold);
+        view.findViewById(R.id.logout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getActivity(), MainActivity.class));
+                getActivity().finish();
+            }
+        });
+        return view;
     }
 
     @Override

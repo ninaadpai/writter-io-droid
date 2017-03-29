@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/loginBackground"
+    android:background="@android:color/white"
     tools:context="io.writter.ninaadpai.writter.SetUpNameActivity">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="8dp"
         android:text="@string/setuphint"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="11sp" />
 
     <EditText
@@ -25,10 +25,10 @@
         android:ems="10"
         android:textSize="11sp"
         android:hint="@string/nameHint"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:textColorHighlight="@android:color/white"
-        android:backgroundTint="@android:color/white"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:textColorHighlight="@android:color/black"
+        android:backgroundTint="@android:color/black"
         android:inputType="textEmailAddress"
         android:layout_below="@+id/setupHint"
         android:layout_alignLeft="@+id/setupHint"
@@ -46,8 +46,8 @@
         android:layout_alignRight="@+id/firstLastName"
         android:layout_alignStart="@+id/firstLastName"
         android:layout_below="@+id/firstLastName"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textColor="@android:color/black"
+        android:textSize="11sp"
         tools:ignore="RtlHardcoded" />
 
     <ListView
@@ -65,14 +65,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:textSize="12sp"
-        android:textColor="@android:color/white"
+        android:textSize="11sp"
+        android:textColor="@android:color/black"
         android:text="@string/chosen_favorites"
-        android:layout_below="@+id/topicList"
-        android:layout_alignLeft="@+id/favoriteRecycler"
-        android:layout_alignStart="@+id/favoriteRecycler"
         android:layout_marginLeft="7dp"
-        android:layout_marginStart="7dp" />
+        android:layout_marginStart="7dp"
+        android:layout_below="@+id/topicList"
+        android:layout_alignLeft="@+id/topicEditText"
+        android:layout_alignStart="@+id/topicEditText" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/favoriteRecycler"

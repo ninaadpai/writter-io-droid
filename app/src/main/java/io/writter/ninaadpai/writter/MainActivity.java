@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
         emailEdit = (EditText)findViewById(R.id.emailEdit);
         signupbtn = (Button) findViewById(R.id.signupbtn);
         loginbtn = (Button) findViewById(R.id.loginbtn);
-        novaOval = Typeface.createFromAsset(getAssets(),"fonts/NovaOval.ttf");
-        domineBold = Typeface.createFromAsset(getAssets(),"fonts/NotoSans-Bold.ttf");
+        novaOval = Typeface.createFromAsset(getAssets(),"fonts/CrimsonText-Bold.ttf");
+        domineBold = Typeface.createFromAsset(getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
         appTitle.setTypeface(novaOval);
         subTitle.setTypeface(domineBold);
         emailEdit.setTypeface(domineBold);

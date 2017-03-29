@@ -33,6 +33,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 
+import org.joda.time.Hours;
 import org.json.JSONException;
 
 import java.text.SimpleDateFormat;
@@ -54,7 +55,7 @@ public class FeedFragment extends Fragment {
                              Bundle savedInstanceState) {
         Log.i("Demo","FeedFragment onCreateView");
         View view = inflater.inflate(R.layout.fragment_feed, container, false);
-        final Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/NotoSans-Bold.ttf");
+        final Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
         final Typeface share = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Share-Bold.ttf");
         final Typeface arvoBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/CrimsonText-Semibold.ttf");
         final FragmentActivity f = getActivity();
@@ -68,24 +69,19 @@ public class FeedFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot dS : dataSnapshot.getChildren()) {
-                   // Log.i("Questions", String.valueOf(dS.getValue()));
                     String time = String.valueOf(dS.child("uploadTime").getValue());
                     long milliSeconds = Long.parseLong(time);
                     SimpleDateFormat sdf = new SimpleDateFormat("MMM, dd HH:mm");
                     long currentTime = System.currentTimeMillis();
-                    long millis = currentTime - milliSeconds;
-                    int Hours = (Math.round(millis/(1000 * 60 * 60)* 100000000) / 100000000);
-                    int Mins = (Math.round(millis % (1000 * 60 * 60)* 100000000) / 100000000);
-                    String timeAsString = Hours + " : " + Mins;
-                   // String timeAsString = sdf.format(milliSeconds);
+                    String timeAsString = timeDiff(currentTime-milliSeconds);
                      Post p = new Post("",
                             String.valueOf(dS.child("userId").getValue()),
                              String.valueOf(dS.child("category").getValue()),
                              timeAsString,
                              String.valueOf(dS.child("questionText").getValue()),
                             "");
-             //       Log.i("Post", String.valueOf(p));
                     posts.add(p);
+                    
                 }
                 final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts, domineBold, arvoBold);
                 feedRecycler.setAdapter(feedListAdapter);
@@ -98,8 +94,35 @@ public class FeedFragment extends Fragment {
 
             }
         });
-      //  Log.i("Posts",posts.toString());
         return view;
+    }
+
+    private String timeDiff(long timeDifferenceMilliseconds) {
+        long diffSeconds = timeDifferenceMilliseconds / 1000;
+        long diffMinutes = timeDifferenceMilliseconds / (60 * 1000);
+        long diffHours = timeDifferenceMilliseconds / (60 * 60 * 1000);
+        long diffDays = timeDifferenceMilliseconds / (60 * 60 * 1000 * 24);
+        long diffWeeks = timeDifferenceMilliseconds / (60 * 60 * 1000 * 24 * 7);
+        long diffMonths = (long) (timeDifferenceMilliseconds / (60 * 60 * 1000 * 24 * 30.41666666));
+        long diffYears = timeDifferenceMilliseconds / ((long)60 * 60 * 1000 * 24 * 365);
+
+        if (diffSeconds < 1) {
+            return "less than a second";
+        } else if (diffMinutes < 1) {
+            return diffSeconds + " secs";
+        } else if (diffHours < 1) {
+            return diffMinutes + " mins";
+        } else if (diffDays < 1) {
+            return diffHours + " hrs";
+        } else if (diffWeeks < 1) {
+            return diffDays + " D";
+        } else if (diffMonths < 1) {
+            return diffWeeks + " W";
+        } else if (diffYears < 1) {
+            return diffMonths + " M";
+        } else {
+            return diffYears + " yrs";
+        }
     }
 
     @Override
