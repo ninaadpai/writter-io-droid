@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -36,6 +37,7 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -58,7 +60,6 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     ProgressDialog progressDialog;
     ImageView clearSearch;
     InputMethodManager inputManager;
-    static String userName;
     AlertDialog.Builder questionPostedDialog;
     Fragment fragment = FeedFragment.class.newInstance();
     String[] values = new String[] {
@@ -106,6 +107,9 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
                 break;
             case R.id.navigation_profile:
                 fragmentClass = ProfileFragment.class;
+                firebaseAuth.getInstance().signOut();
+                startActivity(new Intent(DashboardActivity.this, MainActivity.class));
+                finish();
                 break;
             default:
                 fragmentClass = FeedFragment.class;
@@ -252,13 +256,27 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     }
 
     @Override
-    public void postQuestion(boolean anonymously) {
+    public void postQuestion(final boolean anonymously) {
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         String text = searchFeed.getText().toString().trim();
-        StringBuilder questionText = new StringBuilder();
+        final StringBuilder questionText = new StringBuilder();
         questionText.append(text.substring(0,1).toUpperCase() + text.substring(1));
-        Object questionTimeStamp= ServerValue.TIMESTAMP;
-        databaseReference.child("questions_pool").push().setValue(new QuestionPool(firebaseUser.getUid(), questionText.toString(),"General", questionTimeStamp, anonymously));
+        final Object questionTimeStamp= ServerValue.TIMESTAMP;
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child("userName");
+
+        ref.addValueEventListener(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                String userName = (String) dataSnapshot.getValue();
+                databaseReference.child("questions_pool").push().setValue(new QuestionPool(userName, questionText.toString(),"General", questionTimeStamp, anonymously));
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     @Override

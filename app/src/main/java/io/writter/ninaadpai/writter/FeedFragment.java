@@ -30,10 +30,12 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 
 import org.json.JSONException;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,8 +43,7 @@ import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
 public class FeedFragment extends Fragment {
     FirebaseAuth firebaseAuth;
     DatabaseReference databaseReference;
-    public static List<Post> posts = new ArrayList<>();
-    Post p;
+    List<Post> posts = new ArrayList<>();
     public FeedFragment() {
         // Required empty public constructor
     }
@@ -53,7 +54,7 @@ public class FeedFragment extends Fragment {
                              Bundle savedInstanceState) {
         Log.i("Demo","FeedFragment onCreateView");
         View view = inflater.inflate(R.layout.fragment_feed, container, false);
-        final Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/RobotoSlab-Regular.ttf");
+        final Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/NotoSans-Regular.ttf");
         final Typeface share = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Share-Bold.ttf");
         final FragmentActivity f = getActivity();
         final RecyclerView feedRecycler = (RecyclerView)view.findViewById(R.id.feedRecycler);
@@ -67,10 +68,19 @@ public class FeedFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot dS : dataSnapshot.getChildren()) {
                    // Log.i("Questions", String.valueOf(dS.getValue()));
-                     p = new Post("",
+                    String time = String.valueOf(dS.child("uploadTime").getValue());
+                    long milliSeconds = Long.parseLong(time);
+                    SimpleDateFormat sdf = new SimpleDateFormat("MMM, dd HH:mm");
+                    long currentTime = System.currentTimeMillis();
+                    long millis = currentTime - milliSeconds;
+                    int Hours = (Math.round(millis/(1000 * 60 * 60)* 100000000) / 100000000);
+                    int Mins = (Math.round(millis % (1000 * 60 * 60)* 100000000) / 100000000);
+                    String timeAsString = Hours + " : " + Mins;
+                   // String timeAsString = sdf.format(milliSeconds);
+                     Post p = new Post("",
                             String.valueOf(dS.child("userId").getValue()),
                              String.valueOf(dS.child("category").getValue()),
-                             String.valueOf(dS.child("uploadTime").getValue()),
+                             timeAsString,
                              String.valueOf(dS.child("questionText").getValue()),
                             "");
              //       Log.i("Post", String.valueOf(p));

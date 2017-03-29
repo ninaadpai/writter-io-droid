@@ -38,7 +38,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
 
     public FeedListAdapter(FragmentActivity f, List<Post> dataSet, Typeface domineBold, Typeface share) {
         this.mDataSet = dataSet;
-        this.domineBold = MainActivity.domineBold;
+        this.domineBold = domineBold;
         this.share = share;
         this.context = f;
     }
@@ -93,9 +93,9 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         viewHolder.postQuestion.setTypeface(domineBold);
        viewHolder.postDesc.setText(p.getPostDesc());
        viewHolder.postDesc.setTypeface(domineBold);
-       viewHolder.likeCount.setTypeface(share);
+       viewHolder.likeCount.setTypeface(domineBold);
        viewHolder.likeCount.setText("27.2k");
-       viewHolder.commentCount.setTypeface(share);
+       viewHolder.commentCount.setTypeface(domineBold);
        viewHolder.commentCount.setText("5.5k");
        viewHolder.likedImage.setOnClickListener(new View.OnClickListener() {
 

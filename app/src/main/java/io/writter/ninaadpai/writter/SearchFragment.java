@@ -76,14 +76,13 @@ public class SearchFragment extends Fragment {
             searchTitle.setText("Don't see what you're searching for? Post it!");
         adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, topResults, domineBold);
         searchRes.setAdapter(adapter);
-        domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Arimo-Bold.ttf");
+        domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/NotoSans-Regular.ttf");
         Button questionPost = (Button) view.findViewById(R.id.questionPostBtn);
         anonymousCheckbox = (CheckBox) view.findViewById(R.id.anonymousCheckbox);
         checkquestionImg = (ImageView) view.findViewById(R.id.checkquestionImg);
         checkquestionImg.setVisibility(View.INVISIBLE);
         questionPost.setTypeface(domineBold);
         anonymousCheckbox.setTypeface(domineBold);
-        //Typeface arimoBold = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Arimo-Bold.ttf");
         searchTitle.setTypeface(domineBold);
         return view;
     }
