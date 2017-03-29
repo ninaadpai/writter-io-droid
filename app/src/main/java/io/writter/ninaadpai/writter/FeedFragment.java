@@ -81,7 +81,7 @@ public class FeedFragment extends Fragment {
                              String.valueOf(dS.child("questionText").getValue()),
                             "");
                     posts.add(p);
-                    
+
                 }
                 final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts, domineBold, arvoBold);
                 feedRecycler.setAdapter(feedListAdapter);
