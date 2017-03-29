@@ -1,7 +1,5 @@
 package io.writter.ninaadpai.writter;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -23,8 +21,6 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.KeyEvent;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -32,24 +28,16 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.regex.Pattern;
 
 public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion {
 
@@ -107,9 +95,9 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
                 break;
             case R.id.navigation_profile:
                 fragmentClass = ProfileFragment.class;
-                firebaseAuth.getInstance().signOut();
-                startActivity(new Intent(DashboardActivity.this, MainActivity.class));
-                finish();
+//                firebaseAuth.getInstance().signOut();
+//                startActivity(new Intent(DashboardActivity.this, MainActivity.class));
+//                finish();
                 break;
             default:
                 fragmentClass = FeedFragment.class;

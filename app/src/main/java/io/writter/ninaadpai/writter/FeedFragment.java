@@ -54,8 +54,9 @@ public class FeedFragment extends Fragment {
                              Bundle savedInstanceState) {
         Log.i("Demo","FeedFragment onCreateView");
         View view = inflater.inflate(R.layout.fragment_feed, container, false);
-        final Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/NotoSans-Regular.ttf");
+        final Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/NotoSans-Bold.ttf");
         final Typeface share = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Share-Bold.ttf");
+        final Typeface arvoBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/CrimsonText-Semibold.ttf");
         final FragmentActivity f = getActivity();
         final RecyclerView feedRecycler = (RecyclerView)view.findViewById(R.id.feedRecycler);
         LinearLayoutManager layoutManager = new GridLayoutManager(this.getActivity(), 1);
@@ -86,7 +87,7 @@ public class FeedFragment extends Fragment {
              //       Log.i("Post", String.valueOf(p));
                     posts.add(p);
                 }
-                final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts, domineBold, share);
+                final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts, domineBold, arvoBold);
                 feedRecycler.setAdapter(feedListAdapter);
                 feedRecycler.setHasFixedSize(true);
                 feedRecycler.setItemAnimator(new SlideInUpAnimator());

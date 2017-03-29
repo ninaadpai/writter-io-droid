@@ -35,7 +35,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     TextView appTitle, subTitle, alternateOr, useGoogle, useFacebook, whatsThis, termsOfService;
     Typeface novaOval;
-    public static Typeface domineBold;
+    Typeface domineBold;
     EditText emailEdit, passwordEdit;
     Button signupbtn, loginbtn;
     AlertDialog.Builder builder;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         signupbtn = (Button) findViewById(R.id.signupbtn);
         loginbtn = (Button) findViewById(R.id.loginbtn);
         novaOval = Typeface.createFromAsset(getAssets(),"fonts/NovaOval.ttf");
-        domineBold = Typeface.createFromAsset(getAssets(),"fonts/NotoSans-Regular.ttf");
+        domineBold = Typeface.createFromAsset(getAssets(),"fonts/NotoSans-Bold.ttf");
         appTitle.setTypeface(novaOval);
         subTitle.setTypeface(domineBold);
         emailEdit.setTypeface(domineBold);

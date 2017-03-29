@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:textSize="14sp"
+        android:textSize="11sp"
         android:hint="@string/nameHint"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
@@ -47,7 +47,7 @@
         android:layout_alignStart="@+id/firstLastName"
         android:layout_below="@+id/firstLastName"
         android:textColor="@android:color/white"
-        android:textSize="14sp"
+        android:textSize="12sp"
         tools:ignore="RtlHardcoded" />
 
     <ListView
@@ -64,10 +64,15 @@
         android:id="@+id/chosenFavorites"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/topicList"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="11dp"
+        android:textSize="12sp"
         android:textColor="@android:color/white"
-        android:text="@string/chosen_favorites" />
+        android:text="@string/chosen_favorites"
+        android:layout_below="@+id/topicList"
+        android:layout_alignLeft="@+id/favoriteRecycler"
+        android:layout_alignStart="@+id/favoriteRecycler"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/favoriteRecycler"

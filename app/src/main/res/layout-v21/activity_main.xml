@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:textSize="12sp"
+        android:textSize="11dp"
         android:textColor="@android:color/white"
         android:text="@string/subtitle" />
 
@@ -22,7 +22,7 @@
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         app:srcCompat="@drawable/landing_icon"
         android:layout_below="@+id/subTitle"
         android:layout_centerHorizontal="true"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textColor="@android:color/white"
-        android:textSize="24sp"
+        android:textSize="24dp"
         android:textStyle="bold"
         android:text="@string/app_name"
         android:layout_below="@+id/imageView"
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:textSize="14sp"
+        android:textSize="12dp"
         android:hint="@string/emailhint"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
@@ -53,7 +53,7 @@
         android:backgroundTint="@android:color/white"
         android:inputType="textEmailAddress"
         android:layout_below="@+id/appTitle"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:layout_alignLeft="@+id/subTitle"
         android:layout_alignStart="@+id/subTitle"
         android:layout_alignRight="@+id/subTitle"
@@ -71,7 +71,7 @@
         android:backgroundTint="@android:color/white"
         android:hint="@string/pwdhint"
         android:inputType="textPassword"
-        android:textSize="14sp"
+        android:textSize="12dp"
         android:layout_below="@+id/emailEdit"
         android:layout_alignLeft="@+id/emailEdit"
         android:layout_alignStart="@+id/emailEdit"
@@ -82,11 +82,12 @@
         android:id="@+id/loginbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/login"
+        android:layout_below="@+id/passwordEdit"
         android:layout_alignLeft="@+id/passwordEdit"
         android:layout_alignStart="@+id/passwordEdit"
-        android:layout_below="@+id/passwordEdit"
-        android:background="@color/cardview_dark_background"
-        android:text="@string/login" />
+        android:layout_marginTop="5dp" />
 
     <Button
         android:id="@+id/signupbtn"
@@ -94,7 +95,8 @@
         android:layout_height="wrap_content"
         android:background="#1EA775"
         android:text="@string/signup"
-        android:layout_below="@+id/passwordEdit"
+        android:layout_alignBaseline="@+id/loginbtn"
+        android:layout_alignBottom="@+id/loginbtn"
         android:layout_alignRight="@+id/passwordEdit"
         android:layout_alignEnd="@+id/passwordEdit" />
 
@@ -103,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
-        android:textSize="12sp"
+        android:textSize="12dp"
         android:textColor="@android:color/white"
         android:text="@string/alternativeor"
         android:layout_below="@+id/signupbtn"
@@ -113,8 +115,8 @@
         android:id="@+id/google"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:textSize="12sp"
+        android:layout_marginTop="12dp"
+        android:textSize="12dp"
         android:textColor="@android:color/white"
         android:text="@string/usegoogle"
         android:layout_below="@+id/alternateOr"
@@ -127,7 +129,7 @@
         android:id="@+id/facebook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
+        android:textSize="12dp"
         android:textColor="@android:color/white"
         android:text="@string/usefacebook"
         android:layout_alignBaseline="@+id/google"
@@ -143,7 +145,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:textColor="@android:color/white"
-        android:textSize="11sp" />
+        android:textSize="11dp" />
 
     <TextView
         android:id="@+id/whatsThis"
@@ -154,7 +156,7 @@
         android:layout_marginBottom="27dp"
         android:text="@string/whatsthis"
         android:textAlignment="center"
-        android:textSize="12sp"
+        android:textSize="11dp"
         tools:textColor="@android:color/white" />
 
 </RelativeLayout>

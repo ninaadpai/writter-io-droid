@@ -90,9 +90,9 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         viewHolder.postDetails.setText(p.getUploadedBy()+" \t\t "+p.getTopicString()+" \t\t "+p.getUploadedTime());
         viewHolder.postDetails.setTypeface(domineBold);
         viewHolder.postQuestion.setText(p.getPostQuestion());
-        viewHolder.postQuestion.setTypeface(domineBold);
+        viewHolder.postQuestion.setTypeface(share);
        viewHolder.postDesc.setText(p.getPostDesc());
-       viewHolder.postDesc.setTypeface(domineBold);
+       viewHolder.postDesc.setTypeface(share);
        viewHolder.likeCount.setTypeface(domineBold);
        viewHolder.likeCount.setText("27.2k");
        viewHolder.commentCount.setTypeface(domineBold);

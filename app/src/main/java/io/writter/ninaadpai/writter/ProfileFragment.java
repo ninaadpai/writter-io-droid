@@ -27,7 +27,7 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         Log.i("Demo","ProfileFragment onCreateView");
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_trending, container, false);
+        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
     @Override

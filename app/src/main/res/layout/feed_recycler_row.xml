@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:textColor="@color/loginBackground"
+                android:textColor="@color/detailsColor"
                 android:textSize="10sp"
                 android:textStyle="bold" />
 
@@ -44,7 +44,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:textColor="@android:color/black"
-                android:textSize="13dp"
+                android:textSize="14dp"
                 android:ellipsize="end"
                 android:maxLines="3"/>
 

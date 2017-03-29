@@ -4,5 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="loginBackground">#565656</color>
+    <color name="detailsColor">#9a565656</color>
     <color name="writterGreen">#1EA775</color>
 </resources>
