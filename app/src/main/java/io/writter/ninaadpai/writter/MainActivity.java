@@ -60,18 +60,18 @@ public class MainActivity extends AppCompatActivity {
         signupbtn = (Button) findViewById(R.id.signupbtn);
         loginbtn = (Button) findViewById(R.id.loginbtn);
         novaOval = Typeface.createFromAsset(getAssets(),"fonts/NovaOval.ttf");
-        domineBold = Typeface.createFromAsset(getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
+        domineBold = Typeface.createFromAsset(getAssets(),"fonts/Lora-Bold.ttf");
         appTitle.setTypeface(novaOval);
-        subTitle.setTypeface(domineBold);
-        emailEdit.setTypeface(domineBold);
-        passwordEdit.setTypeface(domineBold);
-        signupbtn.setTypeface(domineBold);
-        loginbtn.setTypeface(domineBold);
-        alternateOr.setTypeface(domineBold);
-        useGoogle.setTypeface(domineBold);
-        useFacebook.setTypeface(domineBold);
-        whatsThis.setTypeface(domineBold);
-        termsOfService.setTypeface(domineBold);
+//        subTitle.setTypeface(domineBold);
+//        emailEdit.setTypeface(domineBold);
+//        passwordEdit.setTypeface(domineBold);
+//        signupbtn.setTypeface(domineBold);
+//        loginbtn.setTypeface(domineBold);
+//        alternateOr.setTypeface(domineBold);
+//        useGoogle.setTypeface(domineBold);
+//        useFacebook.setTypeface(domineBold);
+//        whatsThis.setTypeface(domineBold);
+//        termsOfService.setTypeface(domineBold);
         termsOfService.setText(Html.fromHtml("By clicking Sign Up you automatically agree to the <u>Terms of Use</u>"));
         termsOfService.setOnClickListener(new View.OnClickListener() {
             @Override

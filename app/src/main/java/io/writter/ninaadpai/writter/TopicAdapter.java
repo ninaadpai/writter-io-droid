@@ -22,14 +22,12 @@ public class TopicAdapter extends ArrayAdapter<String> {
     List<String> mData;
     Context mContext;
     int mResource;
-    Typeface domineBold;
 
-    public TopicAdapter(Context context, int resource, List<String> objects, Typeface domineBold) {
+    public TopicAdapter(Context context, int resource, List<String> objects) {
         super(context, resource, objects);
         this.mData = objects;
         this.mContext = context;
         this.mResource = resource;
-        this.domineBold = domineBold;
     }
 
     @NonNull
@@ -41,7 +39,6 @@ public class TopicAdapter extends ArrayAdapter<String> {
         }
         String p = mData.get(position);
         TextView text = (TextView)convertView.findViewById(R.id.textView2);
-        text.setTypeface(domineBold);
         text.setText(p);
         return convertView;
     }

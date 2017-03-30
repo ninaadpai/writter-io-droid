@@ -8,7 +8,7 @@
         android:id="@+id/topicCard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/common_google_signin_btn_text_light_disabled">
+        app:cardBackgroundColor="@color/common_google_signin_btn_text_dark_disabled">
 
         <TextView
             android:id="@+id/textView2"

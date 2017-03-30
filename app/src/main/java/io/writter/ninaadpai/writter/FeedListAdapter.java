@@ -33,12 +33,10 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
     private static final String TAG = "CustomAdapter";
     private static Context context;
     private List<Post> mDataSet;
-    private Typeface domineBold;
     private Typeface share;
 
-    public FeedListAdapter(FragmentActivity f, List<Post> dataSet, Typeface domineBold, Typeface share) {
+    public FeedListAdapter(FragmentActivity f, List<Post> dataSet, Typeface share) {
         this.mDataSet = dataSet;
-        this.domineBold = domineBold;
         this.share = share;
         this.context = f;
     }
@@ -88,31 +86,38 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
        final Post p = mDataSet.get(position);
         viewHolder.postDetails.setText(p.getUploadedBy()+" \t\t "+p.getTopicString()+" \t\t "+p.getUploadedTime());
-        viewHolder.postDetails.setTypeface(domineBold);
+
         viewHolder.postQuestion.setText(p.getPostQuestion());
         viewHolder.postQuestion.setTypeface(share);
        viewHolder.postDesc.setText(p.getPostDesc());
        viewHolder.postDesc.setTypeface(share);
-       viewHolder.likeCount.setTypeface(domineBold);
+
        viewHolder.likeCount.setText("27.2k");
-       viewHolder.commentCount.setTypeface(domineBold);
+
        viewHolder.commentCount.setText("5.5k");
        viewHolder.likedImage.setTag("like");
+
+
        viewHolder.likedImage.setOnClickListener(new View.OnClickListener() {
 
            @Override
            public void onClick(View v) {
+               boolean liked;
                if(viewHolder.likedImage.getTag().toString().equals("like") ) {
                    viewHolder.likedImage.setImageResource(R.drawable.liked);
                    viewHolder.likedImage.setTag("liked");
+                   liked = true;
+                   DashboardActivity.setLiked(liked);
                }
                else if(viewHolder.likedImage.getTag().toString().equals("liked") ) {
                    viewHolder.likedImage.setImageResource(R.drawable.like);
                    viewHolder.likedImage.setTag("like");
+                   liked = false;
+                   DashboardActivity.setLiked(liked);
                }
            }
        });
-       if(p.getUploadedBy()=="Posted as Anonymous"){
+       if(p.getUploadedBy().equals("Posted as Anonymous") || p.getUploadedBy().equals("Posted by you")){
            viewHolder.addToNetwork.setVisibility(View.INVISIBLE);
        }
        viewHolder.addToNetwork.setOnClickListener(new View.OnClickListener() {

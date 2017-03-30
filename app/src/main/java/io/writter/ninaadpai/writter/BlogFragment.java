@@ -31,11 +31,8 @@ public class BlogFragment extends Fragment {
         // Inflate the layout for this fragment
         Log.i("Demo","BlogFragment onCreateView");
         View view1 =  inflater.inflate(R.layout.fragment_blog, container, false);
-        Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Arimo-Bold.ttf");
         TextView noBlog = (TextView)view1.findViewById(R.id.noBlog);
         Button setUpBlog = (Button) view1.findViewById(R.id.setUpBlog);
-        noBlog.setTypeface(domineBold);
-        setUpBlog.setTypeface(domineBold);
         return view1;
     }
 

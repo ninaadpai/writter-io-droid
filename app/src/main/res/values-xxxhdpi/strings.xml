@@ -9,7 +9,7 @@
     <string name="emailhint">Email</string>
     <string name="pwdhint">Password</string>
     <string name="mainactivitygobtn">Go</string>
-    <string name="nameHint">First &amp; Last Name</string>
+    <string name="nameHint">Enter your First &amp; Last Name</string>
     <string name="setuphint">Thanks for signing up! We would like to know a bit more about you.</string>
     <string name="chooseTopics">Add at least 5 topics to personalize your home.</string>
     <string name="login">Log In</string>
@@ -20,7 +20,7 @@
     <string name="title_trending">Trending</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profile</string>
-    <string name="feed_edittext_hint">Ask a question, search anything...</string>
+    <string name="feed_edittext_hint">Ask a question, search for people...</string>
     <string name="no_blog">Oops! You haven\'t started your blog yet</string>
     <string name="set_up_blog">Set It Up</string>
     <string name="search_frag_title">MOST TRENDING SEARCHES NOW.</string>

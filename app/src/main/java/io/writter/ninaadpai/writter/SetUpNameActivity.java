@@ -67,14 +67,7 @@ public class SetUpNameActivity extends AppCompatActivity {
         frecyclerView = (RecyclerView) findViewById(R.id.favoriteRecycler);
         goBtn = (Button) findViewById(R.id.gobtn1);
         domineBold = Typeface.createFromAsset(getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
-        goBtn.setTypeface(domineBold);
         goBtn.setText("SKIP FOR NOW");
-        favorites = new ArrayList<>();
-        firstLastName.setTypeface(domineBold);
-        topicEditText.setTypeface(domineBold);
-        setupHint.setTypeface(domineBold);
-        topicEditText.setTypeface(domineBold);
-        recyclerTitle.setTypeface(domineBold);
         databaseReference = FirebaseDatabase.getInstance().getReference();
         topics = new ArrayList<>();
         topics.add("Technology");
@@ -161,13 +154,13 @@ public class SetUpNameActivity extends AppCompatActivity {
     private void populateFavorites(List<String> favorites) {
         LinearLayoutManager mLinearLayoutManager = new GridLayoutManager(this, 1);
         frecyclerView.setLayoutManager(mLinearLayoutManager);
-        fadapter = new FavoriteAdapter(SetUpNameActivity.this,favorites, domineBold);
+        fadapter = new FavoriteAdapter(SetUpNameActivity.this,favorites);
         frecyclerView.setItemAnimator(new DefaultItemAnimator());
         frecyclerView.setAdapter(fadapter);
     }
 
     private void populateList(List<String> topics) {
-        adapter = new TopicAdapter(this, R.layout.setup_listview_row, topics, domineBold);
+        adapter = new TopicAdapter(this, R.layout.setup_listview_row, topics);
         topicList.setAdapter(adapter);
     }
 }

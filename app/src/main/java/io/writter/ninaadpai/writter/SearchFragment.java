@@ -30,7 +30,6 @@ import java.util.List;
  */
 public class SearchFragment extends Fragment {
 
-    Typeface domineBold;
     SearchResAdapter adapter;
     TextView searchTitle;
     ArrayList<String> topResults;
@@ -74,16 +73,12 @@ public class SearchFragment extends Fragment {
             searchTitle.setText("Your Search Matches");
         else if(topResults.size() == list.size()-1)
             searchTitle.setText("Don't see what you're searching for? Post it!");
-        adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, topResults, domineBold);
+        adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, topResults);
         searchRes.setAdapter(adapter);
-        domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
         Button questionPost = (Button) view.findViewById(R.id.questionPostBtn);
         anonymousCheckbox = (CheckBox) view.findViewById(R.id.anonymousCheckbox);
         checkquestionImg = (ImageView) view.findViewById(R.id.checkquestionImg);
         checkquestionImg.setVisibility(View.INVISIBLE);
-        questionPost.setTypeface(domineBold);
-        anonymousCheckbox.setTypeface(domineBold);
-        searchTitle.setTypeface(domineBold);
         return view;
     }
 

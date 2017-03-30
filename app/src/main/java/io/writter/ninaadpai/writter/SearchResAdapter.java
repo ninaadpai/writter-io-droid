@@ -19,14 +19,14 @@ class SearchResAdapter extends ArrayAdapter<String> {
     List<String> mData;
     Context mContext;
     int mResource;
-    Typeface domineBold;
-    public SearchResAdapter(Context context, int search_res_item_row, List<String> list, Typeface domineBold) {
+
+    public SearchResAdapter(Context context, int search_res_item_row, List<String> list) {
         super(context, search_res_item_row, list);
         //super(context, list);
         this.mContext = context;
         this.mData = list;
         this.mResource = search_res_item_row;
-        this.domineBold = domineBold;
+
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -36,7 +36,7 @@ class SearchResAdapter extends ArrayAdapter<String> {
         }
         String p = mData.get(position);
         TextView text = (TextView)convertView.findViewById(R.id.search_res);
-        text.setTypeface(domineBold);
+
         text.setText(p);
         return convertView;
     }

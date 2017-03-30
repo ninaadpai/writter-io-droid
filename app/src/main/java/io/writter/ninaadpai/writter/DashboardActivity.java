@@ -39,7 +39,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion {
+public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion, ProfileFragment.imageUpload {
 
     Toolbar toolbar;
     Class fragmentClass;
@@ -140,7 +140,6 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         domineBold = Typeface.createFromAsset(getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
         clearSearch.setVisibility(View.INVISIBLE);
         inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-        searchFeed.setTypeface(domineBold);
         searchFeed.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @TargetApi(Build.VERSION_CODES.CUPCAKE)
             @RequiresApi(api = Build.VERSION_CODES.CUPCAKE)
@@ -315,6 +314,24 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
 
     @Override
     public void doneUpload() {
+        progressDialog.dismiss();
+    }
+
+    public static void setLiked(boolean liked) {
+        int likeNum;
+    }
+
+    @Override
+    public void startImageUpload() {
+        progressDialog = new ProgressDialog(DashboardActivity.this);
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Uploading Your Profile Photo...");
+        progressDialog.show();
+    }
+
+    @Override
+    public void stopImageUpload() {
         progressDialog.dismiss();
     }
 }

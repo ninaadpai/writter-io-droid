@@ -19,12 +19,11 @@ import static io.writter.ninaadpai.writter.SetUpNameActivity.topicEditText;
 class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.RadioViewHolder> {
         private Context context;
         private List<String> favoriteList;
-        private Typeface domineBold;
 
-    public FavoriteAdapter(Context context, List<String> favoriteList, Typeface domineBold) {
+
+    public FavoriteAdapter(Context context, List<String> favoriteList){
             this.context = context;
             this.favoriteList = favoriteList;
-            this.domineBold = domineBold;
         }
 
         @Override
@@ -40,7 +39,6 @@ class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.RadioViewHold
 
             final String f = favoriteList.get(position);
             holder.textView.setText(f);
-            holder.textView.setTypeface(domineBold);
             holder.imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

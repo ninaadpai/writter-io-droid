@@ -42,9 +42,7 @@ public class FeedFragment extends Fragment {
                              Bundle savedInstanceState) {
         Log.i("Demo","FeedFragment onCreateView");
         View view = inflater.inflate(R.layout.fragment_feed, container, false);
-        final Typeface domineBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
-        final Typeface share = Typeface.createFromAsset(getActivity().getAssets(),"fonts/Share-Bold.ttf");
-        final Typeface arvoBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/CrimsonText-Semibold.ttf");
+        final Typeface arvoBold = Typeface.createFromAsset(getActivity().getAssets(),"fonts/GenBkBasB.ttf");
         final FragmentActivity f = getActivity();
         final RecyclerView feedRecycler = (RecyclerView)view.findViewById(R.id.feedRecycler);
         LinearLayoutManager layoutManager = new GridLayoutManager(this.getActivity(), 1);
@@ -84,7 +82,7 @@ public class FeedFragment extends Fragment {
                     posts.add(p);
 
                 }
-                final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts, domineBold, arvoBold);
+                final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts, arvoBold);
                 feedRecycler.setAdapter(feedListAdapter);
                 feedRecycler.setHasFixedSize(true);
                 feedRecycler.setItemAnimator(new SlideInUpAnimator());
@@ -112,11 +110,20 @@ public class FeedFragment extends Fragment {
         } else if (diffMinutes < 1) {
             return diffSeconds + " secs ago";
         } else if (diffHours < 1) {
-            return diffMinutes + " mins ago";
+            if(diffMinutes<2)
+                return diffMinutes + " min ago";
+            else
+                return diffMinutes + " mins ago";
         } else if (diffDays < 1) {
+            if(diffHours<2)
+                return diffHours + " hr ago";
+            else
             return diffHours + " hrs ago";
         } else if (diffWeeks < 1) {
-            return diffDays + " D ago";
+            if(diffDays < 2)
+                return diffDays + " day ago";
+            else
+            return diffDays + " days ago";
         } else if (diffMonths < 1) {
             return diffWeeks + " W ago";
         } else if (diffYears < 1) {
