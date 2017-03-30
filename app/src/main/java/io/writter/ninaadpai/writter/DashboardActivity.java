@@ -49,6 +49,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     ImageView clearSearch;
     InputMethodManager inputManager;
     AlertDialog.Builder questionPostedDialog;
+    String currentUid;
     Fragment fragment = FeedFragment.class.newInstance();
     String[] values = new String[] {
             "What is the best time to visit California in terms of weather?",
@@ -136,7 +137,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         searchFeed.setFocusable(false);
         searchFeed.setFocusableInTouchMode(true);
         searchFeed.setFocusable(true);
-        domineBold = Typeface.createFromAsset(getAssets(),"fonts/Arimo-Bold.ttf");
+        domineBold = Typeface.createFromAsset(getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
         clearSearch.setVisibility(View.INVISIBLE);
         inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
         searchFeed.setTypeface(domineBold);
@@ -245,19 +246,22 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
 
     @Override
     public void postQuestion(final boolean anonymously) {
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        final FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         String text = searchFeed.getText().toString().trim();
         final StringBuilder questionText = new StringBuilder();
         questionText.append(text.substring(0,1).toUpperCase() + text.substring(1));
         final Object questionTimeStamp= ServerValue.TIMESTAMP;
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child("userName");
 
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child("userName");
         ref.addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String userName = (String) dataSnapshot.getValue();
-                databaseReference.child("questions_pool").push().setValue(new QuestionPool(userName, questionText.toString(),"General", questionTimeStamp, anonymously));
+                FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+                final String currentUid = currentUser.getUid();
+                Log.i("Posting user, Dashboard",currentUid);
+                databaseReference.child("questions_pool").push().setValue(new QuestionPool(currentUid.toString(), userName,questionText.toString(),"General", questionTimeStamp, anonymously));
             }
 
             @Override

@@ -7,34 +7,21 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
-
-import org.joda.time.Hours;
-import org.json.JSONException;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -65,17 +52,31 @@ public class FeedFragment extends Fragment {
         firebaseAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("questions_pool");
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        final String currentUid = currentUser.getUid();
+        Log.i("Current User",currentUid);
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot dS : dataSnapshot.getChildren()) {
                     String time = String.valueOf(dS.child("uploadTime").getValue());
                     long milliSeconds = Long.parseLong(time);
-                    SimpleDateFormat sdf = new SimpleDateFormat("MMM, dd HH:mm");
+                    boolean anonymous = (boolean) dS.child("anonymous").getValue();
                     long currentTime = System.currentTimeMillis();
+                    String poster = null;
+                    if(currentUid.equals(dS.child("userId").getValue())) {
+                        poster = "Posted by you";
+                    }
+                    else if(!(currentUid.equals(dS.child("userId").getValue())) && anonymous == false) {
+                        poster = String.valueOf(dS.child("userName").getValue());
+                    }
+                    else if(!(currentUid.equals(dS.child("userId").getValue())) && anonymous == true) {
+                        poster = "Posted as Anonymous";
+                    }
+                    Log.i("Posted user",String.valueOf(dS.child("userId").getValue()));
                     String timeAsString = timeDiff(currentTime-milliSeconds);
                      Post p = new Post("",
-                            String.valueOf(dS.child("userId").getValue()),
+                             poster,
                              String.valueOf(dS.child("category").getValue()),
                              timeAsString,
                              String.valueOf(dS.child("questionText").getValue()),
@@ -107,21 +108,21 @@ public class FeedFragment extends Fragment {
         long diffYears = timeDifferenceMilliseconds / ((long)60 * 60 * 1000 * 24 * 365);
 
         if (diffSeconds < 1) {
-            return "less than a second";
+            return "less than a second ago";
         } else if (diffMinutes < 1) {
-            return diffSeconds + " secs";
+            return diffSeconds + " secs ago";
         } else if (diffHours < 1) {
-            return diffMinutes + " mins";
+            return diffMinutes + " mins ago";
         } else if (diffDays < 1) {
-            return diffHours + " hrs";
+            return diffHours + " hrs ago";
         } else if (diffWeeks < 1) {
-            return diffDays + " D";
+            return diffDays + " D ago";
         } else if (diffMonths < 1) {
-            return diffWeeks + " W";
+            return diffWeeks + " W ago";
         } else if (diffYears < 1) {
-            return diffMonths + " M";
+            return diffMonths + " M ago";
         } else {
-            return diffYears + " yrs";
+            return diffYears + " yrs ago";
         }
     }
 

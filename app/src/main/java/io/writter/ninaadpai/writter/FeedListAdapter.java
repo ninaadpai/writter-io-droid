@@ -97,13 +97,24 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
        viewHolder.likeCount.setText("27.2k");
        viewHolder.commentCount.setTypeface(domineBold);
        viewHolder.commentCount.setText("5.5k");
+       viewHolder.likedImage.setTag("like");
        viewHolder.likedImage.setOnClickListener(new View.OnClickListener() {
 
            @Override
            public void onClick(View v) {
-               viewHolder.likedImage.setImageResource(R.drawable.liked);
+               if(viewHolder.likedImage.getTag().toString().equals("like") ) {
+                   viewHolder.likedImage.setImageResource(R.drawable.liked);
+                   viewHolder.likedImage.setTag("liked");
+               }
+               else if(viewHolder.likedImage.getTag().toString().equals("liked") ) {
+                   viewHolder.likedImage.setImageResource(R.drawable.like);
+                   viewHolder.likedImage.setTag("like");
+               }
            }
        });
+       if(p.getUploadedBy()=="Posted as Anonymous"){
+           viewHolder.addToNetwork.setVisibility(View.INVISIBLE);
+       }
        viewHolder.addToNetwork.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {

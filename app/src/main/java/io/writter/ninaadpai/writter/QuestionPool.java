@@ -1,27 +1,40 @@
 package io.writter.ninaadpai.writter;
 
+import java.util.List;
+
 /**
  * Created by ninaadpai on 3/27/17.
  */
 //CURRENTLY NOT IN USE
 public class QuestionPool {
-    String userId, questionText, category;
+    String userId, userName, questionText, category;
     Object uploadTime;
     boolean anonymous;
+    List<String> likers;
 
-    public QuestionPool(String userId, String questionText, String category, Object uploadTime, boolean anonymous) {
+    public QuestionPool(String userId, String userName, String questionText, String category, Object uploadTime, boolean anonymous) {
         this.userId = userId;
+        this.userName = userName;
         this.questionText = questionText;
         this.category = category;
         this.uploadTime = uploadTime;
         this.anonymous = anonymous;
     }
+
     public String getUserId() {
         return userId;
     }
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getQuestionText() {
@@ -56,10 +69,20 @@ public class QuestionPool {
         this.anonymous = anonymous;
     }
 
+    public List<String> getLikers() {
+        return likers;
+    }
+
+    public void setLikers(List<String> likers) {
+        this.likers = likers;
+    }
+
+
     @Override
     public String toString() {
         return "QuestionPool{" +
                 "userId='" + userId + '\'' +
+                "userName='" + userName + '\'' +
                 ", questionText='" + questionText + '\'' +
                 ", category='" + category + '\'' +
                 ", uploadTime=" + uploadTime  + '\'' +

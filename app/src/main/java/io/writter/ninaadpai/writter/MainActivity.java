@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,9 +44,6 @@ public class MainActivity extends AppCompatActivity {
     AlertDialog.Builder builder;
     ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
-    FirebaseUser firebaseUser;
-    DatabaseReference databaseReference;
-    ArrayList<String> globalTopics;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         emailEdit = (EditText)findViewById(R.id.emailEdit);
         signupbtn = (Button) findViewById(R.id.signupbtn);
         loginbtn = (Button) findViewById(R.id.loginbtn);
-        novaOval = Typeface.createFromAsset(getAssets(),"fonts/CrimsonText-Bold.ttf");
+        novaOval = Typeface.createFromAsset(getAssets(),"fonts/NovaOval.ttf");
         domineBold = Typeface.createFromAsset(getAssets(),"fonts/FiraSansCondensed-Regular.ttf");
         appTitle.setTypeface(novaOval);
         subTitle.setTypeface(domineBold);
@@ -181,7 +180,14 @@ public class MainActivity extends AppCompatActivity {
                         }
                         else{
                             progressDialog.dismiss();
-                            Toast.makeText(getApplicationContext(), "Could not register, please try again", Toast.LENGTH_LONG).show();
+                            View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.signup_custom_toast, null);
+                            TextView custom_toast_message = (TextView)layoutValue.findViewById(R.id.custom_toast_message);
+                            custom_toast_message.setTypeface(domineBold);
+                            Toast toast = new Toast(getApplicationContext());
+                            toast.setDuration(Toast.LENGTH_LONG);
+                            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 600);
+                            toast.setView(layoutValue);//setting the view of custom toast layout
+                            toast.show();
                         }
                     }
                 });
