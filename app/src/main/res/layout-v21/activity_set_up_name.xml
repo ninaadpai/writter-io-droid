@@ -28,6 +28,7 @@
         app:met_textColor="@color/landingText"
         app:met_textColorHint="@color/landingText"
         app:met_floatingLabelTextColor="@color/landingText"
+        app:met_floatingLabelAnimating="true"
         app:met_floatingLabel="highlight"
         app:met_primaryColor="@color/landingText"
         app:met_singleLineEllipsis="true"

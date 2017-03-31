@@ -13,16 +13,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -34,9 +33,13 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.RequestCreator;
 import com.squareup.picasso.Transformation;
 
 import org.w3c.dom.Text;
+
+import java.io.File;
+import java.net.URL;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -63,14 +66,42 @@ public class ProfileFragment extends Fragment {
         Log.i("Demo","ProfileFragment onCreateView");
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_profile, container, false);
-        TextView userName = (TextView) view.findViewById(R.id.userName);
-        TextView tagLine = (TextView) view.findViewById(R.id.tagLine);
-        TextView location = (TextView) view.findViewById(R.id.location);
+        final TextView userName = (TextView) view.findViewById(R.id.userName);
+        final TextView tagLine = (TextView) view.findViewById(R.id.tagLine);
+        final TextView location = (TextView) view.findViewById(R.id.location);
+        profileImage = (ImageView)view.findViewById(R.id.profileImage);
         firebaseAuth = firebaseAuth.getInstance();
         user = firebaseAuth.getCurrentUser();
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(user.getUid());
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                    String name = String.valueOf(dataSnapshot.child("userName").getValue());
+                    userName.setText(name);
+                    String tagline = String.valueOf(dataSnapshot.child("tagLine").getValue());
+                    if(tagline == null)
+                        tagLine.setText("Set a tag line");
+                    else
+                        tagLine.setText(tagline.toString());
+                     String Location = String.valueOf(dataSnapshot.child("location").getValue());
+                if(Location == null)
+                    location.setText("Set a home location");
+                else
+                    location.setText(Location.toString());
+                    Picasso.with(getContext())
+                        .load("https:"+String.valueOf(dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue()))
+                        .rotate(0)
+                        .transform(new CircleTransform())
+                        .into(profileImage);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference();
-        profileImage = (ImageView)view.findViewById(R.id.profileImage);
         profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,7 +132,6 @@ public class ProfileFragment extends Fragment {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     databaseReference.child(user.getUid()).child("profile_photo").setValue(taskSnapshot.getDownloadUrl());
-                   // Bitmap resized = resizeBitmap(String.valueOf(taskSnapshot.getDownloadUrl()), 120, 100);
                     Picasso.with(getContext())
                             .load(String.valueOf(taskSnapshot.getDownloadUrl()))
                             .rotate(90)

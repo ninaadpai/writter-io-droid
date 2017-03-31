@@ -4,6 +4,10 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
+import android.graphics.BitmapShader;
+import android.graphics.Canvas;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
@@ -20,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
 import org.w3c.dom.Text;
 
@@ -59,6 +64,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                 public void onClick(View v) {
                 }
             });
+            profileImage = (ImageView)v.findViewById(R.id.profileImage);
             postDetails = (TextView) v.findViewById(R.id.postDetails);
             postQuestion = (TextView) v.findViewById(R.id.postQuestion);
             postDesc = (TextView) v.findViewById(R.id.postDesc);
@@ -86,7 +92,11 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
        final Post p = mDataSet.get(position);
         viewHolder.postDetails.setText(p.getUploadedBy()+" \t\t "+p.getTopicString()+" \t\t "+p.getUploadedTime());
-
+       Picasso.with(context)
+               .load(p.getImgUrl())
+               .rotate(0)
+               .transform(new FeedListAdapter.CircleTransform())
+               .into(viewHolder.profileImage);
         viewHolder.postQuestion.setText(p.getPostQuestion());
         viewHolder.postQuestion.setTypeface(share);
        viewHolder.postDesc.setText(p.getPostDesc());
@@ -124,7 +134,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
            @Override
            public void onClick(View v) {
                Log.i("Clicked", "Add");
-                viewHolder.addToNW.setTitle("Send a request")
+                viewHolder.addToNW.setTitle("Follow "+p.getUploadedBy())
                 .setMessage("Are you sure to want to send a follow request?")
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
@@ -164,5 +174,39 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
     @Override
     public int getItemCount() {
         return mDataSet.size();
+    }
+    public class CircleTransform implements Transformation {
+        @Override
+        public Bitmap transform(Bitmap source) {
+            int size = Math.min(source.getWidth(), source.getHeight());
+
+            int x = (source.getWidth() - size) / 2;
+            int y = (source.getHeight() - size) / 2;
+
+            Bitmap squaredBitmap = Bitmap.createBitmap(source, x, y, size, size);
+            if (squaredBitmap != source) {
+                source.recycle();
+            }
+
+            Bitmap bitmap = Bitmap.createBitmap(size, size, source.getConfig());
+
+            Canvas canvas = new Canvas(bitmap);
+            Paint paint = new Paint();
+            BitmapShader shader = new BitmapShader(squaredBitmap,
+                    BitmapShader.TileMode.CLAMP, BitmapShader.TileMode.CLAMP);
+            paint.setShader(shader);
+            paint.setAntiAlias(true);
+
+            float r = size / 2f;
+            canvas.drawCircle(r, r, r, paint);
+
+            squaredBitmap.recycle();
+            return bitmap;
+        }
+
+        @Override
+        public String key() {
+            return "circle";
+        }
     }
 }

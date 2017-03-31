@@ -7,38 +7,50 @@
     android:background="@android:color/white"
     tools:context="io.writter.ninaadpai.writter.MainActivity">
 
-    <TextView
-        android:id="@+id/subTitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="11sp"
-        android:textColor="@color/landingText"
-        android:text="@string/subtitle"
+        android:orientation="vertical"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="5dp"
-        app:srcCompat="@drawable/landing_icon"
-        android:layout_below="@+id/subTitle"
-        android:layout_centerHorizontal="true"
-        tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/emailEdit"
+            android:layout_centerHorizontal="true"
+            android:text="@string/subtitle"
+            android:gravity="center"
+            android:textColor="@color/landingText"
+            android:textSize="11sp"
+            android:textStyle="normal|bold" />
 
-    <TextView
-        android:id="@+id/appTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/landingText"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:text="@string/app_name"
-        android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/subTitle"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/landing_icon"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_centerHorizontal="true"
+            android:text="@string/app_name"
+            android:textColor="@color/landingText"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/emailEdit"
@@ -50,17 +62,18 @@
         app:met_textColor="@color/landingText"
         app:met_textColorHint="@color/landingText"
         app:met_floatingLabelTextColor="@color/landingText"
+        app:met_floatingLabelAnimating="true"
         android:background="@drawable/landing_edittext_background"
         app:met_floatingLabel="highlight"
         app:met_primaryColor="@color/landingText"
         app:met_singleLineEllipsis="true"
-        android:layout_below="@+id/appTitle"
-        android:layout_marginTop="15dp"
         android:inputType="textEmailAddress"
-        android:layout_alignRight="@+id/subTitle"
-        android:layout_alignEnd="@+id/subTitle"
-        android:layout_alignLeft="@+id/loginbtn"
-        android:layout_alignStart="@+id/loginbtn" />
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignRight="@+id/google"
+        android:layout_alignEnd="@+id/google"
+        android:layout_alignLeft="@+id/facebook"
+        android:layout_alignStart="@+id/facebook" />
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/passwordEdit"
@@ -72,11 +85,13 @@
         app:met_textColor="@color/landingText"
         app:met_textColorHint="@color/landingText"
         app:met_floatingLabelTextColor="@color/landingText"
+        app:met_floatingLabelAnimating="true"
         android:background="@drawable/landing_edittext_background"
         app:met_floatingLabel="highlight"
         app:met_primaryColor="@color/landingText"
         android:inputType="textPassword"
         android:layout_below="@+id/emailEdit"
+        android:textStyle="normal|bold"
         android:layout_alignLeft="@+id/emailEdit"
         android:layout_alignStart="@+id/emailEdit"
         android:layout_alignRight="@+id/emailEdit"
@@ -86,30 +101,38 @@
         android:id="@+id/loginbtn"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:background="@color/cardview_dark_background"
-        android:text="@string/login"
+        android:layout_alignEnd="@+id/passwordEdit"
+        android:layout_alignLeft="@+id/passwordEdit"
+        android:layout_alignRight="@+id/passwordEdit"
+        android:layout_alignStart="@+id/passwordEdit"
         android:layout_below="@+id/passwordEdit"
-        android:layout_alignLeft="@+id/subTitle"
-        android:layout_alignStart="@+id/subTitle" />
+        android:height="6dp"
+        android:width="10dp"
+        android:background="@color/cardview_dark_background"
+        android:text="@string/login" />
 
     <Button
         android:id="@+id/signupbtn"
         android:layout_width="80dp"
         android:layout_height="50dp"
-        android:layout_alignTop="@+id/loginbtn"
-        android:layout_alignBottom="@+id/loginbtn"
-        android:layout_alignEnd="@+id/passwordEdit"
-        android:layout_alignRight="@+id/passwordEdit"
         android:background="#1EA775"
-        android:text="@string/signup" />
+        android:text="@string/signup"
+        android:layout_below="@+id/loginbtn"
+        android:height="6dp"
+        android:width="10dp"
+        android:layout_alignLeft="@+id/loginbtn"
+        android:layout_alignStart="@+id/loginbtn"
+        android:layout_alignRight="@+id/loginbtn"
+        android:layout_alignEnd="@+id/loginbtn" />
 
     <TextView
         android:id="@+id/alternateOr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="10dp"
         android:textSize="12sp"
         android:textColor="@color/landingText"
+        android:textStyle="normal|bold"
         android:text="@string/alternativeor"
         android:layout_below="@+id/signupbtn"
         android:layout_centerHorizontal="true" />
@@ -118,15 +141,16 @@
         android:id="@+id/google"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="13dp"
         android:textSize="12sp"
         android:textColor="@color/landingText"
+        android:textStyle="normal|bold"
         android:text="@string/usegoogle"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
         android:layout_below="@+id/alternateOr"
-        android:layout_alignRight="@+id/loginbtn"
-        android:layout_alignEnd="@+id/loginbtn" />
+        android:layout_toRightOf="@+id/alternateOr"
+        android:layout_toEndOf="@+id/alternateOr" />
 
     <TextView
         android:id="@+id/facebook"
@@ -134,12 +158,11 @@
         android:layout_height="wrap_content"
         android:textSize="12sp"
         android:textColor="@color/landingText"
+        android:textStyle="normal|bold"
         android:text="@string/usefacebook"
         android:layout_above="@+id/termsOfService"
-        android:layout_alignLeft="@+id/signupbtn"
-        android:layout_alignStart="@+id/signupbtn"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp" />
+        android:layout_toLeftOf="@+id/alternateOr"
+        android:layout_toStartOf="@+id/alternateOr" />
 
     <TextView
         android:id="@+id/termsOfService"
@@ -147,6 +170,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/google"
         android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold"
         android:layout_marginTop="24dp"
         android:textColor="@color/landingText"
         android:textSize="11sp" />
@@ -157,6 +181,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold"
         android:layout_marginBottom="27dp"
         android:text="@string/whatsthis"
         android:textAlignment="center"

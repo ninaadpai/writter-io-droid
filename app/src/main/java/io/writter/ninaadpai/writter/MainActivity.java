@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
     AlertDialog.Builder builder;
     ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
+    public static final int DURATION = 3000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,16 +65,6 @@ public class MainActivity extends AppCompatActivity {
         novaOval = Typeface.createFromAsset(getAssets(),"fonts/NovaOval.ttf");
         domineBold = Typeface.createFromAsset(getAssets(),"fonts/Lora-Bold.ttf");
         appTitle.setTypeface(novaOval);
-//        subTitle.setTypeface(domineBold);
-//        emailEdit.setTypeface(domineBold);
-//        passwordEdit.setTypeface(domineBold);
-//        signupbtn.setTypeface(domineBold);
-//        loginbtn.setTypeface(domineBold);
-//        alternateOr.setTypeface(domineBold);
-//        useGoogle.setTypeface(domineBold);
-//        useFacebook.setTypeface(domineBold);
-//        whatsThis.setTypeface(domineBold);
-//        termsOfService.setTypeface(domineBold);
         termsOfService.setText(Html.fromHtml("By clicking Sign Up you automatically agree to the <u>Terms of Use</u>"));
         termsOfService.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth.createUserWithEmailAndPassword(email, pass)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()) {
@@ -178,17 +172,24 @@ public class MainActivity extends AppCompatActivity {
                             Intent i = new Intent(MainActivity.this, SetUpNameActivity.class);
                             startActivity(i);
                         }
-                        else{
+                        else if(task.getException() instanceof FirebaseAuthUserCollisionException) {
                             progressDialog.dismiss();
                             View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.signup_custom_toast, null);
-                            TextView custom_toast_message = (TextView)layoutValue.findViewById(R.id.custom_toast_message);
-                            custom_toast_message.setTypeface(domineBold);
                             Toast toast = new Toast(getApplicationContext());
                             toast.setDuration(Toast.LENGTH_LONG);
-                            toast.setGravity(Gravity.CENTER_VERTICAL, 0, 600);
+                            toast.setGravity(Gravity.BOTTOM, 0, 200);
                             toast.setView(layoutValue);//setting the view of custom toast layout
                             toast.show();
                         }
+//                        else{
+//                            progressDialog.dismiss();
+//                            View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.signup_custom_toast, null);
+//                            Toast toast = new Toast(getApplicationContext());
+//                            toast.setDuration(Toast.LENGTH_LONG);
+//                            toast.setGravity(Gravity.BOTTOM, 0, 200);
+//                            toast.setView(layoutValue);//setting the view of custom toast layout
+//                            toast.show();
+//                        }
                     }
                 });
     }

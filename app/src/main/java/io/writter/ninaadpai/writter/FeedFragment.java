@@ -62,23 +62,28 @@ public class FeedFragment extends Fragment {
                     boolean anonymous = (boolean) dS.child("anonymous").getValue();
                     long currentTime = System.currentTimeMillis();
                     String poster = null;
+                    String profileImageUrl = null;
                     if(currentUid.equals(dS.child("userId").getValue())) {
                         poster = "Posted by you";
+                        profileImageUrl = String.valueOf(dS.child("imgUrl").getValue());
                     }
                     else if(!(currentUid.equals(dS.child("userId").getValue())) && anonymous == false) {
                         poster = String.valueOf(dS.child("userName").getValue());
+                        profileImageUrl = String.valueOf(dS.child("imgUrl").getValue());
                     }
                     else if(!(currentUid.equals(dS.child("userId").getValue())) && anonymous == true) {
                         poster = "Posted as Anonymous";
+                        profileImageUrl = null;
                     }
                     Log.i("Posted user",String.valueOf(dS.child("userId").getValue()));
                     String timeAsString = timeDiff(currentTime-milliSeconds);
-                     Post p = new Post("",
+                     Post p = new Post(profileImageUrl,
                              poster,
                              String.valueOf(dS.child("category").getValue()),
                              timeAsString,
                              String.valueOf(dS.child("questionText").getValue()),
-                            "");
+                            "Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah ");
+                    Log.i("profile pics","https:"+String.valueOf(dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue()));
                     posts.add(p);
 
                 }

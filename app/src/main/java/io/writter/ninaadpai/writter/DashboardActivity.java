@@ -49,7 +49,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     ImageView clearSearch;
     InputMethodManager inputManager;
     AlertDialog.Builder questionPostedDialog;
-    String currentUid;
+    String imgUrl;
     Fragment fragment = FeedFragment.class.newInstance();
     String[] values = new String[] {
             "What is the best time to visit California in terms of weather?",
@@ -250,7 +250,18 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         final StringBuilder questionText = new StringBuilder();
         questionText.append(text.substring(0,1).toUpperCase() + text.substring(1));
         final Object questionTimeStamp= ServerValue.TIMESTAMP;
+        DatabaseReference imgRef = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child("profile_photo").child("encodedSchemeSpecificPart");
+        imgRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                imgUrl = "https:"+dataSnapshot.getValue();
+            }
 
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child("userName");
         ref.addValueEventListener(new ValueEventListener() {
 
@@ -260,7 +271,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
                 FirebaseUser currentUser = firebaseAuth.getCurrentUser();
                 final String currentUid = currentUser.getUid();
                 Log.i("Posting user, Dashboard",currentUid);
-                databaseReference.child("questions_pool").push().setValue(new QuestionPool(currentUid.toString(), userName,questionText.toString(),"General", questionTimeStamp, anonymously));
+                databaseReference.child("questions_pool").push().setValue(new QuestionPool(imgUrl,currentUid.toString(), userName,questionText.toString(),"General", questionTimeStamp, anonymously));
             }
 
             @Override

@@ -7,18 +7,27 @@ import java.util.List;
  */
 //CURRENTLY NOT IN USE
 public class QuestionPool {
-    String userId, userName, questionText, category;
+    String imgUrl, userId, userName, questionText, category;
     Object uploadTime;
     boolean anonymous;
     List<String> likers;
 
-    public QuestionPool(String userId, String userName, String questionText, String category, Object uploadTime, boolean anonymous) {
+    public QuestionPool(String imgUrl, String userId, String userName, String questionText, String category, Object uploadTime, boolean anonymous) {
+        this.imgUrl = imgUrl;
         this.userId = userId;
         this.userName = userName;
         this.questionText = questionText;
         this.category = category;
         this.uploadTime = uploadTime;
         this.anonymous = anonymous;
+    }
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     public String getUserId() {
@@ -81,6 +90,7 @@ public class QuestionPool {
     @Override
     public String toString() {
         return "QuestionPool{" +
+                "imgUrl='" + imgUrl + '\'' +
                 "userId='" + userId + '\'' +
                 "userName='" + userName + '\'' +
                 ", questionText='" + questionText + '\'' +
