@@ -35,7 +35,7 @@
             android:layout_marginTop="5dp"
             android:layout_below="@+id/subTitle"
             android:layout_centerHorizontal="true"
-            app:srcCompat="@drawable/landing_icon"
+            app:srcCompat="@drawable/landing_icon2"
             tools:ignore="ContentDescription" />
 
         <TextView

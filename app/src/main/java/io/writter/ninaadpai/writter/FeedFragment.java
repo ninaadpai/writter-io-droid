@@ -58,32 +58,32 @@ public class FeedFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot dS : dataSnapshot.getChildren()) {
                     String time = String.valueOf(dS.child("uploadTime").getValue());
-                    long milliSeconds = Long.parseLong(time);
                     boolean anonymous = (boolean) dS.child("anonymous").getValue();
-                    long currentTime = System.currentTimeMillis();
                     String poster = null;
-                    String profileImageUrl = null;
+                    String posterImgUrl = null;
                     if(currentUid.equals(dS.child("userId").getValue())) {
                         poster = "Posted by you";
-                        profileImageUrl = String.valueOf(dS.child("imgUrl").getValue());
+                        posterImgUrl = String.valueOf(dS.child("imgUrl").getValue());
                     }
                     else if(!(currentUid.equals(dS.child("userId").getValue())) && anonymous == false) {
                         poster = String.valueOf(dS.child("userName").getValue());
-                        profileImageUrl = String.valueOf(dS.child("imgUrl").getValue());
+                        posterImgUrl =String.valueOf(dS.child("imgUrl").getValue());
                     }
                     else if(!(currentUid.equals(dS.child("userId").getValue())) && anonymous == true) {
                         poster = "Posted as Anonymous";
-                        profileImageUrl = null;
                     }
-                    Log.i("Posted user",String.valueOf(dS.child("userId").getValue()));
+                    long milliSeconds = Long.parseLong(time);
+                    long currentTime = System.currentTimeMillis();
+                    Log.i("Img Url", posterImgUrl);
                     String timeAsString = timeDiff(currentTime-milliSeconds);
-                     Post p = new Post(profileImageUrl,
-                             poster,
-                             String.valueOf(dS.child("category").getValue()),
-                             timeAsString,
-                             String.valueOf(dS.child("questionText").getValue()),
+                    Post p = new Post(
+                            posterImgUrl,
+                            poster,
+                            String.valueOf(dS.child("category").getValue()),
+                            timeAsString,
+                            String.valueOf(dS.child("questionText").getValue()),
                             "Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah ");
-                    Log.i("profile pics","https:"+String.valueOf(dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue()));
+                //    Log.i("profile pics","https:"+String.valueOf(dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue()));
                     posts.add(p);
 
                 }
@@ -123,12 +123,12 @@ public class FeedFragment extends Fragment {
             if(diffHours<2)
                 return diffHours + " hr ago";
             else
-            return diffHours + " hrs ago";
+                return diffHours + " hrs ago";
         } else if (diffWeeks < 1) {
             if(diffDays < 2)
                 return diffDays + " day ago";
             else
-            return diffDays + " days ago";
+                return diffDays + " days ago";
         } else if (diffMonths < 1) {
             return diffWeeks + " W ago";
         } else if (diffYears < 1) {

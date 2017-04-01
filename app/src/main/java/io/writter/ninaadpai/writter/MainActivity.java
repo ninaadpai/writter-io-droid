@@ -24,6 +24,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -103,39 +105,44 @@ public class MainActivity extends AppCompatActivity {
         String pass = passwordEdit.getText().toString().trim();
 
         if(TextUtils.isEmpty(email) || TextUtils.isEmpty(pass)) {
-            builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Log In").setMessage("Please enter email and password correctly.")
-                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    }).setCancelable(false);
-            AlertDialog alert = builder.create();
-            alert.show();
+            View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.enter_email_pwd, null);
+            Toast toast = new Toast(getApplicationContext());
+            toast.setDuration(Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.BOTTOM, 0, 200);
+            toast.setView(layoutValue);//setting the view of custom toast layout
+            toast.show();
         }
+        else {
+            progressDialog = new ProgressDialog(MainActivity.this);
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressDialog.setCancelable(false);
+            progressDialog.setMessage("Please Wait...");
+            progressDialog.show();
 
-        progressDialog = new ProgressDialog(MainActivity.this);
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.setCancelable(false);
-        progressDialog.setMessage("Please Wait...");
-        progressDialog.show();
 
-        firebaseAuth.signInWithEmailAndPassword(email, pass)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()) {
-                            progressDialog.dismiss();
-                            finish();
-                            Intent i = new Intent(MainActivity.this, DashboardActivity.class);
-                            startActivity(i);
+            firebaseAuth.signInWithEmailAndPassword(email, pass)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                progressDialog.dismiss();
+                                finish();
+                                Intent i = new Intent(MainActivity.this, DashboardActivity.class);
+                                startActivity(i);
+                            } else if (task.getException() instanceof FirebaseAuthInvalidUserException) {
+                                progressDialog.dismiss();
+                                View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.login_not_valid, null);
+                                Toast toast = new Toast(getApplicationContext());
+                                toast.setDuration(Toast.LENGTH_LONG);
+                                toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                toast.setView(layoutValue);//setting the view of custom toast layout
+                                toast.show();
+                            } else {
+                                progressDialog.dismiss();
+                            }
                         }
-                        else {
-                            progressDialog.dismiss();
-                        }
-                    }
-                });
+                    });
+        }
     }
 
     private void RegisterUser() {
@@ -143,54 +150,49 @@ public class MainActivity extends AppCompatActivity {
         String pass = passwordEdit.getText().toString().trim();
 
         if(TextUtils.isEmpty(email) || TextUtils.isEmpty(pass)) {
-            builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Sign Up").setMessage("Please enter email and password correctly.")
-                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    }).setCancelable(false);
-            AlertDialog alert = builder.create();
-            alert.show();
+            View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.enter_email_pwd, null);
+            Toast toast = new Toast(getApplicationContext());
+            toast.setDuration(Toast.LENGTH_LONG);
+            toast.setGravity(Gravity.BOTTOM, 0, 200);
+            toast.setView(layoutValue);//setting the view of custom toast layout
+            toast.show();
         }
+        else {
+            progressDialog = new ProgressDialog(MainActivity.this);
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressDialog.setCancelable(false);
+            progressDialog.setMessage("Please Wait...");
+            progressDialog.show();
 
-        progressDialog = new ProgressDialog(MainActivity.this);
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDialog.setCancelable(false);
-        progressDialog.setMessage("Please Wait...");
-        progressDialog.show();
+            firebaseAuth.createUserWithEmailAndPassword(email, pass)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
 
-        firebaseAuth.createUserWithEmailAndPassword(email, pass)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()) {
-                            progressDialog.dismiss();
-                            finish();
-                            Intent i = new Intent(MainActivity.this, SetUpNameActivity.class);
-                            startActivity(i);
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                progressDialog.dismiss();
+                                finish();
+                                Intent i = new Intent(MainActivity.this, SetUpNameActivity.class);
+                                startActivity(i);
+                            } else if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                                progressDialog.dismiss();
+                                View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.signup_custom_toast, null);
+                                Toast toast = new Toast(getApplicationContext());
+                                toast.setDuration(Toast.LENGTH_LONG);
+                                toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                toast.setView(layoutValue);//setting the view of custom toast layout
+                                toast.show();
+                            } else {
+                                progressDialog.dismiss();
+                                View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.some_prob_toast, null);
+                                Toast toast = new Toast(getApplicationContext());
+                                toast.setDuration(Toast.LENGTH_LONG);
+                                toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                toast.setView(layoutValue);//setting the view of custom toast layout
+                                toast.show();
+                            }
                         }
-                        else if(task.getException() instanceof FirebaseAuthUserCollisionException) {
-                            progressDialog.dismiss();
-                            View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.signup_custom_toast, null);
-                            Toast toast = new Toast(getApplicationContext());
-                            toast.setDuration(Toast.LENGTH_LONG);
-                            toast.setGravity(Gravity.BOTTOM, 0, 200);
-                            toast.setView(layoutValue);//setting the view of custom toast layout
-                            toast.show();
-                        }
-//                        else{
-//                            progressDialog.dismiss();
-//                            View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.signup_custom_toast, null);
-//                            Toast toast = new Toast(getApplicationContext());
-//                            toast.setDuration(Toast.LENGTH_LONG);
-//                            toast.setGravity(Gravity.BOTTOM, 0, 200);
-//                            toast.setView(layoutValue);//setting the view of custom toast layout
-//                            toast.show();
-//                        }
-                    }
-                });
+                    });
+        }
     }
 }

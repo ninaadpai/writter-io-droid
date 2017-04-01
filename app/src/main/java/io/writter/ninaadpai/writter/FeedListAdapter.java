@@ -14,6 +14,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +40,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
     private static Context context;
     private List<Post> mDataSet;
     private Typeface share;
+    boolean liked, added;
 
     public FeedListAdapter(FragmentActivity f, List<Post> dataSet, Typeface share) {
         this.mDataSet = dataSet;
@@ -57,6 +59,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         private ImageView addToNetwork;
         private int width;
         private AlertDialog.Builder addToNW;
+        private AlertDialog.Builder addToNW1;
         public ViewHolder(View v) {
             super(v);
             v.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +76,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             commentCount = (TextView) v.findViewById(R.id.commentCount);
             addToNetwork = (ImageView) v.findViewById(R.id.addUser);
             addToNW = new AlertDialog.Builder(v.getContext());
+            addToNW1 = new AlertDialog.Builder(v.getContext());
             WindowManager window = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
             width = window.getDefaultDisplay().getWidth();
         }
@@ -92,36 +96,70 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
        final Post p = mDataSet.get(position);
         viewHolder.postDetails.setText(p.getUploadedBy()+" \t\t "+p.getTopicString()+" \t\t "+p.getUploadedTime());
-       Picasso.with(context)
-               .load(p.getImgUrl())
-               .rotate(0)
-               .transform(new FeedListAdapter.CircleTransform())
-               .into(viewHolder.profileImage);
+        if(!p.getImgUrl().equals(null)){
+            Picasso.with(context)
+                    .load(p.getImgUrl())
+                    .rotate(0)
+                    .transform(new FeedListAdapter.CircleTransform())
+                    .into(viewHolder.profileImage);
+        }
         viewHolder.postQuestion.setText(p.getPostQuestion());
         viewHolder.postQuestion.setTypeface(share);
        viewHolder.postDesc.setText(p.getPostDesc());
        viewHolder.postDesc.setTypeface(share);
-
        viewHolder.likeCount.setText("27.2k");
-
        viewHolder.commentCount.setText("5.5k");
        viewHolder.likedImage.setTag("like");
+       viewHolder.addToNetwork.setTag("add");
 
 
        viewHolder.likedImage.setOnClickListener(new View.OnClickListener() {
 
            @Override
            public void onClick(View v) {
-               boolean liked;
                if(viewHolder.likedImage.getTag().toString().equals("like") ) {
-                   viewHolder.likedImage.setImageResource(R.drawable.liked);
-                   viewHolder.likedImage.setTag("liked");
+                   viewHolder.likedImage.postDelayed(new Runnable() {
+                       @Override
+                       public void run() {
+                           viewHolder.likedImage.animate()
+                                  // .alpha(0.0f)
+                                   .rotation(360)
+                                   .setDuration(500)
+                           .setListener(new AnimatorListenerAdapter() {
+                               @Override
+                               public void onAnimationEnd(Animator animation) {
+                                   super.onAnimationEnd(animation);
+                                   viewHolder.likedImage.setImageResource(R.drawable.liked);
+                                   viewHolder.likedImage.setTag("liked");
+                                 //  notifyItemChanged(position);
+                               }
+
+                           });
+                       }
+                   },0);
                    liked = true;
                    DashboardActivity.setLiked(liked);
                }
                else if(viewHolder.likedImage.getTag().toString().equals("liked") ) {
-                   viewHolder.likedImage.setImageResource(R.drawable.like);
-                   viewHolder.likedImage.setTag("like");
+                   viewHolder.likedImage.postDelayed(new Runnable() {
+                       @Override
+                       public void run() {
+                           viewHolder.likedImage.animate()
+                                   // .alpha(0.0f)
+                                   .rotation(-360)
+                                   .setDuration(500)
+                                   .setListener(new AnimatorListenerAdapter() {
+                                       @Override
+                                       public void onAnimationEnd(Animator animation) {
+                                           super.onAnimationEnd(animation);
+                                           viewHolder.likedImage.setImageResource(R.drawable.like);
+                                           viewHolder.likedImage.setTag("like");
+                                           //  notifyItemChanged(position);
+                                       }
+
+                                   });
+                       }
+                   },0);
                    liked = false;
                    DashboardActivity.setLiked(liked);
                }
@@ -133,41 +171,75 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
        viewHolder.addToNetwork.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Log.i("Clicked", "Add");
-                viewHolder.addToNW.setTitle("Follow "+p.getUploadedBy())
-                .setMessage("Are you sure to want to send a follow request?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                                viewHolder.addToNetwork.setImageResource(R.drawable.added);
-                                viewHolder.addToNetwork.postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        viewHolder.addToNetwork.animate()
-                                                .alpha(0.0f)
-                                                .rotation(45)
-                                                .setDuration(1500)
-                                                .setListener(new AnimatorListenerAdapter() {
-                                                    @Override
-                                                    public void onAnimationEnd(Animator animation) {
-                                                        super.onAnimationEnd(animation);
-                                                        viewHolder.addToNetwork.setVisibility(View.GONE);
-                                                        notifyItemChanged(position);
-                                                    }
+               if (viewHolder.addToNetwork.getTag().toString().equals("add")) {
+                   viewHolder.addToNW.setTitle("Follow " + p.getUploadedBy())
+                           .setMessage("Are you sure to want to send a follow request?")
+                           .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                               @Override
+                               public void onClick(DialogInterface dialog, int which) {
+                                   dialog.dismiss();
+                                   viewHolder.addToNetwork.postDelayed(new Runnable() {
+                                       @Override
+                                       public void run() {
+                                           viewHolder.addToNetwork.animate()
+                                                   //.alpha(0.0f)
+                                                   .rotation(360)
+                                                   .setDuration(500);
+                                       }
+                                   }, 0);
+                                   viewHolder.addToNetwork.setImageResource(R.drawable.added);
+                                   View layoutValue = LayoutInflater.from(context).inflate(R.layout.request_sent, null);
+                                   Toast toast = new Toast(context);
+                                   toast.setDuration(Toast.LENGTH_LONG);
+                                   toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                   toast.setView(layoutValue);//setting the view of custom toast layout
+                                   toast.show();
+                                   viewHolder.addToNetwork.setTag("added");
+                               }
+                           }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                       @Override
+                       public void onClick(DialogInterface dialog, int which) {
+                           dialog.dismiss();
+                       }
+                   }).setCancelable(false);
+                   AlertDialog alert = viewHolder.addToNW.create();
+                   alert.show();
+               }
 
-                                                });
-                                    }
-                                },5000);
-                          }
-                        }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
-                    }
-                }).setCancelable(false);
-               AlertDialog alert = viewHolder.addToNW.create();
-               alert.show();
+               else if (viewHolder.addToNetwork.getTag().toString().equals("added")) {
+                   viewHolder.addToNW1.setTitle("Remove request to " + p.getUploadedBy())
+                           .setMessage("Are you sure to want to remove follow request?")
+                           .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                               @Override
+                               public void onClick(DialogInterface dialog, int which) {
+                                   dialog.dismiss();
+                                   viewHolder.addToNetwork.postDelayed(new Runnable() {
+                                       @Override
+                                       public void run() {
+                                           viewHolder.addToNetwork.animate()
+                                                   //.alpha(0.0f)
+                                                   .rotation(-360)
+                                                   .setDuration(500);
+                                       }
+                                   }, 0);
+                                   viewHolder.addToNetwork.setImageResource(R.drawable.add);
+                                   View layoutValue = LayoutInflater.from(context).inflate(R.layout.request_cancelled, null);
+                                   Toast toast = new Toast(context);
+                                   toast.setDuration(Toast.LENGTH_LONG);
+                                   toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                   toast.setView(layoutValue);//setting the view of custom toast layout
+                                   toast.show();
+                                   viewHolder.addToNetwork.setTag("add");
+                               }
+                           }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                       @Override
+                       public void onClick(DialogInterface dialog, int which) {
+                           dialog.dismiss();
+                       }
+                   }).setCancelable(false);
+                   AlertDialog alert = viewHolder.addToNW1.create();
+                   alert.show();
+               }
            }
        });
     }
