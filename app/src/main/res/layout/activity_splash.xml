@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="176dp"
-        app:srcCompat="@drawable/landing_icon" />
+        app:srcCompat="@drawable/landing_icon2" />
 
     <TextView
         android:id="@+id/textView"

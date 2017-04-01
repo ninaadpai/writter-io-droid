@@ -1,6 +1,8 @@
 package io.writter.ninaadpai.writter;
 
 
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -10,16 +12,26 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -55,6 +67,7 @@ public class ProfileFragment extends Fragment {
     private static final int GALLERY_INTENT = 2;
     FirebaseUser user;
     ImageView profileImage;
+    private PopupWindow pw;
     public ProfileFragment() {
         // Required empty public constructor
     }
@@ -71,6 +84,8 @@ public class ProfileFragment extends Fragment {
         final TextView location = (TextView) view.findViewById(R.id.location);
         profileImage = (ImageView)view.findViewById(R.id.profileImage);
         firebaseAuth = firebaseAuth.getInstance();
+        storageReference = FirebaseStorage.getInstance().getReference();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
         user = firebaseAuth.getCurrentUser();
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(user.getUid());
         ref.addValueEventListener(new ValueEventListener() {
@@ -100,8 +115,6 @@ public class ProfileFragment extends Fragment {
 
             }
         });
-        storageReference = FirebaseStorage.getInstance().getReference();
-        databaseReference = FirebaseDatabase.getInstance().getReference();
         profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,7 +123,30 @@ public class ProfileFragment extends Fragment {
                 startActivityForResult(intent, GALLERY_INTENT);
             }
         });
-        view.findViewById(R.id.logout).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.optButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inflateOptionsWindow(getActivity());
+            }
+        });
+        return view;
+    }
+
+    private void inflateOptionsWindow(Context context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+        final View dialogLayout = inflater.inflate(R.layout.profile_options_window,
+                null);
+        final AlertDialog dialog = builder.create();
+        dialog.getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        dialog.setView(dialogLayout, 0, 0, 0, 0);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCancelable(true);
+        WindowManager.LayoutParams wlmp = dialog.getWindow()
+                .getAttributes();
+        wlmp.gravity = Gravity.BOTTOM;
+        dialogLayout.findViewById(R.id.logOut).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 firebaseAuth.getInstance().signOut();
@@ -118,7 +154,15 @@ public class ProfileFragment extends Fragment {
                 getActivity().finish();
             }
         });
-        return view;
+        builder.setView(dialogLayout);
+        dialog.show();
+
+        dialog.findViewById(R.id.exitOptions).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
     }
 
     @Override
@@ -222,10 +266,6 @@ public class ProfileFragment extends Fragment {
         public String key() {
             return "circle";
         }
-    }
-
-    public interface onFragmentInteractionListener {
-        public void moveToNextFragment();
     }
 
     public interface imageUpload {

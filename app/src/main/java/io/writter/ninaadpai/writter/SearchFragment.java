@@ -75,7 +75,6 @@ public class SearchFragment extends Fragment {
             searchTitle.setText("Don't see what you're searching for? Post it!");
         adapter = new SearchResAdapter(getActivity(),R.layout.search_res_item_row, topResults);
         searchRes.setAdapter(adapter);
-        Button questionPost = (Button) view.findViewById(R.id.questionPostBtn);
         anonymousCheckbox = (CheckBox) view.findViewById(R.id.anonymousCheckbox);
         checkquestionImg = (ImageView) view.findViewById(R.id.checkquestionImg);
         checkquestionImg.setVisibility(View.INVISIBLE);
@@ -105,7 +104,6 @@ public class SearchFragment extends Fragment {
         }catch(ClassCastException e) {
             throw new ClassCastException(activity.toString()+" should implement IQuestion.");
         }
-
     }
 
     @Override
@@ -127,8 +125,11 @@ public class SearchFragment extends Fragment {
                     mListener.doneUpload();
                     mListener.destroySearchFragment();
                 }
-                provideWarning();
-                //mListener.sanitizeQuestionText();
+                if(postWarning == false) {
+                    provideWarning();
+                    mListener.sanitizeQuestionText();
+                    postWarning = true;
+                }
             }
         });
 
@@ -138,7 +139,6 @@ public class SearchFragment extends Fragment {
     public void onStart() {
         super.onStart();
         Log.i("Demo","SearchFragment onStart");
-
     }
 
     @Override
@@ -149,14 +149,9 @@ public class SearchFragment extends Fragment {
     }
 
     private void provideWarning() {
-        searchTitle.setText("Please confirm if the question is correct and press post again.");
+        searchTitle.setText("Please form your question as a sentence and press post again.");
         searchRes.setVisibility(View.INVISIBLE);
         checkquestionImg.setVisibility(View.VISIBLE);
-        postWarning = true;
-    }
-
-    public interface onFragmentInteractionListener {
-        public void moveToNextFragment();
     }
 
     static public interface IQuestion {

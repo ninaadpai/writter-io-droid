@@ -137,8 +137,16 @@ public class MainActivity extends AppCompatActivity {
                                 toast.setGravity(Gravity.BOTTOM, 0, 200);
                                 toast.setView(layoutValue);//setting the view of custom toast layout
                                 toast.show();
-                            } else {
+                            }
+
+                            else {
                                 progressDialog.dismiss();
+                                View layoutValue = LayoutInflater.from(MainActivity.this).inflate(R.layout.incorrect_details_toast, null);
+                                Toast toast = new Toast(getApplicationContext());
+                                toast.setDuration(Toast.LENGTH_LONG);
+                                toast.setGravity(Gravity.BOTTOM, 0, 200);
+                                toast.setView(layoutValue);//setting the view of custom toast layout
+                                toast.show();
                             }
                         }
                     });

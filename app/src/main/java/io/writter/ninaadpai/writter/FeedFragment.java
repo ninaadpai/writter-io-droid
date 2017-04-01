@@ -82,12 +82,12 @@ public class FeedFragment extends Fragment {
                             String.valueOf(dS.child("category").getValue()),
                             timeAsString,
                             String.valueOf(dS.child("questionText").getValue()),
-                            "Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah Blah Blah BlahBlah BlahBlah Blah Blah Blah ");
+                            "Top Answer : Well this is my story, I have tried really hard to something but I have always failed, well maybe because I was a bit stupid or careless or just didn't do enough homework. I am really hoping I will get something out of this.");
                 //    Log.i("profile pics","https:"+String.valueOf(dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue()));
                     posts.add(p);
 
                 }
-                final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts, arvoBold);
+                final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts);
                 feedRecycler.setAdapter(feedListAdapter);
                 feedRecycler.setHasFixedSize(true);
                 feedRecycler.setItemAnimator(new SlideInUpAnimator());

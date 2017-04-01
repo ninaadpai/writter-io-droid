@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
@@ -21,26 +22,28 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        RotateAnimation anim = new RotateAnimation(0f, 350f, 15f, 15f);
-        anim.setInterpolator(new LinearInterpolator());
-        anim.setRepeatCount(Animation.INFINITE);
-        anim.setDuration(700);
 
 // Start animating the image
         final ImageView splash = (ImageView) findViewById(R.id.splashImage);
+        final Animation anim = AnimationUtils.loadAnimation(getBaseContext(),R.anim.rotate);
         splash.startAnimation(anim);
+        anim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
 
-// Later.. stop the animation
-        splash.setAnimation(null);
-        new Handler().postDelayed(new Runnable() {
+            }
 
             @Override
-            public void run() {
+            public void onAnimationEnd(Animation animation) {
+                finish();
                 Intent i = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(i);
-
-                finish();
             }
-        }, SPLASH_TIME_OUT);
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
     }
 }

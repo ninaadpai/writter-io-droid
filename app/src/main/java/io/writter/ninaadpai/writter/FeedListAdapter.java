@@ -2,8 +2,10 @@ package io.writter.ninaadpai.writter;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
@@ -39,12 +41,10 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
     private static final String TAG = "CustomAdapter";
     private static Context context;
     private List<Post> mDataSet;
-    private Typeface share;
     boolean liked, added;
 
-    public FeedListAdapter(FragmentActivity f, List<Post> dataSet, Typeface share) {
+    public FeedListAdapter(FragmentActivity f, List<Post> dataSet) {
         this.mDataSet = dataSet;
-        this.share = share;
         this.context = f;
     }
 
@@ -56,10 +56,10 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         private ImageView likedImage;
         private TextView likeCount;
         private TextView commentCount;
+        private ImageView moreOptions;
         private ImageView addToNetwork;
         private int width;
         private AlertDialog.Builder addToNW;
-        private AlertDialog.Builder addToNW1;
         public ViewHolder(View v) {
             super(v);
             v.setOnClickListener(new View.OnClickListener() {
@@ -74,9 +74,8 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             likedImage = (ImageView) v.findViewById(R.id.likeDetails);
             likeCount = (TextView) v.findViewById(R.id.likeCount);
             commentCount = (TextView) v.findViewById(R.id.commentCount);
-            addToNetwork = (ImageView) v.findViewById(R.id.addUser);
+            moreOptions = (ImageView) v.findViewById(R.id.moreOptions);
             addToNW = new AlertDialog.Builder(v.getContext());
-            addToNW1 = new AlertDialog.Builder(v.getContext());
             WindowManager window = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
             width = window.getDefaultDisplay().getWidth();
         }
@@ -104,15 +103,23 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                     .into(viewHolder.profileImage);
         }
         viewHolder.postQuestion.setText(p.getPostQuestion());
-        viewHolder.postQuestion.setTypeface(share);
        viewHolder.postDesc.setText(p.getPostDesc());
-       viewHolder.postDesc.setTypeface(share);
        viewHolder.likeCount.setText("27.2k");
        viewHolder.commentCount.setText("5.5k");
        viewHolder.likedImage.setTag("like");
-       viewHolder.addToNetwork.setTag("add");
-
-
+//       viewHolder.addToNetwork.setTag("add");
+//        viewHolder.addToNetwork.setVisibility(View.INVISIBLE);
+        viewHolder.postQuestion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View layoutValue = LayoutInflater.from(context).inflate(R.layout.request_sent, null);
+                Toast toast = new Toast(context);
+                toast.setDuration(Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.BOTTOM, 0, 200);
+                toast.setView(layoutValue);//setting the view of custom toast layout
+                toast.show();
+            }
+        });
        viewHolder.likedImage.setOnClickListener(new View.OnClickListener() {
 
            @Override
@@ -165,81 +172,115 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                }
            }
        });
-       if(p.getUploadedBy().equals("Posted as Anonymous") || p.getUploadedBy().equals("Posted by you")){
-           viewHolder.addToNetwork.setVisibility(View.INVISIBLE);
-       }
-       viewHolder.addToNetwork.setOnClickListener(new View.OnClickListener() {
+//       if(p.getUploadedBy().equals("Posted as Anonymous") || p.getUploadedBy().equals("Posted by you")){
+//           viewHolder.addToNetwork.setVisibility(View.INVISIBLE);
+//       }
+//       final Dialog dialog = new Dialog(context);
+//       dialog.setContentView(R.layout.custom_alert_dialog);
+//       TextView text = (TextView)dialog.findViewById(R.id.dialogInstr);
+//       Button yesBtn = (Button) dialog.findViewById(R.id.yesBtn);
+//       Button noBtn = (Button) dialog.findViewById(R.id.noBtn);
+//       viewHolder.addToNetwork.setOnClickListener(new View.OnClickListener() {
+//           @Override
+//           public void onClick(View v) {
+//               if (viewHolder.addToNetwork.getTag().toString().equals("add")) {
+//                   viewHolder.addToNW.setTitle("Follow " + p.getUploadedBy())
+//                           .setMessage("Are you sure to want to send a follow request?")
+//                           .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                               @Override
+//                               public void onClick(DialogInterface dialog, int which) {
+//                                   dialog.dismiss();
+//                                   viewHolder.addToNetwork.postDelayed(new Runnable() {
+//                                       @Override
+//                                       public void run() {
+//                                           viewHolder.addToNetwork.animate()
+//                                                   //.alpha(0.0f)
+//                                                   .rotation(360)
+//                                                   .setDuration(500);
+//                                       }
+//                                   }, 0);
+//                                   viewHolder.addToNetwork.setImageResource(R.drawable.added);
+//                                   View layoutValue = LayoutInflater.from(context).inflate(R.layout.request_sent, null);
+//                                   Toast toast = new Toast(context);
+//                                   toast.setDuration(Toast.LENGTH_LONG);
+//                                   toast.setGravity(Gravity.BOTTOM, 0, 200);
+//                                   toast.setView(layoutValue);//setting the view of custom toast layout
+//                                   toast.show();
+//                                   viewHolder.addToNetwork.setTag("added");
+//                               }
+//                           }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+//                       @Override
+//                       public void onClick(DialogInterface dialog, int which) {
+//                           dialog.dismiss();
+//                       }
+//                   }).setCancelable(false);
+//                   AlertDialog alert = viewHolder.addToNW.create();
+//                   alert.show();
+//               }
+//
+//               else if (viewHolder.addToNetwork.getTag().toString().equals("added")) {
+//                   viewHolder.addToNW.setTitle("Remove request to " + p.getUploadedBy())
+//                           .setMessage("Are you sure to want to remove follow request?")
+//                           .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                               @Override
+//                               public void onClick(DialogInterface dialog, int which) {
+//                                   dialog.dismiss();
+//                                   viewHolder.addToNetwork.postDelayed(new Runnable() {
+//                                       @Override
+//                                       public void run() {
+//                                           viewHolder.addToNetwork.animate()
+//                                                   //.alpha(0.0f)
+//                                                   .rotation(-360)
+//                                                   .setDuration(500);
+//                                       }
+//                                   }, 0);
+//                                   viewHolder.addToNetwork.setImageResource(R.drawable.add);
+//                                   View layoutValue = LayoutInflater.from(context).inflate(R.layout.request_cancelled, null);
+//                                   Toast toast = new Toast(context);
+//                                   toast.setDuration(Toast.LENGTH_LONG);
+//                                   toast.setGravity(Gravity.BOTTOM, 0, 200);
+//                                   toast.setView(layoutValue);//setting the view of custom toast layout
+//                                   toast.show();
+//                                   viewHolder.addToNetwork.setTag("add");
+//                               }
+//                           }).setNegativeButton("No", new DialogInterface.OnClickListener() {
+//                       @Override
+//                       public void onClick(DialogInterface dialog, int which) {
+//                           dialog.dismiss();
+//                       }
+//                   }).setCancelable(false);
+//                   AlertDialog alert = viewHolder.addToNW.create();
+//                   alert.show();
+//               }
+//           }
+//       });
+       viewHolder.moreOptions.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               if (viewHolder.addToNetwork.getTag().toString().equals("add")) {
-                   viewHolder.addToNW.setTitle("Follow " + p.getUploadedBy())
-                           .setMessage("Are you sure to want to send a follow request?")
-                           .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                               @Override
-                               public void onClick(DialogInterface dialog, int which) {
-                                   dialog.dismiss();
-                                   viewHolder.addToNetwork.postDelayed(new Runnable() {
-                                       @Override
-                                       public void run() {
-                                           viewHolder.addToNetwork.animate()
-                                                   //.alpha(0.0f)
-                                                   .rotation(360)
-                                                   .setDuration(500);
-                                       }
-                                   }, 0);
-                                   viewHolder.addToNetwork.setImageResource(R.drawable.added);
-                                   View layoutValue = LayoutInflater.from(context).inflate(R.layout.request_sent, null);
-                                   Toast toast = new Toast(context);
-                                   toast.setDuration(Toast.LENGTH_LONG);
-                                   toast.setGravity(Gravity.BOTTOM, 0, 200);
-                                   toast.setView(layoutValue);//setting the view of custom toast layout
-                                   toast.show();
-                                   viewHolder.addToNetwork.setTag("added");
-                               }
-                           }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-                       @Override
-                       public void onClick(DialogInterface dialog, int which) {
-                           dialog.dismiss();
-                       }
-                   }).setCancelable(false);
-                   AlertDialog alert = viewHolder.addToNW.create();
-                   alert.show();
-               }
+               android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(context);
+               LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+               final View dialogLayout = inflater.inflate(R.layout.answer_options_window,
+                       null);
 
-               else if (viewHolder.addToNetwork.getTag().toString().equals("added")) {
-                   viewHolder.addToNW1.setTitle("Remove request to " + p.getUploadedBy())
-                           .setMessage("Are you sure to want to remove follow request?")
-                           .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                               @Override
-                               public void onClick(DialogInterface dialog, int which) {
-                                   dialog.dismiss();
-                                   viewHolder.addToNetwork.postDelayed(new Runnable() {
-                                       @Override
-                                       public void run() {
-                                           viewHolder.addToNetwork.animate()
-                                                   //.alpha(0.0f)
-                                                   .rotation(-360)
-                                                   .setDuration(500);
-                                       }
-                                   }, 0);
-                                   viewHolder.addToNetwork.setImageResource(R.drawable.add);
-                                   View layoutValue = LayoutInflater.from(context).inflate(R.layout.request_cancelled, null);
-                                   Toast toast = new Toast(context);
-                                   toast.setDuration(Toast.LENGTH_LONG);
-                                   toast.setGravity(Gravity.BOTTOM, 0, 200);
-                                   toast.setView(layoutValue);//setting the view of custom toast layout
-                                   toast.show();
-                                   viewHolder.addToNetwork.setTag("add");
-                               }
-                           }).setNegativeButton("No", new DialogInterface.OnClickListener() {
-                       @Override
-                       public void onClick(DialogInterface dialog, int which) {
-                           dialog.dismiss();
-                       }
-                   }).setCancelable(false);
-                   AlertDialog alert = viewHolder.addToNW1.create();
-                   alert.show();
-               }
+               final android.app.AlertDialog dialog = builder.create();
+               dialog.getWindow().setSoftInputMode(
+                       WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+               dialog.setView(dialogLayout, 0, 0, 0, 0);
+               dialog.setCanceledOnTouchOutside(true);
+               dialog.setCancelable(true);
+               WindowManager.LayoutParams wlmp = dialog.getWindow()
+                       .getAttributes();
+               wlmp.gravity = Gravity.BOTTOM;
+
+               builder.setView(dialogLayout);
+               dialog.show();
+
+               dialog.findViewById(R.id.exitAnswerOptions).setOnClickListener(new View.OnClickListener() {
+                   @Override
+                   public void onClick(View v) {
+                       dialog.dismiss();
+                   }
+               });
            }
        });
     }

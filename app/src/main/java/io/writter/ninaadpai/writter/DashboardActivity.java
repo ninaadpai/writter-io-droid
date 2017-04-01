@@ -46,7 +46,6 @@ import java.util.List;
 
 public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion, ProfileFragment.imageUpload {
 
-    Toolbar toolbar;
     Class fragmentClass;
     EditText searchFeed;
     Typeface domineBold;
@@ -68,9 +67,7 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     };
     FirebaseAuth firebaseAuth;
     DatabaseReference databaseReference;
-
     private FragmentManager fragmentManager;
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -92,9 +89,6 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
                 break;
             case R.id.navigation_blog:
                 fragmentClass = BlogFragment.class;
-                break;
-            case R.id.navigation_trending:
-                fragmentClass = TrendingFragment.class;
                 break;
             case R.id.navigation_notifications:
                 fragmentClass = NotificationsFragment.class;
@@ -312,12 +306,12 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     public void sanitizeQuestionText() {
         String specialChars = "/*!@#$%^&*()\"{}_[]|\\/<>,.";
 
-        StringBuffer questionStr = new StringBuffer();
-        questionStr.append(searchFeed.getText().toString().trim());
-        if(specialChars.substring(questionStr.length() - 1).equals(searchFeed.getText().toString().trim())) {
-            questionStr.append(questionStr.substring(0, questionStr.length()-1));
-            questionStr.append("?");
+        String questionStr;
+        questionStr = searchFeed.getText().toString().trim();
+        if(!(questionStr.substring(questionStr.length() - 1).equals("?"))){
+            questionStr = questionStr + "?";
             searchFeed.setText(questionStr.toString());
+            Log.i("Sanitization", "Done");
         }
     }
 
