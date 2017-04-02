@@ -17,6 +17,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
@@ -25,6 +28,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -32,6 +36,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dant.centersnapreyclerview.SnappingRecyclerView;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -67,7 +72,10 @@ public class ProfileFragment extends Fragment {
     private static final int GALLERY_INTENT = 2;
     FirebaseUser user;
     ImageView profileImage;
-    private PopupWindow pw;
+    TextView tagLine, location;
+    InputMethodManager inputManager;
+    SnappingRecyclerView profileExplorer;
+    private FragmentManager fragmentManager;
     public ProfileFragment() {
         // Required empty public constructor
     }
@@ -80,13 +88,18 @@ public class ProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_profile, container, false);
         final TextView userName = (TextView) view.findViewById(R.id.userName);
-        final TextView tagLine = (TextView) view.findViewById(R.id.tagLine);
-        final TextView location = (TextView) view.findViewById(R.id.location);
+        tagLine = (TextView) view.findViewById(R.id.tagLine);
+        location = (TextView) view.findViewById(R.id.location);
         profileImage = (ImageView)view.findViewById(R.id.profileImage);
         firebaseAuth = firebaseAuth.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
         databaseReference = FirebaseDatabase.getInstance().getReference();
         user = firebaseAuth.getCurrentUser();
+        fragmentManager = getActivity().getSupportFragmentManager();
+        profileExplorer = (SnappingRecyclerView) view.findViewById(R.id.profileExplorer);
+        profileExplorer.addItemDecoration(new ExampleDateEndPaddingItemDecoration(profileExplorer.getOrientation()));
+        profileExplorer.setAdapter(new ExampleDateAdapter());
+        inputManager = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(user.getUid());
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -94,20 +107,26 @@ public class ProfileFragment extends Fragment {
                     String name = String.valueOf(dataSnapshot.child("userName").getValue());
                     userName.setText(name);
                     String tagline = String.valueOf(dataSnapshot.child("tagLine").getValue());
-                    if(tagline == null)
+                    if(tagline.isEmpty())
                         tagLine.setText("Set a tag line");
                     else
                         tagLine.setText(tagline.toString());
                      String Location = String.valueOf(dataSnapshot.child("location").getValue());
-                if(Location == null)
+                if(Location.isEmpty())
                     location.setText("Set a home location");
                 else
                     location.setText(Location.toString());
+                String photoLink = String.valueOf(dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue());
+                if(photoLink.isEmpty()) {
+                    profileImage.setImageResource(R.drawable.default_profile);
+                    }
+                else {
                     Picasso.with(getContext())
-                        .load("https:"+String.valueOf(dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue()))
-                        .rotate(0)
-                        .transform(new CircleTransform())
-                        .into(profileImage);
+                            .load("https:"+photoLink)
+                            .rotate(0)
+                            .transform(new CircleTransform())
+                            .into(profileImage);
+                }
             }
 
             @Override
@@ -129,40 +148,21 @@ public class ProfileFragment extends Fragment {
                 inflateOptionsWindow(getActivity());
             }
         });
+
+        tagLine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inflateTagLine(getActivity());
+            }
+        });
+
+        location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inflateLocation(getActivity());
+            }
+        });
         return view;
-    }
-
-    private void inflateOptionsWindow(Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
-        final View dialogLayout = inflater.inflate(R.layout.profile_options_window,
-                null);
-        final AlertDialog dialog = builder.create();
-        dialog.getWindow().setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-        dialog.setView(dialogLayout, 0, 0, 0, 0);
-        dialog.setCanceledOnTouchOutside(true);
-        dialog.setCancelable(true);
-        WindowManager.LayoutParams wlmp = dialog.getWindow()
-                .getAttributes();
-        wlmp.gravity = Gravity.BOTTOM;
-        dialogLayout.findViewById(R.id.logOut).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                firebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getActivity(), MainActivity.class));
-                getActivity().finish();
-            }
-        });
-        builder.setView(dialogLayout);
-        dialog.show();
-
-        dialog.findViewById(R.id.exitOptions).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
     }
 
     @Override
@@ -267,6 +267,118 @@ public class ProfileFragment extends Fragment {
             return "circle";
         }
     }
+
+    private void inflateTagLine(Context context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+        final View dialogLayout = inflater.inflate(R.layout.set_tagline_window,
+                null);
+        final AlertDialog dialog = builder.create();
+        dialog.getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        dialog.setView(dialogLayout, 0, 0, 0, 0);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCancelable(true);
+        WindowManager.LayoutParams wlmp = dialog.getWindow()
+                .getAttributes();
+        wlmp.gravity = Gravity.CENTER;
+        builder.setView(dialogLayout);
+        dialog.show();
+        final TextView tagLineEdit =(TextView) dialog.findViewById(R.id.tagLineEdit);
+        dialog.findViewById(R.id.exitTag).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+                tagLineEdit.setText("");
+                dialog.dismiss();
+            }
+        });
+        dialog.findViewById(R.id.updateTag).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String updatedTag = tagLineEdit.getText().toString().trim();
+                if(updatedTag.length() <= 50) {
+                    databaseReference.child(user.getUid()).child("tagLine").setValue(updatedTag.toString().trim());
+                    Log.i("Updated tag",updatedTag);
+                    tagLineEdit.setText("");
+                    dialog.dismiss();
+                }
+            }
+        });
+    }
+
+    private void inflateLocation(Context context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+        final View dialogLayout = inflater.inflate(R.layout.set_location_window,
+                null);
+        final AlertDialog dialog = builder.create();
+        dialog.getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        dialog.setView(dialogLayout, 0, 0, 0, 0);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCancelable(true);
+        WindowManager.LayoutParams wlmp = dialog.getWindow()
+                .getAttributes();
+        wlmp.gravity = Gravity.CENTER;
+        builder.setView(dialogLayout);
+        dialog.show();
+        final TextView locationEdit =(TextView) dialog.findViewById(R.id.locationEdit);
+        dialog.findViewById(R.id.exitLocation).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+                locationEdit.setText("");
+                dialog.dismiss();
+            }
+        });
+        dialog.findViewById(R.id.updateLocation).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String updatedTag = locationEdit.getText().toString().trim();
+                if(updatedTag.length() <= 50) {
+                    databaseReference.child(user.getUid()).child("location").setValue(updatedTag.toString().trim());
+                    Log.i("Updated tag",updatedTag);
+                    locationEdit.setText("");
+                    dialog.dismiss();
+                }
+            }
+        });
+    }
+
+    private void inflateOptionsWindow(Context context) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+        final View dialogLayout = inflater.inflate(R.layout.profile_options_window,
+                null);
+        final AlertDialog dialog = builder.create();
+        dialog.getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        dialog.setView(dialogLayout, 0, 0, 0, 0);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCancelable(true);
+        WindowManager.LayoutParams wlmp = dialog.getWindow()
+                .getAttributes();
+        wlmp.gravity = Gravity.BOTTOM;
+        dialogLayout.findViewById(R.id.logOut).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getActivity(), MainActivity.class));
+                getActivity().finish();
+            }
+        });
+        builder.setView(dialogLayout);
+        dialog.show();
+
+        dialog.findViewById(R.id.exitOptions).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
+
 
     public interface imageUpload {
         public void startImageUpload();

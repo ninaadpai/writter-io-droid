@@ -152,9 +152,10 @@ public class SetUpNameActivity extends AppCompatActivity {
     }
 
     private void updateUserName(String name) {
-        WritterUser user =  new WritterUser(name, favorites);
+        WritterUser user =  new WritterUser(name, favorites, "", "");
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         databaseReference.child(firebaseUser.getUid()).setValue(user);
+        databaseReference.child(firebaseUser.getUid()).child("profile_photo").child("encodedSchemeSpecificPart").setValue("");
         startActivity(new Intent(SetUpNameActivity.this, DashboardActivity.class));
     }
 }

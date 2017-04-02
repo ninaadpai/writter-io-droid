@@ -7,12 +7,14 @@ import java.util.List;
  */
 
 public class WritterUser {
-    String userName;
+    String userName, tagLine, location;
     List<String> preferences;
 
-    public WritterUser(String userName, List<String> preferences) {
+    public WritterUser(String userName, List<String> preferences, String tagLine, String location) {
         this.userName = userName;
         this.preferences = preferences;
+        this.tagLine = tagLine;
+        this.location = location;
     }
 
     public String getUserName() {
@@ -31,11 +33,29 @@ public class WritterUser {
         this.preferences = preferences;
     }
 
+    public String getTagLine() {
+        return tagLine;
+    }
+
+    public void setTagLine(String tagLine) {
+        this.tagLine = tagLine;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     @Override
     public String toString() {
         return "WritterUser{" +
                 "userName='" + userName + '\'' +
                 ", preferences=" + preferences +
+                ", tagLine='" + preferences + '\'' +
+                ", location='" + preferences + '\'' +
                 '}';
     }
 }

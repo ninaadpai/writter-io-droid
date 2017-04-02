@@ -3,8 +3,6 @@ package io.writter.ninaadpai.writter;
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Build;

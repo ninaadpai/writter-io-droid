@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "io.writter.ninaadpai.writter"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -36,6 +36,7 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.3.3'
     compile 'jp.wasabeef:recyclerview-animators:2.2.3'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.github.dan-td:snappy-recyclerview:1.0.2'
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'
