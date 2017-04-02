@@ -72,7 +72,7 @@ public class ProfileFragment extends Fragment {
     private static final int GALLERY_INTENT = 2;
     FirebaseUser user;
     ImageView profileImage;
-    TextView tagLine, location;
+    TextView tagLine;
     InputMethodManager inputManager;
     SnappingRecyclerView profileExplorer;
     private FragmentManager fragmentManager;
@@ -89,7 +89,7 @@ public class ProfileFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_profile, container, false);
         final TextView userName = (TextView) view.findViewById(R.id.userName);
         tagLine = (TextView) view.findViewById(R.id.tagLine);
-        location = (TextView) view.findViewById(R.id.location);
+        //location = (TextView) view.findViewById(R.id.location);
         profileImage = (ImageView)view.findViewById(R.id.profileImage);
         firebaseAuth = firebaseAuth.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
@@ -111,11 +111,11 @@ public class ProfileFragment extends Fragment {
                         tagLine.setText("Set a tag line");
                     else
                         tagLine.setText(tagline.toString());
-                     String Location = String.valueOf(dataSnapshot.child("location").getValue());
-                if(Location.isEmpty())
-                    location.setText("Set a home location");
-                else
-                    location.setText(Location.toString());
+//                     String Location = String.valueOf(dataSnapshot.child("location").getValue());
+//                if(Location.isEmpty())
+//                    location.setText("Set a home location");
+//                else
+//                    location.setText(Location.toString());
                 String photoLink = String.valueOf(dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue());
                 if(photoLink.isEmpty()) {
                     profileImage.setImageResource(R.drawable.default_profile);
@@ -156,12 +156,12 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        location.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inflateLocation(getActivity());
-            }
-        });
+//        location.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                inflateLocation(getActivity());
+//            }
+//        });
         return view;
     }
 
@@ -297,7 +297,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String updatedTag = tagLineEdit.getText().toString().trim();
-                if(updatedTag.length() <= 50) {
+                if(updatedTag.length() <= 100) {
                     databaseReference.child(user.getUid()).child("tagLine").setValue(updatedTag.toString().trim());
                     Log.i("Updated tag",updatedTag);
                     tagLineEdit.setText("");
@@ -307,44 +307,44 @@ public class ProfileFragment extends Fragment {
         });
     }
 
-    private void inflateLocation(Context context) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
-        final View dialogLayout = inflater.inflate(R.layout.set_location_window,
-                null);
-        final AlertDialog dialog = builder.create();
-        dialog.getWindow().setSoftInputMode(
-                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-        dialog.setView(dialogLayout, 0, 0, 0, 0);
-        dialog.setCanceledOnTouchOutside(true);
-        dialog.setCancelable(true);
-        WindowManager.LayoutParams wlmp = dialog.getWindow()
-                .getAttributes();
-        wlmp.gravity = Gravity.CENTER;
-        builder.setView(dialogLayout);
-        dialog.show();
-        final TextView locationEdit =(TextView) dialog.findViewById(R.id.locationEdit);
-        dialog.findViewById(R.id.exitLocation).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-                locationEdit.setText("");
-                dialog.dismiss();
-            }
-        });
-        dialog.findViewById(R.id.updateLocation).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String updatedTag = locationEdit.getText().toString().trim();
-                if(updatedTag.length() <= 50) {
-                    databaseReference.child(user.getUid()).child("location").setValue(updatedTag.toString().trim());
-                    Log.i("Updated tag",updatedTag);
-                    locationEdit.setText("");
-                    dialog.dismiss();
-                }
-            }
-        });
-    }
+//    private void inflateLocation(Context context) {
+//        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+//        LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+//        final View dialogLayout = inflater.inflate(R.layout.set_location_window,
+//                null);
+//        final AlertDialog dialog = builder.create();
+//        dialog.getWindow().setSoftInputMode(
+//                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+//        dialog.setView(dialogLayout, 0, 0, 0, 0);
+//        dialog.setCanceledOnTouchOutside(true);
+//        dialog.setCancelable(true);
+//        WindowManager.LayoutParams wlmp = dialog.getWindow()
+//                .getAttributes();
+//        wlmp.gravity = Gravity.CENTER;
+//        builder.setView(dialogLayout);
+//        dialog.show();
+//        final TextView locationEdit =(TextView) dialog.findViewById(R.id.locationEdit);
+//        dialog.findViewById(R.id.exitLocation).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+//                locationEdit.setText("");
+//                dialog.dismiss();
+//            }
+//        });
+//        dialog.findViewById(R.id.updateLocation).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String updatedTag = locationEdit.getText().toString().trim();
+//                if(updatedTag.length() <= 50) {
+//                    databaseReference.child(user.getUid()).child("location").setValue(updatedTag.toString().trim());
+//                    Log.i("Updated tag",updatedTag);
+//                    locationEdit.setText("");
+//                    dialog.dismiss();
+//                }
+//            }
+//        });
+//    }
 
     private void inflateOptionsWindow(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
