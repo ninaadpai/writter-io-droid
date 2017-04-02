@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ServerValue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -152,7 +153,8 @@ public class SetUpNameActivity extends AppCompatActivity {
     }
 
     private void updateUserName(String name) {
-        WritterUser user =  new WritterUser(name, favorites, "", "");
+        final Object signUpTime= ServerValue.TIMESTAMP;
+        WritterUser user =  new WritterUser(name, "", "", signUpTime,"",favorites, null, null, null);
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         databaseReference.child(firebaseUser.getUid()).setValue(user);
         databaseReference.child(firebaseUser.getUid()).child("profile_photo").child("encodedSchemeSpecificPart").setValue("");

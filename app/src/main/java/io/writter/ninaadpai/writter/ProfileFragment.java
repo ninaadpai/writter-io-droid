@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -21,6 +22,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -57,6 +59,11 @@ import org.w3c.dom.Text;
 
 import java.io.File;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -72,14 +79,17 @@ public class ProfileFragment extends Fragment {
     private static final int GALLERY_INTENT = 2;
     FirebaseUser user;
     ImageView profileImage;
-    TextView tagLine;
+    TextView tagLine, birthday, memberSince, institute, work, placesLived, nothingtoshow;
     InputMethodManager inputManager;
     SnappingRecyclerView profileExplorer;
     private FragmentManager fragmentManager;
+    HashMap<String, String> institutesMap = new HashMap<>();
+    HashMap<String, String> workMap = new HashMap<>();
+    List<String> placesLivedList = new ArrayList<>();
+    String name, tagline;
     public ProfileFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -89,7 +99,17 @@ public class ProfileFragment extends Fragment {
         View view =  inflater.inflate(R.layout.fragment_profile, container, false);
         final TextView userName = (TextView) view.findViewById(R.id.userName);
         tagLine = (TextView) view.findViewById(R.id.tagLine);
-        //location = (TextView) view.findViewById(R.id.location);
+        birthday = (TextView) view.findViewById(R.id.birthday);
+        memberSince = (TextView) view.findViewById(R.id.memberSince);
+        institute = (TextView) view.findViewById(R.id.institute);
+        work = (TextView) view.findViewById(R.id.work);
+        placesLived = (TextView) view.findViewById(R.id.placesLived);
+        nothingtoshow = (TextView) view.findViewById(R.id.nothingtoshow);
+        birthday.setVisibility(View.GONE);
+        institute.setVisibility(View.GONE);
+        work.setVisibility(View.GONE);
+        placesLived.setVisibility(View.GONE);
+        nothingtoshow.setVisibility(View.GONE);
         profileImage = (ImageView)view.findViewById(R.id.profileImage);
         firebaseAuth = firebaseAuth.getInstance();
         storageReference = FirebaseStorage.getInstance().getReference();
@@ -104,18 +124,13 @@ public class ProfileFragment extends Fragment {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                    String name = String.valueOf(dataSnapshot.child("userName").getValue());
+                     name = String.valueOf(dataSnapshot.child("userName").getValue());
                     userName.setText(name);
-                    String tagline = String.valueOf(dataSnapshot.child("tagLine").getValue());
+                    tagline = String.valueOf(dataSnapshot.child("tagLine").getValue());
                     if(tagline.isEmpty())
                         tagLine.setText("Set a tag line");
                     else
                         tagLine.setText(tagline.toString());
-//                     String Location = String.valueOf(dataSnapshot.child("location").getValue());
-//                if(Location.isEmpty())
-//                    location.setText("Set a home location");
-//                else
-//                    location.setText(Location.toString());
                 String photoLink = String.valueOf(dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue());
                 if(photoLink.isEmpty()) {
                     profileImage.setImageResource(R.drawable.default_profile);
@@ -126,6 +141,34 @@ public class ProfileFragment extends Fragment {
                             .rotate(0)
                             .transform(new CircleTransform())
                             .into(profileImage);
+                }
+                String member = String.valueOf(dataSnapshot.child("memberSince").getValue());
+                long millisecond = Long.parseLong(member);
+                String memberSinceString = DateFormat.format("MMM dd, yyyy", new Date(millisecond)).toString();
+                String birthdayString = String.valueOf(dataSnapshot.child("birthday").getValue());
+
+                memberSince.setText("Member since: "+memberSinceString);
+                DataSnapshot instituteRef = dataSnapshot.child("institutions");
+                for(DataSnapshot insti : instituteRef.getChildren()) {
+                    institutesMap.put(insti.getKey(), String.valueOf(insti.getValue()));
+                }
+                DataSnapshot workRef = dataSnapshot.child("work");
+                for(DataSnapshot worked : workRef.getChildren()) {
+                    workMap.put(worked.getKey(), String.valueOf(worked.getValue()));
+                }
+                DataSnapshot placesLivedData = dataSnapshot.child("placesLived");
+                for(DataSnapshot places : placesLivedData.getChildren()) {
+                    placesLivedList.add(String.valueOf(places.getValue()));
+                }
+                Log.i("Bday, places lived",birthdayString+", "+placesLivedList);
+                if(birthdayString.isEmpty()|| placesLivedList.isEmpty()) {
+                    nothingtoshow.setVisibility(View.VISIBLE);
+                }
+                else {
+                    birthday.setVisibility(View.VISIBLE);
+                    institute.setVisibility(View.VISIBLE);
+                    work.setVisibility(View.VISIBLE);
+                    placesLived.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -149,19 +192,19 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+        view.findViewById(R.id.editButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inflateEditProfileWindow(getActivity(), name, tagline);
+            }
+        });
+
         tagLine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 inflateTagLine(getActivity());
             }
         });
-
-//        location.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                inflateLocation(getActivity());
-//            }
-//        });
         return view;
     }
 
@@ -307,44 +350,37 @@ public class ProfileFragment extends Fragment {
         });
     }
 
-//    private void inflateLocation(Context context) {
-//        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-//        LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
-//        final View dialogLayout = inflater.inflate(R.layout.set_location_window,
-//                null);
-//        final AlertDialog dialog = builder.create();
-//        dialog.getWindow().setSoftInputMode(
-//                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-//        dialog.setView(dialogLayout, 0, 0, 0, 0);
-//        dialog.setCanceledOnTouchOutside(true);
-//        dialog.setCancelable(true);
-//        WindowManager.LayoutParams wlmp = dialog.getWindow()
-//                .getAttributes();
-//        wlmp.gravity = Gravity.CENTER;
-//        builder.setView(dialogLayout);
-//        dialog.show();
-//        final TextView locationEdit =(TextView) dialog.findViewById(R.id.locationEdit);
-//        dialog.findViewById(R.id.exitLocation).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-//                locationEdit.setText("");
-//                dialog.dismiss();
-//            }
-//        });
-//        dialog.findViewById(R.id.updateLocation).setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                String updatedTag = locationEdit.getText().toString().trim();
-//                if(updatedTag.length() <= 50) {
-//                    databaseReference.child(user.getUid()).child("location").setValue(updatedTag.toString().trim());
-//                    Log.i("Updated tag",updatedTag);
-//                    locationEdit.setText("");
-//                    dialog.dismiss();
-//                }
-//            }
-//        });
-//    }
+    private void inflateEditProfileWindow(Context context, String name, String tagline) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+        final View dialogLayout = inflater.inflate(R.layout.profile_edit_window,
+                null);
+        final AlertDialog dialog = builder.create();
+        dialog.getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        dialog.setView(dialogLayout, 0, 0, 0, 0);
+        dialog.setCanceledOnTouchOutside(true);
+        dialog.setCancelable(true);
+        WindowManager.LayoutParams wlmp = dialog.getWindow()
+                .getAttributes();
+        wlmp.gravity = Gravity.CENTER;
+
+        builder.setView(dialogLayout);
+        dialog.show();
+
+        dialog.findViewById(R.id.exitEdit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        TextView nameText = (TextView) dialog.findViewById(R.id.nameEdit);
+        TextView tagText = (TextView) dialog.findViewById(R.id.tagEdit);
+        nameText.setText(name);
+        if(!(tagline.isEmpty()))
+        tagText.setText(tagline);
+    }
+
 
     private void inflateOptionsWindow(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
@@ -359,7 +395,7 @@ public class ProfileFragment extends Fragment {
         dialog.setCancelable(true);
         WindowManager.LayoutParams wlmp = dialog.getWindow()
                 .getAttributes();
-        wlmp.gravity = Gravity.BOTTOM;
+        wlmp.gravity = Gravity.CENTER;
         dialogLayout.findViewById(R.id.logOut).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

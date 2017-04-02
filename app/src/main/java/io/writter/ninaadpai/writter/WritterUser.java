@@ -1,5 +1,6 @@
 package io.writter.ninaadpai.writter;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -7,15 +8,23 @@ import java.util.List;
  */
 
 public class WritterUser {
-    String userName, tagLine, location;
-    List<String> preferences;
+    String userName, tagLine, location, birthday;
+    Object memberSince;
+    List<String> preferences, placesLived;
+    HashMap<String, String> work, institutions;
 
-    public WritterUser(String userName, List<String> preferences, String tagLine, String location) {
+    public WritterUser(String userName, String tagLine, String location, Object memberSince, String birthday, List<String> preferences, HashMap<String, String> work, HashMap<String, String> institutions, List<String> placesLived) {
         this.userName = userName;
-        this.preferences = preferences;
         this.tagLine = tagLine;
         this.location = location;
+        this.memberSince = memberSince;
+        this.birthday = birthday;
+        this.preferences = preferences;
+        this.work = work;
+        this.institutions = institutions;
+        this.placesLived = placesLived;
     }
+
 
     public String getUserName() {
         return userName;
@@ -23,14 +32,6 @@ public class WritterUser {
 
     public void setUserName(String userName) {
         this.userName = userName;
-    }
-
-    public List<String> getPreferences() {
-        return preferences;
-    }
-
-    public void setPreferences(List<String> preferences) {
-        this.preferences = preferences;
     }
 
     public String getTagLine() {
@@ -49,13 +50,66 @@ public class WritterUser {
         this.location = location;
     }
 
+    public Object getMemberSince() {
+        return memberSince;
+    }
+
+    public void setMemberSince(Object memberSince) {
+        this.memberSince = memberSince;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public List<String> getPreferences() {
+        return preferences;
+    }
+
+    public void setPreferences(List<String> preferences) {
+        this.preferences = preferences;
+    }
+
+    public HashMap<String, String> getWork() {
+        return work;
+    }
+
+    public void setWork(HashMap<String, String> work) {
+        this.work = work;
+    }
+
+    public HashMap<String, String> getInstitutions() {
+        return institutions;
+    }
+
+    public void setInstitutions(HashMap<String, String> institutions) {
+        this.institutions = institutions;
+    }
+
+    public List<String> getPlacesLived() {
+        return placesLived;
+    }
+
+    public void setPlacesLived(List<String> placesLived) {
+        this.placesLived = placesLived;
+    }
+
     @Override
-    public String toString() {
+    public String  toString() {
         return "WritterUser{" +
                 "userName='" + userName + '\'' +
+                ", tagLine='" + tagLine + '\'' +
+                ", location='" + location + '\'' +
+                ", memberSince=" + memberSince +
+                ", birthday='" + birthday + '\'' +
                 ", preferences=" + preferences +
-                ", tagLine='" + preferences + '\'' +
-                ", location='" + preferences + '\'' +
+                ", work=" + work +
+                ", institutions=" + institutions +
+                ", placesLived=" + placesLived +
                 '}';
     }
 }

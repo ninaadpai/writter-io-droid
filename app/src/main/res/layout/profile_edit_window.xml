@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/options_popup_bg"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/exitEdit"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_clear_black_24dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:text="Edit Profile"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/nameEdit"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#2196F3"
+        android:layout_marginTop="25dp"
+        android:text="Change your name"
+        android:textStyle="bold"
+        android:layout_below="@+id/exitEdit"
+        android:layout_alignLeft="@+id/workEdit"
+        android:layout_alignStart="@+id/workEdit" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/ic_mode_edit_black_18dp"
+        android:layout_alignBottom="@+id/nameEdit"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="7dp"
+        android:layout_marginEnd="7dp" />
+
+    <TextView
+        android:id="@+id/tagEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/nameEdit"
+        android:layout_alignLeft="@+id/workEdit"
+        android:layout_alignRight="@+id/nameEdit"
+        android:layout_alignStart="@+id/workEdit"
+        android:layout_below="@+id/nameEdit"
+        android:layout_marginTop="40dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="12sp"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        android:text="Enter a tag line" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/tagEdit"
+        android:layout_alignEnd="@+id/imageView3"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignRight="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        app:srcCompat="@drawable/ic_mode_edit_black_18dp" />
+
+    <TextView
+        android:id="@+id/workEdit"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:textColor="#2196F3"
+        android:textSize="12sp"
+        android:text="Where do you work?"
+        android:textStyle="bold"
+        android:layout_below="@+id/tagEdit"
+        android:layout_alignLeft="@+id/instituteEdit"
+        android:layout_alignStart="@+id/instituteEdit" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/ic_mode_edit_black_18dp"
+        android:layout_below="@+id/workEdit"
+        android:layout_alignLeft="@+id/imageView6"
+        android:layout_alignStart="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/instituteEdit"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginTop="40dp"
+        android:text="Where did you study?"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignLeft="@+id/stayEdit"
+        android:layout_alignStart="@+id/stayEdit" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/ic_mode_edit_black_18dp"
+        android:layout_above="@+id/imageView2"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/stayEdit"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        android:text="Where do you live?"
+        android:textColor="#2196F3"
+        android:textStyle="bold"
+        android:layout_below="@+id/instituteEdit"
+        android:layout_alignLeft="@+id/exitEdit"
+        android:layout_alignStart="@+id/exitEdit"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        app:srcCompat="@drawable/ic_mode_edit_black_18dp"
+        android:layout_alignBottom="@+id/stayEdit"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2" />
+
+</RelativeLayout>

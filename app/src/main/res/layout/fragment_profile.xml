@@ -12,12 +12,12 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:background="@color/writterGreen"
         android:orientation="horizontal"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <ImageView
             android:id="@+id/profileImage"
@@ -29,10 +29,10 @@
 
         <LinearLayout
             android:layout_width="115dp"
-            android:layout_height="52dp"
-            android:layout_marginBottom="20dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="0.27"
             android:orientation="vertical">
 
@@ -48,12 +48,12 @@
                 android:id="@+id/tagLine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="0dp"
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:textColor="@android:color/white"
                 android:textSize="11sp"
-                android:textStyle="normal|bold" />
+                android:textStyle="normal" />
 
         </LinearLayout>
 
@@ -103,46 +103,54 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/birthday"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/male_icon"
-                android:text="TextView" />
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/ic_cake_black_18dp" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/institute"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/birthday_icon"
-                android:text="TextView" />
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/ic_school_black_18dp" />
 
             <TextView
-                android:id="@+id/textView13"
+                android:id="@+id/work"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/institution_icon"
-                android:text="TextView" />
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/ic_work_black_18dp"/>
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/memberSince"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/work_icon"
-                android:text="TextView" />
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/ic_date_range_black_18dp"/>
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/placesLived"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/membersince_icon"
-                android:text="TextView" />
+                android:textColor="@android:color/black"
+                android:textSize="10sp"
+                android:drawableLeft="@drawable/ic_location_on_black_18dp" />
 
             <TextView
-                android:id="@+id/textView17"
+                android:id="@+id/nothingtoshow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/home_icon"
-                android:text="TextView" />
+                android:text="Nothing else to show. Add some info by editing your profile."
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="10sp" />
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
