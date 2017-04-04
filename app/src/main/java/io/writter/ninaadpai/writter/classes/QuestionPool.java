@@ -1,4 +1,4 @@
-package io.writter.ninaadpai.writter;
+package io.writter.ninaadpai.writter.classes;
 
 import java.util.List;
 

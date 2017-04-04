@@ -1,27 +1,18 @@
-package io.writter.ninaadpai.writter;
+package io.writter.ninaadpai.writter.fragments;
 
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Typeface;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Gravity;
@@ -29,18 +20,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.dant.centersnapreyclerview.SnappingRecyclerView;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -52,18 +38,17 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
-import com.squareup.picasso.RequestCreator;
 import com.squareup.picasso.Transformation;
 
-import org.w3c.dom.Text;
-
-import java.io.File;
-import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+
+import io.writter.ninaadpai.writter.adapters.ExampleDateAdapter;
+import io.writter.ninaadpai.writter.adapters.ExampleDateEndPaddingItemDecoration;
+import io.writter.ninaadpai.writter.MainActivity;
+import io.writter.ninaadpai.writter.R;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -314,8 +299,8 @@ public class ProfileFragment extends Fragment {
     private void inflateTagLine(Context context) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
-        final View dialogLayout = inflater.inflate(R.layout.set_tagline_window,
-                null);
+        final View dialogLayout = inflater.inflate(R.layout.set_tagline_window, null);
+
         final AlertDialog dialog = builder.create();
         dialog.getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -327,7 +312,7 @@ public class ProfileFragment extends Fragment {
         wlmp.gravity = Gravity.CENTER;
         builder.setView(dialogLayout);
         dialog.show();
-        final TextView tagLineEdit =(TextView) dialog.findViewById(R.id.tagLineEdit);
+        final EditText tagLineEdit =(EditText) dialog.findViewById(R.id.tagLineEdit);
         dialog.findViewById(R.id.exitTag).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,4 +1,4 @@
-package io.writter.ninaadpai.writter;
+package io.writter.ninaadpai.writter.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import io.writter.ninaadpai.writter.R;
 
 /**
  * Created by ninaadpai on 4/1/17.

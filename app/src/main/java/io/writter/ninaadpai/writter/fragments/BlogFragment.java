@@ -1,4 +1,4 @@
-package io.writter.ninaadpai.writter;
+package io.writter.ninaadpai.writter.fragments;
 
 
 import android.graphics.Typeface;
@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
+
+import io.writter.ninaadpai.writter.R;
 
 
 /**

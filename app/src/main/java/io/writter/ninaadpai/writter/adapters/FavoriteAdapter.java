@@ -1,7 +1,6 @@
-package io.writter.ninaadpai.writter;
+package io.writter.ninaadpai.writter.adapters;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,13 +9,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.List;
 
+import io.writter.ninaadpai.writter.R;
+import io.writter.ninaadpai.writter.SetUpNameActivity;
+
 import static io.writter.ninaadpai.writter.SetUpNameActivity.topicEditText;
 
 /**
  * Created by ninaadpai on 3/24/17.
  */
 
-class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.RadioViewHolder> {
+public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.RadioViewHolder> {
         private Context context;
         private List<String> favoriteList;
 

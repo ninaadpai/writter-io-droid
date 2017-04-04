@@ -1,4 +1,4 @@
-package io.writter.ninaadpai.writter;
+package io.writter.ninaadpai.writter.classes;
 
 import java.util.HashMap;
 import java.util.List;
@@ -8,12 +8,12 @@ import java.util.List;
  */
 
 public class WritterUser {
-    String userName, tagLine, location, birthday;
+    String userName, tagLine, location, birthday, imgUrl;
     Object memberSince;
     List<String> preferences, placesLived;
     HashMap<String, String> work, institutions;
 
-    public WritterUser(String userName, String tagLine, String location, Object memberSince, String birthday, List<String> preferences, HashMap<String, String> work, HashMap<String, String> institutions, List<String> placesLived) {
+    public WritterUser(String userName, String imgUrl,String tagLine, String location, Object memberSince, String birthday, List<String> preferences, HashMap<String, String> work, HashMap<String, String> institutions, List<String> placesLived) {
         this.userName = userName;
         this.tagLine = tagLine;
         this.location = location;
@@ -23,6 +23,7 @@ public class WritterUser {
         this.work = work;
         this.institutions = institutions;
         this.placesLived = placesLived;
+        this.imgUrl = imgUrl;
     }
 
 
@@ -98,18 +99,27 @@ public class WritterUser {
         this.placesLived = placesLived;
     }
 
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
     @Override
-    public String  toString() {
+    public String toString() {
         return "WritterUser{" +
                 "userName='" + userName + '\'' +
                 ", tagLine='" + tagLine + '\'' +
                 ", location='" + location + '\'' +
-                ", memberSince=" + memberSince +
                 ", birthday='" + birthday + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", memberSince=" + memberSince +
                 ", preferences=" + preferences +
+                ", placesLived=" + placesLived +
                 ", work=" + work +
                 ", institutions=" + institutions +
-                ", placesLived=" + placesLived +
                 '}';
     }
 }

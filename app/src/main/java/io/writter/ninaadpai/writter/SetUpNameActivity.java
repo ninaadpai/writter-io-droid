@@ -17,7 +17,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -28,11 +27,15 @@ import com.google.firebase.database.ServerValue;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.writter.ninaadpai.writter.adapters.FavoriteAdapter;
+import io.writter.ninaadpai.writter.adapters.TopicAdapter;
+import io.writter.ninaadpai.writter.classes.WritterUser;
+
 public class SetUpNameActivity extends AppCompatActivity {
     TextView appTitle;
     TextView setupHint;
     TextView chooseTopicsHint;
-    static TextView recyclerTitle;
+    public static TextView recyclerTitle;
     EditText firstLastName;
     public static Typeface novaOval, domineBold;
     ListView topicList;
@@ -154,7 +157,7 @@ public class SetUpNameActivity extends AppCompatActivity {
 
     private void updateUserName(String name) {
         final Object signUpTime= ServerValue.TIMESTAMP;
-        WritterUser user =  new WritterUser(name, "", "", signUpTime,"",favorites, null, null, null);
+        WritterUser user =  new WritterUser(name, "", "", "", signUpTime,"",favorites, null, null, null);
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         databaseReference.child(firebaseUser.getUid()).setValue(user);
         databaseReference.child(firebaseUser.getUid()).child("profile_photo").child("encodedSchemeSpecificPart").setValue("");

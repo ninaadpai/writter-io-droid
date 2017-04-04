@@ -1,4 +1,4 @@
-package io.writter.ninaadpai.writter;
+package io.writter.ninaadpai.writter.adapters;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;

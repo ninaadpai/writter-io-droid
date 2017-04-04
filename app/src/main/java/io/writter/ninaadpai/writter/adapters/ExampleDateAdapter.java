@@ -1,20 +1,16 @@
-package io.writter.ninaadpai.writter;
+package io.writter.ninaadpai.writter.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 /**
  * Created by ninaadpai on 4/1/17.
  */
 
-class ExampleDateAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class ExampleDateAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
 
     private List<String> options = new ArrayList<>();

@@ -16,7 +16,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -41,6 +40,13 @@ import com.google.firebase.database.ServerValue;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
+
+import io.writter.ninaadpai.writter.classes.Question;
+import io.writter.ninaadpai.writter.classes.QuestionPool;
+import io.writter.ninaadpai.writter.fragments.BlogFragment;
+import io.writter.ninaadpai.writter.fragments.FeedFragment;
+import io.writter.ninaadpai.writter.fragments.ProfileFragment;
+import io.writter.ninaadpai.writter.fragments.SearchFragment;
 
 public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion, ProfileFragment.imageUpload {
 
@@ -242,49 +248,23 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
 
     @Override
     public void postQuestion(final boolean anonymously) {
-        final FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
         String text = searchFeed.getText().toString().trim();
         final StringBuilder questionText = new StringBuilder();
         questionText.append(text.substring(0,1).toUpperCase() + text.substring(1));
         final Object questionTimeStamp= ServerValue.TIMESTAMP;
-        DatabaseReference imgRef = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child("profile_photo").child("encodedSchemeSpecificPart");
-        imgRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                imgUrl = "https:"+dataSnapshot.getValue();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(firebaseUser.getUid()).child("userName");
-        ref.addValueEventListener(new ValueEventListener() {
-
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String userName = (String) dataSnapshot.getValue();
-                FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-                final String currentUid = currentUser.getUid();
-                Log.i("Posting user, Dashboard",currentUid);
-                databaseReference.child("questions_pool").push().setValue(new QuestionPool(imgUrl,currentUid.toString(), userName,questionText.toString(),"General", questionTimeStamp, anonymously));
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        final String currentUid = currentUser.getUid();
+        databaseReference.child("questions_pool").push().setValue(new Question("",currentUid, questionText.toString(),"General", anonymously ,questionTimeStamp, null, null, null));
     }
 
     @Override
-    public void destroySearchFragment() {
+    public void destroySearchFragment() throws IllegalAccessException, InstantiationException {
         clearSearch.setVisibility(View.INVISIBLE);
         searchFeed.setText("");
         inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-        FragmentTransaction tx = getSupportFragmentManager().beginTransaction();
-        tx.replace(R.id.flContent, new FeedFragment()).commit();
+        fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, FeedFragment.class.newInstance()).commit();
+        recreate();
         View layoutValue = LayoutInflater.from(DashboardActivity.this).inflate(R.layout.question_posted_successfully, null);
         final Toast toast = new Toast(getApplicationContext());
         toast.setDuration(Toast.LENGTH_LONG);
@@ -344,4 +324,5 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     public void stopImageUpload() {
         progressDialog.dismiss();
     }
+
 }

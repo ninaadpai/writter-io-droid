@@ -6,9 +6,18 @@
     android:background="#eee"
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true"
-    tools:context="io.writter.ninaadpai.writter.FeedFragment">
+    tools:context="io.writter.ninaadpai.writter.fragments.FeedFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/feedTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:text="Top Posts" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/feedRecycler"
@@ -16,6 +25,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
         android:gravity="center_vertical"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:layout_below="@+id/feedTitle" />
 
 </RelativeLayout>

@@ -30,7 +30,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/answerLink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
@@ -81,15 +81,15 @@
         android:layout_marginRight="20dp"/>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/editTopic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
         android:layout_marginBottom="15dp"
-        android:textSize="12sp"
-        android:text="Edit Topic" />
+        android:layout_marginTop="15dp"
+        android:text="Edit Topic"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
 
     <View
         android:id="@+id/view4"
