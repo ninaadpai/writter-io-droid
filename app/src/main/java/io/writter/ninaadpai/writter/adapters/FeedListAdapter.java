@@ -269,7 +269,6 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                if(viewHolder.likeButton.getTag().toString().equals("like"))  {
                    viewHolder.likeButton.setTag("liked");
                    FeedFragment.setLiked(p.getQuestionId(), viewHolder.likeButton.getTag().toString());
-
                }
                else if(viewHolder.likeButton.getTag().toString().equals("liked")) {
                    viewHolder.likeButton.setTag("like");
@@ -282,6 +281,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 openAnswerPopUp(context, p.getCategory(), timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))), p.getQuestionText(), "", p.getQuestionId());
+                notifyItemChanged(position);
             }
         });
 

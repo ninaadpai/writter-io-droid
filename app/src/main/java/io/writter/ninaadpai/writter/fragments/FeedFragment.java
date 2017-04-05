@@ -50,6 +50,7 @@ public class FeedFragment extends Fragment{
     List<Question> posts = new ArrayList<>();
     List<Answer> answers;
     List<String> likers;
+    static FeedListAdapter feedListAdapter;
     public FeedFragment() {
         // Required empty public constructor
     }
@@ -111,7 +112,7 @@ public class FeedFragment extends Fragment{
                 if(posts.size() == 0) {
                     feedTitle.setText("Currently there are no posts in your feed.");
                 }
-                final FeedListAdapter feedListAdapter = new FeedListAdapter(f, posts);
+                feedListAdapter = new FeedListAdapter(f, posts);
                 feedRecycler.setAdapter(feedListAdapter);
                 feedRecycler.setHasFixedSize(true);
                 feedRecycler.setItemAnimator(new SlideInUpAnimator());
@@ -178,7 +179,6 @@ public class FeedFragment extends Fragment{
         if(liked == "like") {
             databaseReference.child("questions_pool").child(questionId).child("likers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(0);
         }
-        mListener.doRecreate();
     }
 
     public static void postAnswer(final String questionId, final String answer, final boolean anonymous) {
@@ -198,7 +198,6 @@ public class FeedFragment extends Fragment{
 
             }
         });
-        mListener.doRecreate();
     }
     public interface feedInterface{
         void doRecreate();
