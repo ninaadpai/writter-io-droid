@@ -7,4 +7,5 @@
     <color name="detailsColor">#9a565656</color>
     <color name="writterGreen">#1EA775</color>
     <color name="landingText">#595959</color>
+    <color name="likedOrResponded">#FF2EA4C9</color>
 </resources>

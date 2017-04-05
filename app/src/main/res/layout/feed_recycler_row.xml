@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height = "wrap_content">
-
     <android.support.v7.widget.CardView
         android:id="@+id/questionCard"
         cardElevation="10dp"
@@ -106,12 +105,12 @@
                     android:id="@+id/responseButton"
                     android:layout_marginTop="12dp"
                     android:layout_width="80dp"
-                    android:layout_height="25dp"
+                    android:layout_height="26dp"
                     android:layout_marginLeft="10dp"
-                    android:background="@drawable/feed_button_background_selected"
+                    android:background="@drawable/feed_button_background"
                     android:textSize="10sp"
                     android:height="20dp"
-                    android:textColor="#036a8b"
+                    android:textColor="@android:color/black"
                     android:text="Button" />
 
                 <ImageView
@@ -121,9 +120,7 @@
                     android:layout_height="14dp"
                     android:layout_marginTop="17dp"
                     app:srcCompat="@drawable/options" />
-
             </LinearLayout>
-
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>

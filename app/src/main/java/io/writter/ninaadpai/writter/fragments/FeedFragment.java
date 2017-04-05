@@ -32,7 +32,9 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import io.writter.ninaadpai.writter.DashboardActivity;
 import io.writter.ninaadpai.writter.adapters.FeedListAdapter;
@@ -47,6 +49,7 @@ public class FeedFragment extends Fragment{
     static DatabaseReference databaseReference;
     List<Question> posts = new ArrayList<>();
     List<Answer> answers;
+    List<String> likers;
     public FeedFragment() {
         // Required empty public constructor
     }
@@ -75,15 +78,22 @@ public class FeedFragment extends Fragment{
                     final String questionText = questionSnapShot.child("questionText").getValue().toString();
                     final String  uploadTime = questionSnapShot.child("uploadTime").getValue().toString();
                     final boolean  anonymous = (boolean) questionSnapShot.child("anonymous").getValue();
-                    DataSnapshot answerSnapShot = dataSnapshot.child(questionId).child("answers");
 
+                    DataSnapshot answerSnapShot = dataSnapshot.child(questionId).child("answers");
+                    likers = new ArrayList<>();
+                    DataSnapshot likersSnapShot = dataSnapshot.child(questionId).child("likers");
+                    Iterable<DataSnapshot> likersIterable = likersSnapShot.getChildren();
+                    for(DataSnapshot liker : likersIterable) {
+                        if(Integer.parseInt(String.valueOf(liker.getValue())) == 1)
+                            likers.add(liker.getKey());
+                    }
                     answers = new ArrayList<>();
                     Iterable<DataSnapshot> answerIterable = answerSnapShot.getChildren();
                     for(DataSnapshot answer  : answerIterable) {
                         Answer a = new Answer(answer.child("providerId").getValue().toString(), answer.child("providerName").getValue().toString(), answer.child("questionId").getValue().toString(), answer.child("answerText").getValue().toString(), answer.child("timeStamp").getValue(), (boolean) answer.child("anonymous").getValue(), null);
                         answers.add(a);
                     }
-                    posts.add(new Question(questionId, userId, questionText, topic, anonymous, uploadTime, null, null,answers));
+                    posts.add(new Question(questionId, userId, questionText, topic, anonymous, uploadTime, likers, null,answers));
 
                 }
 
@@ -128,11 +138,16 @@ public class FeedFragment extends Fragment{
         super.onResume();
         Log.i("Demo","FeedFragment onResume");
     }
-
+    static feedInterface mListener;
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         Log.i("Demo","FeedFragment onAttach");
+        try{
+            mListener = (FeedFragment.feedInterface) activity;
+        }catch(ClassCastException e) {
+            throw new ClassCastException(activity.toString()+" should implement IQuestion.");
+        }
     }
 
     @Override
@@ -155,6 +170,17 @@ public class FeedFragment extends Fragment{
 
     }
 
+    public static void setLiked(String questionId, String liked) {
+
+        if(liked == "liked") {
+            databaseReference.child("questions_pool").child(questionId).child("likers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(1);
+        }
+        if(liked == "like") {
+            databaseReference.child("questions_pool").child(questionId).child("likers").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(0);
+        }
+        mListener.doRecreate();
+    }
+
     public static void postAnswer(final String questionId, final String answer, final boolean anonymous) {
         final FirebaseUser currentUser = firebaseAuth.getCurrentUser();
         final DatabaseReference currentUserNameRef = databaseReference.child(currentUser.getUid()).child("userName");
@@ -172,6 +198,9 @@ public class FeedFragment extends Fragment{
 
             }
         });
+        mListener.doRecreate();
     }
-
+    public interface feedInterface{
+        void doRecreate();
+    }
 }

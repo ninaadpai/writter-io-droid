@@ -6,6 +6,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
@@ -25,6 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -47,6 +49,8 @@ import io.writter.ninaadpai.writter.classes.Answer;
 import io.writter.ninaadpai.writter.classes.Question;
 import io.writter.ninaadpai.writter.classes.WritterUser;
 import io.writter.ninaadpai.writter.fragments.FeedFragment;
+
+import static io.writter.ninaadpai.writter.R.id.answerBox;
 
 /**
  * Created by ninaadpai on 3/24/17.
@@ -152,14 +156,42 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         final long currentTime = System.currentTimeMillis();
         viewHolder.postDetails.setText("Question Answered For : "+p.getCategory()+"\t\t"+timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))));
         viewHolder.postQuestion.setText(p.getQuestionText());
-       // viewHolder.postDesc.setText("");
-      //  viewHolder.postDesc.setVisibility(View.GONE);
-        if(p.getLikers() != null)
-           viewHolder.likeButton.setText("Like | "+String.valueOf(p.getLikers().size()));
-        else
-           viewHolder.likeButton.setText("Like | 0");
-        viewHolder.likeButton.setTag("like");
-        viewHolder.responseButton.setText("Respond | "+String.valueOf(p.getAnswers().size()));
+        if(p.getAnswers().size() == 0) {
+            viewHolder.responseButton.setText("Respond | " + String.valueOf(p.getAnswers().size()));
+            viewHolder.responseButton.setBackgroundResource(R.drawable.feed_button_background);
+        }
+        else if(p.getAnswers().size() > 0) {
+            if (alreadyResponded(p.getAnswers())) {
+                viewHolder.responseButton.setText("Responded | " + String.valueOf(p.getAnswers().size()));
+                viewHolder.responseButton.setBackgroundResource(R.drawable.feed_button_background_selected);
+                viewHolder.responseButton.setTextColor(Color.parseColor("#FF1993B9"));
+            } else {
+                viewHolder.responseButton.setText("Respond | " + String.valueOf(p.getAnswers().size()));
+                viewHolder.responseButton.setBackgroundResource(R.drawable.feed_button_background);
+            }
+        }
+
+        if(alreadyLiked(p.getLikers()) == true) {
+            viewHolder.likeButton.setTag("liked");
+        }
+        else if (alreadyLiked(p.getLikers()) == false){
+            viewHolder.likeButton.setTag("like");
+        }
+        else if (p.getLikers() == null || p.getLikers().size() == 0) {
+            viewHolder.likeButton.setTag("like");
+        }
+
+
+        if (viewHolder.likeButton.getTag().toString().equals("liked")) {
+                viewHolder.likeButton.setText("Liked | " + String.valueOf(p.getLikers().size()));
+                viewHolder.likeButton.setBackgroundResource(R.drawable.feed_button_background_selected);
+                viewHolder.likeButton.setTextColor(Color.parseColor("#FF1993B9"));
+            }
+        if (viewHolder.likeButton.getTag().toString().equals("like")){
+                viewHolder.likeButton.setText("Like | " + String.valueOf(p.getLikers().size()));
+                viewHolder.likeButton.setBackgroundResource(R.drawable.feed_button_background);
+            }
+
         if(p.getAnswers().size() == 0) {
             viewHolder.postDescription.setText("No answers yet.");
             viewHolder.answerDetails.setText("This question has not been answered yet, be the first one to respond!");
@@ -230,59 +262,22 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             }
         });
 
-//       viewHolder.likedImage.setOnClickListener(new View.OnClickListener() {
-//
-//           @Override
-//           public void onClick(View v) {
-//               if(viewHolder.likedImage.getTag().toString().equals("like") ) {
-//                   viewHolder.likedImage.postDelayed(new Runnable() {
-//                       @Override
-//                       public void run() {
-//                           viewHolder.likedImage.animate()
-//                                  // .alpha(0.0f)
-//                                   .rotation(360)
-//                                   .setDuration(500)
-//                           .setListener(new AnimatorListenerAdapter() {
-//                               @Override
-//                               public void onAnimationEnd(Animator animation) {
-//                                   super.onAnimationEnd(animation);
-//                                   viewHolder.likedImage.setImageResource(R.drawable.liked);
-//                                   viewHolder.likedImage.setTag("liked");
-//                                 //  notifyItemChanged(position);
-//                               }
-//
-//                           });
-//                       }
-//                   },0);
-//                   liked = true;
-//                   DashboardActivity.setLiked(liked);
-//               }
-//               else if(viewHolder.likedImage.getTag().toString().equals("liked") ) {
-//                   viewHolder.likedImage.postDelayed(new Runnable() {
-//                       @Override
-//                       public void run() {
-//                           viewHolder.likedImage.animate()
-//                                   // .alpha(0.0f)
-//                                   .rotation(-360)
-//                                   .setDuration(500)
-//                                   .setListener(new AnimatorListenerAdapter() {
-//                                       @Override
-//                                       public void onAnimationEnd(Animator animation) {
-//                                           super.onAnimationEnd(animation);
-//                                           viewHolder.likedImage.setImageResource(R.drawable.like);
-//                                           viewHolder.likedImage.setTag("like");
-//                                           //  notifyItemChanged(position);
-//                                       }
-//
-//                                   });
-//                       }
-//                   },0);
-//                   liked = false;
-//                   DashboardActivity.setLiked(liked);
-//               }
-//           }
-//       });
-//
+       viewHolder.likeButton.setOnClickListener(new View.OnClickListener() {
+
+           @Override
+           public void onClick(View v) {
+               if(viewHolder.likeButton.getTag().toString().equals("like"))  {
+                   viewHolder.likeButton.setTag("liked");
+                   FeedFragment.setLiked(p.getQuestionId(), viewHolder.likeButton.getTag().toString());
+
+               }
+               else if(viewHolder.likeButton.getTag().toString().equals("liked")) {
+                   viewHolder.likeButton.setTag("like");
+                   FeedFragment.setLiked(p.getQuestionId(), viewHolder.likeButton.getTag().toString());
+               }
+           }
+       });
+
         viewHolder.responseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -341,25 +336,32 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
 
             }
         });
-//        final List<Answer> answerProviders = new ArrayList<>();
-//        for(int i=0; i<p.getAnswers().size(); i++) {
-//            String providerId = p.getAnswers().get(i).getProviderId();
-//            FirebaseDatabase.getInstance().getReference().child(providerId).addValueEventListener(new ValueEventListener() {
-//                @Override
-//                public void onDataChange(DataSnapshot dataSnapshot) {
-//                    for(DataSnapshot ds: dataSnapshot.getChildren()) {
-//                        Answer answer = new Answer(ds.child("providerId").getValue().toString(), ds.child("providerName").getValue().toString(), ds.child("questionId").getValue().toString(), ds.child("answerText").getValue().toString(), ds.child("timeStamp").getValue(), (boolean) ds.child("anonymous").getValue(), null);
-//                        answerProviders.add(answer);
-//                    }
-//                }
-//
-//                @Override
-//                public void onCancelled(DatabaseError databaseError) {
-//
-//                }
-//            });
-//            }
-//        viewHolder.answerDetails.setText(p.getAnswers().size() + " Answers: Top Answer By, ");
+    }
+
+    private boolean alreadyLiked(List<String> likers) {
+        boolean contains = false;
+        String ref = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        for(String a :likers) {
+            if(a.equals(ref)) {
+                contains = true;
+                break;
+            }
+        }
+        return contains;
+    }
+
+    private boolean alreadyResponded(List<Answer> answers) {
+        boolean contains = false;
+        String ref = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        for(Answer a :answers) {
+            if(a.getProviderId().equals(ref)) {
+                contains = true;
+                break;
+            }
+        }
+        return contains;
     }
 
     private void openTopicChangePopUp(Context context, String category, String s, String questionText, String s1, String questionId) {

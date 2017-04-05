@@ -3,6 +3,8 @@ package io.writter.ninaadpai.writter;
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -41,6 +43,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.writter.ninaadpai.writter.classes.Answer;
 import io.writter.ninaadpai.writter.classes.Question;
 import io.writter.ninaadpai.writter.classes.QuestionPool;
 import io.writter.ninaadpai.writter.fragments.BlogFragment;
@@ -48,7 +51,7 @@ import io.writter.ninaadpai.writter.fragments.FeedFragment;
 import io.writter.ninaadpai.writter.fragments.ProfileFragment;
 import io.writter.ninaadpai.writter.fragments.SearchFragment;
 
-public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion, ProfileFragment.imageUpload{
+public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion, ProfileFragment.imageUpload, FeedFragment.feedInterface{
 
     Class fragmentClass;
     EditText searchFeed;
@@ -305,10 +308,6 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         progressDialog.dismiss();
     }
 
-    public static void setLiked(boolean liked) {
-        int likeNum;
-    }
-
     @Override
     public void startImageUpload() {
         progressDialog = new ProgressDialog(DashboardActivity.this);
@@ -323,4 +322,8 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
         progressDialog.dismiss();
     }
 
+    @Override
+    public void doRecreate() {
+        recreate();
+    }
 }
