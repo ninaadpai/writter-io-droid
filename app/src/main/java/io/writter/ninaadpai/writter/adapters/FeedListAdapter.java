@@ -283,12 +283,12 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
 //           }
 //       });
 //
-//        viewHolder.commentOnPost.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openAnswerPopUp(context, p.getCategory(), timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))), p.getQuestionText(), "", p.getQuestionId());
-//            }
-//        });
+        viewHolder.responseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAnswerPopUp(context, p.getCategory(), timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))), p.getQuestionText(), "", p.getQuestionId());
+            }
+        });
 
     viewHolder.moreOptions.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -303,6 +303,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                dialog.setView(dialogLayout, 0, 0, 0, 0);
                dialog.setCanceledOnTouchOutside(true);
                dialog.setCancelable(true);
+               dialog.getWindow().getAttributes().windowAnimations = R.style.Animation;
                WindowManager.LayoutParams wlmp = dialog.getWindow()
                        .getAttributes();
                wlmp.gravity = Gravity.CENTER;
@@ -365,22 +366,23 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
     }
 
     private void openAnswerPopUp(Context context, String topicString, String uploadedTime, String postQuestion, String postDesc, final String questionId) {
-        Log.i("Topic String",topicString);
         AlertDialog.Builder answerBuilder = new AlertDialog.Builder(context);
         LayoutInflater answerInflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
         final View answerdialogLayout = answerInflater.inflate(R.layout.answer_form, null);
-        final AlertDialog answerDialog = answerBuilder.create();
 
+        final AlertDialog answerDialog = answerBuilder.create();
         answerDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         answerDialog.setView(answerdialogLayout, 0, 0, 0, 0);
         answerDialog.setCanceledOnTouchOutside(true);
         answerDialog.setCancelable(true);
+        answerDialog.getWindow().getAttributes().windowAnimations = R.style.Animation;
         WindowManager.LayoutParams answerwlmp = answerDialog.getWindow().getAttributes();
         answerwlmp.gravity = Gravity.TOP;
         answerBuilder.setView(answerdialogLayout);
         answerDialog.show();
-        final TextView topic = (TextView) answerDialog.findViewById(R.id.postingDetails1);
-        final TextView question = (TextView) answerDialog.findViewById(R.id.questionText1);
+
+        final TextView topic = (TextView) answerDialog.findViewById(R.id.postDetails1);
+        final TextView question = (TextView) answerDialog.findViewById(R.id.postQuestion1);
         final EditText answerBox = (EditText) answerDialog.findViewById(R.id.answerBox);
         final CheckBox anonymousCB = (CheckBox) answerDialog.findViewById(R.id.anonymous);
         topic.setText(topicString+"\t\t"+uploadedTime);
@@ -404,6 +406,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
                         anonymous = false;
                     FeedFragment.postAnswer(questionId,answerBox.getText().toString().trim(), anonymous);
                     answerDialog.dismiss();
+                    notifyDataSetChanged();
                 }
             }
         });

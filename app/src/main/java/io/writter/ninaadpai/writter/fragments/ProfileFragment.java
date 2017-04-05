@@ -307,6 +307,8 @@ public class ProfileFragment extends Fragment {
         dialog.setView(dialogLayout, 0, 0, 0, 0);
         dialog.setCanceledOnTouchOutside(true);
         dialog.setCancelable(true);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.Animation;
+
         WindowManager.LayoutParams wlmp = dialog.getWindow()
                 .getAttributes();
         wlmp.gravity = Gravity.CENTER;
@@ -345,6 +347,7 @@ public class ProfileFragment extends Fragment {
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         dialog.setView(dialogLayout, 0, 0, 0, 0);
         dialog.setCanceledOnTouchOutside(true);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.Animation;
         dialog.setCancelable(true);
         WindowManager.LayoutParams wlmp = dialog.getWindow()
                 .getAttributes();
@@ -377,6 +380,7 @@ public class ProfileFragment extends Fragment {
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         dialog.setView(dialogLayout, 0, 0, 0, 0);
         dialog.setCanceledOnTouchOutside(true);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.Animation;
         dialog.setCancelable(true);
         WindowManager.LayoutParams wlmp = dialog.getWindow()
                 .getAttributes();

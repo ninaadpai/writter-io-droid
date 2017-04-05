@@ -48,7 +48,7 @@ import io.writter.ninaadpai.writter.fragments.FeedFragment;
 import io.writter.ninaadpai.writter.fragments.ProfileFragment;
 import io.writter.ninaadpai.writter.fragments.SearchFragment;
 
-public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion, ProfileFragment.imageUpload {
+public class DashboardActivity extends AppCompatActivity implements SearchFragment.IQuestion, ProfileFragment.imageUpload{
 
     Class fragmentClass;
     EditText searchFeed;
@@ -283,13 +283,11 @@ public class DashboardActivity extends AppCompatActivity implements SearchFragme
     @Override
     public void sanitizeQuestionText() {
         String specialChars = "/*!@#$%^&*()\"{}_[]|\\/<>,.";
-
         String questionStr;
         questionStr = searchFeed.getText().toString().trim();
         if(!(questionStr.substring(questionStr.length() - 1).equals("?"))){
             questionStr = questionStr + "?";
             searchFeed.setText(questionStr.toString());
-            Log.i("Sanitization", "Done");
         }
     }
 

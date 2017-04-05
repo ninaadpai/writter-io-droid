@@ -31,31 +31,30 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/postingDetails1"
+        android:id="@+id/postDetails1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
-        android:text="details"
+        android:text="postdetails"
         android:textColor="#737373"
-        android:textSize="10sp"
-        android:textStyle="bold" />
+        android:textSize="12sp"
+        android:ellipsize="end"
+        android:maxLines="2"/>
 
     <TextView
-        android:id="@+id/questionText1"
+        android:id="@+id/postQuestion1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:ellipsize="end"
         android:maxLines="3"
-        android:textStyle="bold"
+        android:text="postQuestion"
         android:textColor="@android:color/black"
-        android:textSize="16sp"
-        android:text="question"/>
-
+        android:textSize="18sp" />
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
@@ -66,7 +65,7 @@
     <com.rengwuxian.materialedittext.MaterialMultiAutoCompleteTextView
         android:id="@+id/answerBox"
         android:layout_width="fill_parent"
-        android:layout_height="350dp"
+        android:layout_height="383dp"
         android:textColor="@android:color/black"
         android:textSize="12sp"
         android:cursorVisible="true"
@@ -87,7 +86,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp">
 
         <Button
             android:id="@+id/postAnswer"
@@ -106,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="0dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:text="Anonymous"
             android:textColor="@android:color/black"
             android:theme="@style/MyCheckBox" />

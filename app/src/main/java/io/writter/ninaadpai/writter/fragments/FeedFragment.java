@@ -1,5 +1,6 @@
 package io.writter.ninaadpai.writter.fragments;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -110,6 +111,7 @@ public class FeedFragment extends Fragment{
 
             }
         });
+
         return view;
     }
 
@@ -128,10 +130,9 @@ public class FeedFragment extends Fragment{
     }
 
     @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
         Log.i("Demo","FeedFragment onAttach");
-
     }
 
     @Override
@@ -172,4 +173,5 @@ public class FeedFragment extends Fragment{
             }
         });
     }
+
 }
