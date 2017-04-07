@@ -1,7 +1,5 @@
 package io.writter.ninaadpai.writter.adapters;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
@@ -17,16 +15,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,22 +30,14 @@ import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import io.writter.ninaadpai.writter.DashboardActivity;
 import io.writter.ninaadpai.writter.R;
 import io.writter.ninaadpai.writter.classes.Answer;
 import io.writter.ninaadpai.writter.classes.Question;
-import io.writter.ninaadpai.writter.classes.WritterUser;
 import io.writter.ninaadpai.writter.fragments.FeedFragment;
-
-import static io.writter.ninaadpai.writter.R.id.answerBox;
 
 /**
  * Created by ninaadpai on 3/24/17.
@@ -77,9 +64,6 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         private TextView answerDetails;
         private ImageView addToNetwork;
         private int width;
-        private AlertDialog.Builder addToNW;
-         FirebaseAuth firebaseAuth;
-         DatabaseReference databaseReference;
 
         public ViewHolder(View v) {
             super(v);
@@ -94,14 +78,12 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             postDescription = (TextView) v.findViewById(R.id.postDesc);
             answerDetails = (TextView) v.findViewById(R.id.answerDetails);
             moreOptions = (ImageView) v.findViewById(R.id.moreOptions);
-            addToNW = new AlertDialog.Builder(v.getContext());
             likeButton = (Button)v.findViewById(R.id.likeButton);
             responseButton = (Button)v.findViewById(R.id.responseButton);
             WindowManager window = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
             width = window.getDefaultDisplay().getWidth();
         }
     }
-
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
@@ -111,6 +93,17 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         v.setClickable(true);
         v.setFocusableInTouchMode(true);
         return new ViewHolder(v);
+    }
+
+    public void swapData(List<Question> data, int position) {
+        if(mDataSet != null) {
+            mDataSet.clear();
+            mDataSet.addAll(data);
+        }
+        else {
+            mDataSet = data;
+        }
+        notifyItemChanged(position);
     }
 
     private String timeDiff(long timeDifferenceMilliseconds) {
@@ -152,7 +145,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
-       final Question p = mDataSet.get(position);
+        final Question p = mDataSet.get(position);
         final long currentTime = System.currentTimeMillis();
         viewHolder.postDetails.setText("Question Answered For : "+p.getCategory()+"\t\t"+timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))));
         viewHolder.postQuestion.setText(p.getQuestionText());
@@ -183,18 +176,18 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
 
 
         if (viewHolder.likeButton.getTag().toString().equals("liked")) {
-                viewHolder.likeButton.setText("Liked | " + String.valueOf(p.getLikers().size()));
-                viewHolder.likeButton.setBackgroundResource(R.drawable.feed_button_background_selected);
-                viewHolder.likeButton.setTextColor(Color.parseColor("#FF1993B9"));
-            }
+            viewHolder.likeButton.setText("Liked | " + String.valueOf(p.getLikers().size()));
+            viewHolder.likeButton.setBackgroundResource(R.drawable.feed_button_background_selected);
+            viewHolder.likeButton.setTextColor(Color.parseColor("#FF1993B9"));
+        }
         if (viewHolder.likeButton.getTag().toString().equals("like")){
-                viewHolder.likeButton.setText("Like | " + String.valueOf(p.getLikers().size()));
-                viewHolder.likeButton.setBackgroundResource(R.drawable.feed_button_background);
-            }
+            viewHolder.likeButton.setText("Like | " + String.valueOf(p.getLikers().size()));
+            viewHolder.likeButton.setBackgroundResource(R.drawable.feed_button_background);
+        }
 
         if(p.getAnswers().size() == 0) {
             viewHolder.postDescription.setText("No answers yet.");
-            viewHolder.answerDetails.setText("This question has not been answered yet, be the first one to respond!");
+            viewHolder.answerDetails.setText("This question has not been responses yet, be the first one to post!");
         }
 
         else if(p.getAnswers().size() == 1) {
@@ -218,7 +211,7 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             });
 
             viewHolder.postDescription.setText(p.getAnswers().get(0).getAnswerText().toString());
-            viewHolder.answerDetails.setText(p.getAnswers().size() + " Answer, posted by " + p.getAnswers().get(0).getProviderName().toString() + "\t\t" + timeDiff(currentTime - Long.parseLong(p.getAnswers().get(0).getTimeStamp().toString())));
+            viewHolder.answerDetails.setText("This question has "+p.getAnswers().size() + " responses.\n Top Response is posted by " + p.getAnswers().get(0).getProviderName().toString() + "\t\t" + timeDiff(currentTime - Long.parseLong(p.getAnswers().get(0).getTimeStamp().toString())));
         }
         else {
 
@@ -239,12 +232,12 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             photoRef.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
-                        String photoLink = dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue().toString();
-                        Picasso.with(context)
-                                .load("https:"+photoLink)
-                                .rotate(0)
-                                .transform(new FeedListAdapter.CircleTransform())
-                                .into(viewHolder.topPosterImage);
+                    String photoLink = dataSnapshot.child("profile_photo").child("encodedSchemeSpecificPart").getValue().toString();
+                    Picasso.with(context)
+                            .load("https:"+photoLink)
+                            .rotate(0)
+                            .transform(new FeedListAdapter.CircleTransform())
+                            .into(viewHolder.topPosterImage);
                 }
 
                 @Override
@@ -259,6 +252,24 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         viewHolder.postQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                questionPopOut(p);
+                Log.i("Clicked","Question");
+            }
+        });
+        viewHolder.likeButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(viewHolder.likeButton.getTag().toString().equals("like"))  {
+                    viewHolder.likeButton.setTag("liked");
+                    FeedFragment.setLiked(p.getQuestionId(), viewHolder.likeButton.getTag().toString());
+                    swapData(mDataSet, position);
+                }
+                else if(viewHolder.likeButton.getTag().toString().equals("liked")) {
+                    viewHolder.likeButton.setTag("like");
+                    FeedFragment.setLiked(p.getQuestionId(), viewHolder.likeButton.getTag().toString());
+                    swapData(mDataSet, position);
+                }
             }
         });
 
@@ -280,56 +291,58 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         viewHolder.responseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openAnswerPopUp(context, p.getCategory(), timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))), p.getQuestionText(), "", p.getQuestionId());
+
+                openAnswerPopUp(position, context, p.getCategory(), timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))), p.getQuestionText(), "", p.getQuestionId());
                 notifyItemChanged(position);
+
             }
         });
 
-    viewHolder.moreOptions.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(context);
-               LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
-               final View dialogLayout = inflater.inflate(R.layout.answer_options_window, null);
+        viewHolder.moreOptions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(context);
+                LayoutInflater inflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+                final View dialogLayout = inflater.inflate(R.layout.answer_options_window, null);
 
-               final android.app.AlertDialog dialog = builder.create();
-               dialog.getWindow().setSoftInputMode(
-                       WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-               dialog.setView(dialogLayout, 0, 0, 0, 0);
-               dialog.setCanceledOnTouchOutside(true);
-               dialog.setCancelable(true);
-               dialog.getWindow().getAttributes().windowAnimations = R.style.Animation;
-               WindowManager.LayoutParams wlmp = dialog.getWindow()
-                       .getAttributes();
-               wlmp.gravity = Gravity.CENTER;
+                final android.app.AlertDialog dialog = builder.create();
+                dialog.getWindow().setSoftInputMode(
+                        WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+                dialog.setView(dialogLayout, 0, 0, 0, 0);
+                dialog.setCanceledOnTouchOutside(true);
+                dialog.setCancelable(true);
+                dialog.getWindow().getAttributes().windowAnimations = R.style.Animation;
+                WindowManager.LayoutParams wlmp = dialog.getWindow()
+                        .getAttributes();
+                wlmp.gravity = Gravity.CENTER;
 
-               builder.setView(dialogLayout);
-               dialog.show();
+                builder.setView(dialogLayout);
+                dialog.show();
 
-               dialog.findViewById(R.id.exitAnswerOptions).setOnClickListener(new View.OnClickListener() {
-                   @Override
-                   public void onClick(View v) {
-                       dialog.dismiss();
-                   }
-               });
+                dialog.findViewById(R.id.exitAnswerOptions).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
 
-               dialog.findViewById(R.id.answerLink).setOnClickListener(new View.OnClickListener() {
-                   @Override
-                   public void onClick(View v) {
-                       dialog.dismiss();
-                       openAnswerPopUp(context, p.getCategory(), timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))), p.getQuestionText(), "", p.getQuestionId());
-                   }
-               });
+                dialog.findViewById(R.id.answerLink).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                        openAnswerPopUp(position, context, p.getCategory(), timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))), p.getQuestionText(), "", p.getQuestionId());
+                    }
+                });
 
-               dialog.findViewById(R.id.editTopic).setOnClickListener(new View.OnClickListener() {
-                   @Override
-                   public void onClick(View v) {
-                       dialog.dismiss();
-                       openTopicChangePopUp(context, p.getCategory(), timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))), p.getQuestionText(), "", p.getQuestionId());
-                   }
-               });
-           }
-       });
+                dialog.findViewById(R.id.editTopic).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                        openTopicChangePopUp(context, p.getCategory(), timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))), p.getQuestionText(), "", p.getQuestionId());
+                    }
+                });
+            }
+        });
         viewHolder.postQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -364,10 +377,40 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
         return contains;
     }
 
+    private void questionPopOut(Question p) {
+        AlertDialog.Builder answerBuilder = new AlertDialog.Builder(context);
+        LayoutInflater answerInflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
+        final View answerdialogLayout = answerInflater.inflate(R.layout.question_pop_out, null);
+        final long currentTime = System.currentTimeMillis();
+
+        final AlertDialog answerDialog = answerBuilder.create();
+        answerDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        answerDialog.setView(answerdialogLayout, 0, 0, 0, 0);
+        answerDialog.setCanceledOnTouchOutside(true);
+        answerDialog.setCancelable(true);
+        answerDialog.getWindow().getAttributes().windowAnimations = R.style.Animation;
+        WindowManager.LayoutParams answerwlmp = answerDialog.getWindow().getAttributes();
+        answerwlmp.gravity = Gravity.TOP;
+        answerBuilder.setView(answerdialogLayout);
+        answerDialog.show();
+        final TextView topic = (TextView) answerDialog.findViewById(R.id.postDetails1);
+        final TextView question = (TextView) answerDialog.findViewById(R.id.postQuestion1);
+        final TextView answerBox = (TextView) answerDialog.findViewById(R.id.answerBox);
+        topic.setText(p.getCategory()+"\t\t"+timeDiff(currentTime - Long.parseLong(String.valueOf(p.getUploadTime()))));
+        question.setText(p.getQuestionText());
+        answerBox.setText(p.getAnswers().get(0).getAnswerText().toString());
+        answerDialog.findViewById(R.id.exit_question_pop_out).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                answerDialog.dismiss();
+            }
+        });
+    }
+
     private void openTopicChangePopUp(Context context, String category, String s, String questionText, String s1, String questionId) {
     }
 
-    private void openAnswerPopUp(Context context, String topicString, String uploadedTime, String postQuestion, String postDesc, final String questionId) {
+    private void openAnswerPopUp(final int position, Context context, String topicString, String uploadedTime, String postQuestion, String postDesc, final String questionId) {
         AlertDialog.Builder answerBuilder = new AlertDialog.Builder(context);
         LayoutInflater answerInflater = (LayoutInflater)(context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
         final View answerdialogLayout = answerInflater.inflate(R.layout.answer_form, null);
@@ -401,14 +444,14 @@ public class FeedListAdapter extends RecyclerView.Adapter<FeedListAdapter.ViewHo
             public void onClick(View v) {
                 if(!(answerBox.getText().toString().isEmpty())) {
                     boolean anonymous;
-                    if(anonymousCB.isChecked()) {
+                    if(anonymousCB.isChecked())
                         anonymous = true;
-                    }
+
                     else
                         anonymous = false;
                     FeedFragment.postAnswer(questionId,answerBox.getText().toString().trim(), anonymous);
                     answerDialog.dismiss();
-                    notifyDataSetChanged();
+                  //  swapData(mDataSet, position);
                 }
             }
         });

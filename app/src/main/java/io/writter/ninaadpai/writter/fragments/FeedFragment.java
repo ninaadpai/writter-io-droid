@@ -51,6 +51,7 @@ public class FeedFragment extends Fragment{
     List<Answer> answers;
     List<String> likers;
     static FeedListAdapter feedListAdapter;
+    static RecyclerView feedRecycler;
     public FeedFragment() {
         // Required empty public constructor
     }
@@ -63,7 +64,7 @@ public class FeedFragment extends Fragment{
         final FragmentActivity f = getActivity();
         final TextView feedTitle = (TextView)view.findViewById(R.id.feedTitle);
 
-        final RecyclerView feedRecycler = (RecyclerView)view.findViewById(R.id.feedRecycler);
+        feedRecycler = (RecyclerView)view.findViewById(R.id.feedRecycler);
         LinearLayoutManager layoutManager = new GridLayoutManager(this.getActivity(), 1);
         feedRecycler.setLayoutManager(layoutManager);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -106,7 +107,7 @@ public class FeedFragment extends Fragment{
                         if(time1 < time2)
                             return 1;
                         else
-                        return -1;
+                            return -1;
                     }
                 });
                 if(posts.size() == 0) {
@@ -198,6 +199,13 @@ public class FeedFragment extends Fragment{
 
             }
         });
+        feedRecycler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                feedListAdapter.notifyDataSetChanged();
+            }
+        }, feedRecycler.getItemAnimator().getAddDuration());
+
     }
     public interface feedInterface{
         void doRecreate();
